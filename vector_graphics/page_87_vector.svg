@@ -1,0 +1,43 @@
+2.10.
+Higman’s Theorem
+79
+Hence, we may assume that L is non-empty and SUBSEQ(L) is a proper
+subset of {0, 1}∗.
+We ﬁx a string z of length at least two in the complement SUBSEQ(L) of
+the language SUBSEQ(L). Observe that this is possible, because SUBSEQ(L)
+is an inﬁnite language. We insert 0s and 1s into z, such that, in the result-
+ing string z′, 0s and 1s alternate. For example, if z = 0011101011, then
+z′ = 01010101010101. Let n = |z′| −1, where |z′| denotes the length of z′.
+Then, n ≥|z| −1 ≥1.
+A (0, 1)-alternation in a binary string x is any occurrence of 01 or 10 in x.
+For example, the string 1101001 contains four (0, 1)-alternations. We deﬁne
+A = {x ∈{0, 1}∗: x has at most n many (0, 1)-alternations}.
+Lemma 2.10.4 SUBSEQ(L) ⊆A.
+Proof. Let x ∈SUBSEQ(L) and assume that x ̸∈A. Then, x has at least
+n + 1 = |z′| many (0, 1)-alternations and, therefore, z′ is a subsequence of x.
+In particular, z is a subsequence of x. Since x ∈SUBSEQ(L), it follows that
+z ∈SUBSEQ(L), which is a contradiction.
+Lemma 2.10.5 SUBSEQ(L) =
+
+A ∩SUBSEQ(L)
+
+∪A.
+Proof. Follows from Lemma 2.10.4.
+Lemma 2.10.6 The language A is regular.
+Proof.
+The complement A of A is the language consisting of all binary
+strings with at least n + 1 many (0, 1)-alternations. If, for example, n = 3,
+then A is described by the regular expression
+(00∗11∗00∗11∗0(0 ∪1)∗) ∪(11∗00∗11∗00∗1(0 ∪1)∗) .
+This should convince you that the claim is true for any value of n.
+For any b ∈{0, 1} and for any k ≥0, we deﬁne Abk to be the language
+consisting of all binary strings that start with a b and have exactly k many
+(0, 1)-alternations. Then, we have
+A = {ϵ} ∪
+ 1[
+b=0
+n[
+k=0
+Abk
+!
+.

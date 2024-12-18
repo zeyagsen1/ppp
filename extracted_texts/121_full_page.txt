@@ -1,0 +1,30 @@
+3.5.
+Pushdown automata
+113
+state control
+a a b a b b a b a b 2
+tape
+6
+$
+A
+A
+B
+A
+stack
+-
+Figure 3.1: A pushdown automaton.
+(a) the pushdown automaton switches to a state r′ of Q (which may
+be equal to r),
+(b) the tape head either moves one cell to the right or stays at the
+current cell, and
+(c) the top symbol A is replaced by a string w that belongs to Γ∗. To
+be more precise,
+i. if w = ϵ, then A is popped from the stack, whereas
+ii. if w = B1B2 . . . Bk, with k ≥1 and B1, B2, . . . , Bk ∈Γ, then
+A is replaced by w, and Bk becomes the new top symbol of
+the stack.
+Later, we will specify when the pushdown automaton accepts the input
+string.
+We now give a formal deﬁnition of a deterministic pushdown automaton.
+Deﬁnition 3.5.1 A deterministic pushdown automaton is a 5-tuple M =
+(Σ, Γ, Q, δ, q), where

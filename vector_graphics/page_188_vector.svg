@@ -1,0 +1,34 @@
+180
+Chapter 5.
+Decidable and Undecidable Languages
+n-th iteration of the while-loop and the i-th iteration of the for-loop. In this
+iteration, M accepts si = w in m ≤n steps and, therefore, w is sent to the
+printer.
+5.6
+Most languages are not enumerable
+In this section, we will prove that most languages are not enumerable. The
+proof is based on the following two facts:
+• The set consisting of all enumerable languages is countable; we will
+prove this in Section 5.6.1.
+• The set consisting of all languages is not countable; we will prove this
+in Section 5.6.2.
+5.6.1
+The set of enumerable languages is countable
+We deﬁne the set E as
+E = {A : A ⊆{0, 1}∗is an enumerable language}.
+In words, E is the set whose elements are the enumerable languages. Every
+element of E is an enumerable language. Hence, every element of the set E
+is itself a set consisting of strings.
+Lemma 5.6.1 The set E is countable.
+Proof. Let A ⊆{0, 1}∗be an enumerable language. There exists a Turing
+machine TA that satisﬁes the conditions in Deﬁnition 5.4.1.
+This Turing
+machine TA can be uniquely speciﬁed by a string in English. This string can
+be converted to a binary string sA. Hence, the binary string sA is a unique
+encoding of the Turing machine TA.
+Consider the set
+S = {sA : A ⊆{0, 1}∗is an enumerable language}.
+Observe that the function f : E →S, deﬁned by f(A) = sA for each A ∈E,
+is a bijection. Therefore, the sets E and S have the same size. Hence, in
+order to prove that the set E is countable, it is suﬃcient to prove that the
+set S is countable.

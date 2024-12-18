@@ -1,0 +1,26 @@
+Preface
+This is a free textbook for an undergraduate course on the Theory of Com-
+putation, which we have been teaching at Carleton University since 2002.
+Until the 2011/2012 academic year, this course was oﬀered as a second-year
+course (COMP 2805) and was compulsory for all Computer Science students.
+Starting with the 2012/2013 academic year, the course has been downgraded
+to a third-year optional course (COMP 3803).
+We have been developing this book since we started teaching this course.
+Currently, we cover most of the material from Chapters 2–5 during a 12-week
+term with three hours of classes per week.
+The material from Chapter 6, on Complexity Theory, is taught in the
+third-year course COMP 3804 (Design and Analysis of Algorithms). In the
+early years of COMP 2805, we gave a two-lecture overview of Complexity
+Theory at the end of the term. Even though this overview has disappeared
+from the course, we decided to keep Chapter 6. This chapter has not been
+revised/modiﬁed for a long time.
+The course as we teach it today has been inﬂuenced by the following two
+textbooks:
+• Introduction to the Theory of Computation (second edition), by Michael
+Sipser, Thomson Course Technnology, Boston, 2006.
+• Einf¨uhrung in die Theoretische Informatik, by Klaus Wagner, Springer-
+Verlag, Berlin, 1994.
+Besides reading this text, we recommend that you also take a look at
+these excellent textbooks, as well as one or more of the following ones:
+• Elements of the Theory of Computation (second edition), by Harry
+Lewis and Christos Papadimitriou, Prentice-Hall, 1998.

@@ -1,0 +1,41 @@
+74
+Chapter 2.
+Finite Automata and Regular Languages
+• q: start state; no symbol has been read.
+• q01: the last symbol read was 1; in the part of the string read so far, the
+number of occurrences of 01 is one more than the number of occurrences
+of 10.
+• q10: the last symbol read was 0; in the part of the string read so far, the
+number of occurrences of 10 is one more than the number of occurrences
+of 01.
+• q0
+equal: the last symbol read was 0; in the part of the string read so far,
+the number of occurrences of 01 is equal to the number of occurrences
+of 10.
+• q1
+equal: the last symbol read was 1; in the part of the string read so far,
+the number of occurrences of 01 is equal to the number of occurrences
+of 10.
+The set of accept states is equal to {q, q0
+equal, q1
+equal}. The state diagram of
+the DFA is given below.
+q0
+equal
+q1
+equal
+q01
+q10
+q
+0
+0
+1
+1
+0
+1
+0
+0
+1
+1
+In fact, the key property mentioned above implies that the language A
+consists of the empty string ϵ and all non-empty binary strings that start

@@ -1,0 +1,31 @@
+116
+Chapter 3.
+Context-Free Languages
+3.6
+Examples of pushdown automata
+3.6.1
+Properly nested parentheses
+We will show how to construct a deterministic pushdown automaton, that
+accepts the set of all strings of properly nested parentheses. Observe that a
+string w in {(, )}∗is properly nested if and only if
+• in every preﬁx of w, the number of “(” is greater than or equal to the
+number of “)”, and
+• in the complete string w, the number of “(” is equal to the number of
+“)”.
+We will use the tape symbol a for “(”, and the tape symbol b for “)”.
+The idea is as follows. Recall that initially, the stack only contains the
+special symbol $. The pushdown automaton reads the input string from left
+to right. For every a it reads, it pushes the symbol S onto the stack, and
+for every b it reads, it pops the top symbol from the stack. In this way, the
+number of symbols S on the stack will always be equal to the number of as
+that have been read minus the number of bs that have been read; additionally,
+the bottom of the stack will contain the special symbol $. The input string
+is properly nested if and only if (i) this diﬀerence is always non-negative and
+(ii) this diﬀerence is zero once the entire input string has been read. Hence,
+the input string is accepted if and only if during this process, (i) the stack
+always contains at least the special symbol $ and (ii) at the end, the stack
+only contains the special symbol $ (which will then be popped in the ﬁnal
+step).
+Based on this discussion, we obtain the deterministic pushdown automa-
+ton M = (Σ, Γ, Q, δ, q), where Σ = {a, b}, Γ = {$, S}, Q = {q}, and the
+transition function δ is speciﬁed by the following instructions:

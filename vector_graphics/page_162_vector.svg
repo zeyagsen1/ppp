@@ -1,0 +1,37 @@
+154
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+4.5 Construct a Turing machine with two tapes that receives as input two
+non-negative integers x and y, and returns as output the integer x + y.
+Integers are represented as binary strings.
+Start of the computation: The ﬁrst tape contains the binary represen-
+tation of x and its head is on the rightmost symbol of x. The second tape
+contains the binary representation of y and its head is on the rightmost bit
+of y. At the start, the Turing machine is in the start state q0.
+End of the computation: The ﬁrst tape contains the binary representation
+of x and its head is on the rightmost symbol of x. The second tape contains
+the binary representation of the integer x + y (thus, the integer y is “gone”).
+The head of the second tape is on the rightmost bit of x + y. The Turing
+machine is in the ﬁnal state q1.
+4.6 Give an informal description (in plain English) of a Turing machine with
+one tape that receives as input two non-negative integers x and y, and returns
+as output the integer x+y. Integers are represented as binary strings. If you
+are an adventurous student, you may give a formal deﬁnition of your Turing
+machine.
+4.7 Construct a Turing machine with one tape that receives as input an
+integer x ≥1 and returns as output the integer x−1. Integers are represented
+in binary.
+Start of the computation: The tape contains the binary representation of
+the input x. The tape head is on the rightmost symbol of x and the Turing
+machine is in the start state q0.
+End of the computation: The tape contains the binary representation of
+the integer x −1. The tape head is on the rightmost bit of x −1 and the
+Turing machine is in the ﬁnal state q1.
+4.8 Give an informal description (in plain English) of a Turing machine with
+three tapes that receives as input two non-negative integers x and y, and
+returns as output the integer xy. Integers are represented as binary strings.
+Start of the computation: The ﬁrst tape contains the binary represen-
+tation of x and its head is on the rightmost symbol of x. The second tape
+contains the binary representation of y and its head is on the rightmost sym-
+bol of y. The third tape is empty and its head is at an arbitrary location.
+The Turing machine is in the start state q0.

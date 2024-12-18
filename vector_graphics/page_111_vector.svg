@@ -1,0 +1,52 @@
+3.4.
+Chomsky normal form
+103
+Consider the string 010011011, which is an element of L. When the ﬁnite
+automaton M reads this string, it visits the states
+S, S, A, B, S, A, A, B, C, C.
+In the grammar G, this corresponds to the derivation
+S
+⇒
+0S
+⇒
+01A
+⇒
+010B
+⇒
+0100S
+⇒
+01001A
+⇒
+010011A
+⇒
+0100110B
+⇒
+01001101C
+⇒
+010011011C
+⇒
+010011011.
+Hence,
+S
+∗⇒010011011,
+implying that the string 010011011 is in the language L(G) of the context-free
+grammar G.
+The string 10011 is not in the language L. When the ﬁnite automaton
+M reads this string, it visits the states
+S, A, B, S, A, A,
+i.e., after the string has been read, M is in the non-accept state A. In the
+grammar G, reading the string 10011 corresponds to the derivation
+S
+⇒
+1A
+⇒
+10B
+⇒
+100S
+⇒
+1001A
+⇒
+10011A.
+Since A is not an accept state in M, the grammar G does not contain the
+rule A →ϵ. This implies that the string 10011 cannot be derived from the
+start variable S. Thus, 10011 is not in the language L(G) of G.

@@ -1,0 +1,36 @@
+192
+Chapter 5.
+Decidable and Undecidable Languages
+UselessState = {⟨M, q⟩:
+M is a Turing machine, q is a state of M,
+for every input string w, the computation of M on
+input w never visits state q},
+and
+EQTM = {⟨M1, M2⟩:
+M1 and M2 are Turing machines
+and L(M1) = L(M2)}.
+• Use Rice’s Theorem to show that Empty is undecidable.
+• Use the ﬁrst part to show that UselessState is undecidable.
+• Use the ﬁrst part to show that EQTM is undecidable.
+5.9 Consider the language
+REGTM = {⟨M⟩: M is a Turing machine whose language L(M) is regular}.
+Use Rice’s Theorem to prove that REGTM is undecidable.
+5.10 We have seen in Section 5.1.4 that the language
+ATM = {⟨M, w⟩: M is a Turing machine that accepts w}
+is undecidable. Consider the language REGTM of Exercise 5.9. The questions
+below will lead you through a proof of the claim that the language REGTM
+is undecidable.
+Consider a ﬁxed Turing machine M and a ﬁxed binary string w. We
+construct a new Turing machine TMw that takes as input an arbitrary binary
+string x:
+Turing machine TMw(x):
+if x = 0n1n for some n ≥0
+then terminate in the accept state
+else run M on the input string w;
+if M terminates in the accept state
+then terminate in the accept state
+else if M terminates in the reject state
+then terminate in the reject state
+endif
+endif
+endif

@@ -1,0 +1,25 @@
+82
+Chapter 2.
+Finite Automata and Regular Languages
+2. {w : 110 is not a substring of w}
+3. {w : w contains at least ﬁve 1s}
+4. {w : w contains the substring 1011}
+5. {w : w contains at least two 1s and at most two 0s}
+6. {w : w contains an odd number of 1s or exactly two 0s}
+7. {w : w begins with 1 and ends with 0}
+8. {w : every odd position in w is 1}
+9. {w : w has length at least 3 and its third symbol is 0}
+10. {ϵ, 0}
+2.2 For each of the following languages, construct an NFA, with the speciﬁed
+number of states, that accepts the language. In all cases, the alphabet is
+{0, 1}.
+1. The language {w : w ends with 10} with three states.
+2. The language {w : w contains the substring 1011} with ﬁve states.
+3. The language {w : w contains an odd number of 1s or exactly two 0s}
+with six states.
+2.3 For each of the following languages, construct an NFA that accepts the
+language. In all cases, the alphabet is {0, 1}.
+1. {w : w contains the substring 11001}
+2. {w : w has length at least 2 and does not end with 10}
+3. {w : w begins with 1 or ends with 0}
+2.4 Convert the following NFA to an equivalent DFA.

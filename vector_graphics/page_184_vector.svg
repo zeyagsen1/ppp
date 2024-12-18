@@ -1,0 +1,32 @@
+176
+Chapter 5.
+Decidable and Undecidable Languages
+Algorithm Hilbert(⟨p⟩):
+n := the number of variables in p;
+d := 0;
+while d ≥0
+do for each (x1, x2, . . . , xn) ∈Hd
+do R := p(x1, x2, . . . , xn);
+if R = 0
+then terminate and accept
+endif
+endfor;
+d := d + 1
+endwhile
+Theorem 5.4.3 The language Hilbert is enumerable.
+5.4.2
+The language ATM
+We have shown in Section 5.1.4 that the language
+ATM = {⟨M, w⟩: M is a Turing machine that accepts the string w}.
+is undecidable. In this section, we will prove that this language is enumerable.
+Thus, we have to construct an algorithm P having the following property,
+for any given input string u:
+• If
+– u encodes a Turing machine M and an input string w for M (i.e.,
+u is in the correct format ⟨M, w⟩) and
+– ⟨M, w⟩∈ATM (i.e., M accepts w),
+then algorithm P terminates in its accept state.
+• In all other cases, either algorithm P terminates in its reject state, or
+algorithm P does not terminate.
+On input string u = ⟨M, w⟩, which is in the correct format, algorithm P does
+the following:

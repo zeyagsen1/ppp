@@ -1,0 +1,41 @@
+6.5.
+NP-complete languages
+215
+Theorem 6.5.3 Let A, B, and C be languages. Then
+1. A ≤P A, and
+2. if A ≤P B and B ≤P C, then A ≤P C.
+We next show that the languages in P are the easiest languages in NP:
+Theorem 6.5.4 Let A be a language in P, and let B be an arbitrary lan-
+guage such that B ̸= ∅and B ̸= {0, 1}∗. Then A ≤P B.
+Proof. We choose two strings u and v in {0, 1}∗, such that u ∈B and v ̸∈B.
+(Observe that this is possible.) Deﬁne the function f : {0, 1}∗→{0, 1}∗by
+f(w) :=
+ u
+if w ∈A,
+v
+if w ̸∈A.
+Then it is clear that for any binary string w,
+w ∈A ⇐⇒f(w) ∈B.
+Since A ∈P, the function f can be computed in polynomial time, i.e.,
+f ∈FP.
+6.5.1
+Two examples of reductions
+Sum of subsets and knapsacks
+We start with a simple reduction. Consider the two languages
+SOS := {⟨a1, . . . , am, b⟩:
+m, a1, . . . , am, b ∈N0 and there exist
+c1, . . . , cm ∈{0, 1}, such that Pm
+i=1 ciai = b}
+and
+KS
+:=
+{⟨w1, . . . , wm, k1, . . . , km, W, K⟩:
+m, w1, . . . , wm, k1, . . . , km, W, K ∈N0
+and there exist c1, . . . , cm ∈{0, 1},
+such that Pm
+i=1 ciwi ≤W and Pm
+i=1 ciki ≥K}.
+The notation KS stands for knapsack: We have m pieces of food. The
+i-th piece has weight wi and contains ki calories. We want to decide whether
+or not we can ﬁll our knapsack with a subset of the pieces of food such that
+the total weight is at most W, and the total amount of calories is at least K.

@@ -1,0 +1,30 @@
+Exercises
+81
+Lemma 2.10.8 For each b ∈{0, 1} and each 0 ≤k ≤n, the set Mbk is
+ﬁnite.
+Proof. Again, we will prove the claim by means of an example. Assume
+that b = 1 and k = 3. Any string in Fbk can be written as 1a0b1c0d, for some
+integers a, b, c, d ≥1. Consider the function ϕ : Fbk →N4 that is deﬁned by
+ϕ(1a0b1c0d) = (a, b, c, d). Then, ϕ is an injective function, and the following
+is true, for any two strings x and x′ in Fbk:
+x is a subsequence of x′ if and only if ϕ(x) is dominated by ϕ(x′).
+It follows that the elements of Mbk are in one-to-one correspondence with
+those elements of ϕ(Fbk) that are minimal in the relation “is dominated by”.
+The lemma thus follows from Dickson’s Theorem.
+Now we can complete the proof of Higman’s Theorem:
+• It follows from (2.9) and Lemmas 2.10.7 and 2.10.8, that Fbk is the
+union of ﬁnitely many regular languages. Therefore, by Theorem 2.3.1,
+Fbk is a regular language.
+• It follows from (2.8) that A∩SUBSEQ(L) is the union of ﬁnitely many
+regular languages. Therefore, again by Theorem 2.3.1, A∩SUBSEQ(L)
+is a regular language.
+• Since A ∩SUBSEQ(L) is regular and, by Lemma 2.10.6, A is regular,
+it follows from Lemma 2.10.5 that SUBSEQ(L) is the union of two reg-
+ular languages. Therefore, by Theorem 2.3.1, SUBSEQ(L) is a regular
+language.
+• Since SUBSEQ(L) is regular, it follows from Theorem 2.6.4 that the
+language SUBSEQ(L) is regular as well.
+Exercises
+2.1 For each of the following languages, construct a DFA that accepts the
+language. In all cases, the alphabet is {0, 1}.
+1. {w : the length of w is divisible by three}

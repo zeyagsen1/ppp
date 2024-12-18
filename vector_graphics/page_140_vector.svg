@@ -1,0 +1,33 @@
+132
+Chapter 3.
+Context-Free Languages
+Consider the string uv2xy2z. Since |vy| ≥1, this string consists of p
+many as, p many bs, but more than p2 many cs. Therefore, this string is not
+contained in A. But, by the pumping lemma, it is contained in A.
+Case 2: The substring v does not contain any c and the substring y does
+not contain any c.
+Consider again the string uv2xy2z. This string consists of p2 many cs.
+Since |vy| ≥1, in this string,
+• the number of as is at least p + 1 and the number of bs is at least p, or
+• the number of as is at least p and the number of bs is at least p + 1.
+Therefore, the number of as multiplied by the number of bs is at least p(p+1),
+which is larger than p2. Therefore, uv2xy2z is not contained in A. But, by
+the pumping lemma, this string is contained in A.
+Case 3: The substring v contains at least one b and the substring y contains
+at least one c.
+Since |vxy| ≤p, the substring vy does not contain any a. Thus, we can
+write vy = bjck, where j ≥1 and k ≥1. Consider the string uxz. We can
+write this string as uxz = apbp−jcp2−k. Since, by the pumping lemma, this
+string is contained in A, we have p(p−j) = p2−k, which implies that jp = k.
+Thus,
+|vxy| ≥|vy| = j + k = j + jp ≥1 + p.
+But, by the pumping lemma, we have |vxy| ≤p.
+Observe that, since |vxy| ≤p, the above three cases cover all possibilities
+for the locations of v and y in the string s. In each of the three cases, we
+have obtained a contradiction. Therefore, the language A is not context-free.
+Exercises
+3.1 Construct context-free grammars that generate the following languages.
+In all cases, Σ = {0, 1}.
+• {02n1n : n ≥0}
+• {w : w contains at least three 1s}
+• {w : the length of w is odd and its middle symbol is 0}

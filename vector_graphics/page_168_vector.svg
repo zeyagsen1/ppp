@@ -1,0 +1,36 @@
+160
+Chapter 5.
+Decidable and Undecidable Languages
+5.1.3
+The language ACFG
+We deﬁne the following language:
+ACFG = {⟨G, w⟩: G is a context-free grammar such that w ∈L(G)}.
+We claim that this language is decidable. In order to prove this claim, con-
+sider a string u that encodes a context-free grammar G = (V, Σ, S, R) and a
+string w ∈Σ∗. Deciding whether or not w ∈L(G) is equivalent to deciding
+whether or not S
+∗⇒w. A ﬁrst idea to decide this is by trying all possible
+derivations that start with the start variable S and that use rules of R. The
+problem is that, in case w ̸∈L(G), it is not clear how many such derivations
+have to be checked before we can be sure that w is not in the language of
+G: If w ∈L(G), then it may be that w can be derived from S, only by ﬁrst
+deriving a very long string, say v, and then use rules to shorten it so as to
+obtain the string w. Since there is no obvious upper bound on the length of
+the string v, we have to be careful.
+The trick is to do the following. First, convert the grammar G to an
+equivalent grammar G′ in Chomsky normal form. (The construction given
+in Section 3.4 can be described by an algorithm.) Let n be the length of the
+string w. Then, if w ∈L(G) = L(G′), any derivation of w in G′, from the
+start variable of G′, consists of exactly 2n−1 steps (where a “step” is deﬁned
+as applying one rule of G′). Hence, we can decide whether or not w ∈L(G),
+by trying all possible derivations, in G′, consisting of 2n −1 steps. If one of
+these (ﬁnite number of) derivations leads to the string w, then w ∈L(G).
+Otherwise, w ̸∈L(G). Thus, we have proved the following result:
+Theorem 5.1.4 The language ACFG is decidable.
+In fact, the arguments above imply the following result:
+Theorem 5.1.5 Every context-free language is decidable.
+Proof. Let Σ be an alphabet and let A ⊆Σ∗be an arbitrary context-free
+language. There exists a context-free grammar in Chomsky normal form,
+whose language is equal to A. Given an arbitrary string w ∈Σ∗, we have
+seen above how we can decide whether or not w can be derived from the
+start variable of this grammar.

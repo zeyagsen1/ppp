@@ -1,0 +1,40 @@
+128
+Chapter 3.
+Context-Free Languages
+Finally, we show that the ﬁrst property in the pumping lemma holds.
+That is, we prove that |vy| ≥1. Recall that
+Aj
+∗⇒vAky.
+Let the ﬁrst rule used in this derivation be Aj →BC. (Since the variables
+Aj and Ak, even though they are equal, are stored at diﬀerent nodes of the
+parse tree, and since the grammar G is in Chomsky normal form, this ﬁrst
+rule exists.) Then
+Aj ⇒BC
+∗⇒vAky.
+Observe that the string BC has length two. Moreover, by applying rules of
+a grammar in Chomsky normal form, strings cannot become shorter. (Here,
+we use the fact that the start variable does not occur on the right-hand side
+of any rule.) Therefore, we have |vAky| ≥2. But this implies that |vy| ≥1.
+This completes the proof of the pumping lemma.
+3.8.2
+Applications of the pumping lemma
+First example
+Consider the language
+A = {anbncn : n ≥0}.
+We will prove by contradiction that A is not a context-free language.
+Assume that A is a context-free language. Let p ≥1 be the pumping
+length, as given by the pumping lemma. Consider the string s = apbpcp.
+Observe that s ∈A and |s| = 3p ≥p. Hence, by the pumping lemma, s can
+be written as s = uvxyz, where |vy| ≥1, |vxy| ≤p, and uvixyiz ∈A for all
+i ≥0.
+Observe that the pumping lemma does not tell us the location of the
+substring vxy in the string s, it only gives us an upper bound on the length
+of this substring. Therefore, we have to consider three cases, depending on
+the location of vxy in s.
+Case 1: The substring vxy does not contain any c.
+Consider the string uv2xy2z = uvvxyyz.
+Since |vy| ≥1, this string
+contains more than p many as or more than p many bs. Since it contains
+exactly p many cs, it follows that this string is not in the language A. This
+is a contradiction because, by the pumping lemma, the string uv2xy2z is in
+A.

@@ -1,0 +1,34 @@
+4.4.
+The Church-Turing Thesis
+151
+4.4
+The Church-Turing Thesis
+We all have some intuitive notion of what an algorithm is. This notion will
+probably be something like “an algorithm is a procedure consisting of com-
+putation steps that can be speciﬁed in a ﬁnite amount of text”. For example,
+any “computational process” that can be speciﬁed by a Java program, should
+be considered an algorithm. Similarly, a Turing machine speciﬁes a “com-
+putational process” and, therefore, should be considered an algorithm. This
+leads to the question of whether it is possible to give a mathematical deﬁni-
+tion of an “algorithm”. We just saw that every Java program represents an
+algorithm and that every Turing machine also represents an algorithm. Are
+these two notions of an algorithm equivalent? The answer is “yes”. In fact,
+the following theorem states that many diﬀerent notions of “computational
+process” are equivalent. (We hope that you have gained suﬃcient intuition,
+so that none of the claims in this theorem comes as a surprise to you.)
+Theorem 4.4.1 The following computation models are equivalent, i.e., any
+one of them can be converted to any other one:
+1. One-tape Turing machines.
+2. k-tape Turing machines, for any k ≥1.
+3. Non-deterministic Turing machines.
+4. Java programs.
+5. C++ programs.
+6. Lisp programs.
+In other words, if we deﬁne the notion of an algorithm using any of the
+models in this theorem, then it does not matter which model we take: All
+these models give the same notion of an algorithm.
+The problem of deﬁning the notion of an algorithm goes back to David
+Hilbert. On August 8, 1900, at the Second International Congress of Math-
+ematicians in Paris, Hilbert presented a list of problems that he considered
+crucial for the further development of mathematics. Hilbert’s 10th problem
+is the following:

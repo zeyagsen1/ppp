@@ -1,0 +1,38 @@
+6.5.
+NP-complete languages
+231
+6.5.4
+Examples of NP-complete languages
+In Section 6.5.3, we have shown that Domino is NP-complete. Using this
+result, we will apply Theorem 6.5.11 to prove the NP-completeness of some
+other languages.
+Satisﬁability
+We consider Boolean formulas ϕ, in the variables x1, x2, . . . , xm, having the
+form
+ϕ = C1 ∧C2 ∧. . . ∧Ck,
+(6.9)
+where each Ci, 1 ≤i ≤k, is of the following form:
+Ci = ℓi
+1 ∨ℓi
+2 ∨. . . ∨ℓi
+ki.
+Each ℓi
+j is either a variable or the negation of a variable. Such a formula ϕ
+is said to be satisﬁable, if there exists a truth-value in {0, 1} for each of the
+variables x1, x2, . . . , xm, such that the entire formula ϕ is true. We deﬁne the
+following language:
+SAT := {⟨ϕ⟩: ϕ is of the form (6.9) and is satisﬁable}.
+We will prove that SAT is NP-complete.
+It is clear that SAT ∈NP. If we can show that
+Domino ≤P SAT,
+then it follows from Theorem 6.5.11 that SAT is NP-complete. (In Theo-
+rem 6.5.11, take B := Domino and C := SAT.)
+Hence, we need a function f ∈FP, that maps input strings for Domino
+to input strings for SAT, in such a way that for every domino game D, the
+following holds:
+domino game D is solvable ⇐⇒the formula encoded by the
+string f(⟨D⟩) is satisﬁable.
+(6.10)
+Let us consider an arbitrary domino game D. Let k be the number of
+tile types, and let the frame have t rows and t columns. We denote the tile
+types by T1, T2, . . . , Tk.

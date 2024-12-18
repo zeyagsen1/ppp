@@ -1,0 +1,39 @@
+220
+Chapter 6.
+Complexity Theory
+The vertices of G consist of k groups, where each group contains exactly
+three vertices. Since vertices within the same group are not connected by
+edges, the clique V ′ contains exactly one vertex from each group. Hence, for
+each i with 1 ≤i ≤k, there is exactly one a, such that vi
+a ∈V ′. Consider
+the corresponding term ℓi
+a. We know that this term is either a variable or
+the negation of a variable, i.e., ℓi
+a is either of the form xj or of the form ¬xj.
+If ℓi
+a = xj, then we give xj the truth-value 1. Otherwise, we have ℓi
+a = ¬xj,
+in which case we give xj the truth-value 0. Since V ′ is a clique, each variable
+gets at most one truth-value. If a variable has no truth-value yet, then we
+give it an arbitrary truth-value.
+If we substitute these truth-values into ϕ, then the entire formula has
+value 1. Hence, ϕ is satisﬁable.
+In order to get a better understanding of this proof, you should verify the
+proof for the formula ϕ in (6.7) and the graph G in Figure 6.4.
+6.5.2
+Deﬁnition of NP-completeness
+Reductions, as deﬁned in Deﬁnition 6.5.1, allow us to compare two language
+according to their diﬃculty. A language B in NP is called NP-complete,
+if B belongs to the most diﬃcult languages in NP; in other words, B is at
+least as hard as any other language in NP.
+Deﬁnition 6.5.9 Let B ⊆{0, 1}∗be a language. We say that B is NP-
+complete, if
+1. B ∈NP and
+2. A ≤P B, for every language A in NP.
+Theorem 6.5.10 Let B be an NP-complete language. Then
+B ∈P ⇐⇒P = NP.
+Proof. Intuitively, this theorem should be true: If the language B is in P,
+then B is an easy language. On the other hand, since B is NP-complete,
+it belongs to the most diﬃcult languages in NP. Hence, the most diﬃcult
+language in NP is easy. But then all languages in NP must be easy, i.e.,
+P = NP.

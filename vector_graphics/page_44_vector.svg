@@ -1,0 +1,60 @@
+36
+Chapter 2.
+Finite Automata and Regular Languages
+– If the automaton stays in state q1, then it is still in this state after
+having read the third symbol.
+– If the automaton switches to state q2, then it again has two op-
+tions:
+∗Either read the third symbol in the input string, which is 0,
+and switch to state q3,
+∗or switch to state q3, without reading the third symbol.
+If we continue in this way, then we see that, for the input string 010110,
+there are seven possible computations. All these computations are given in
+the ﬁgure below.
+q1
+q1
+0
+1
+q1
+q1
+0
+1
+1
+q1
+q2
+1
+1
+q1
+q2
+q1
+0
+0
+ε
+q3
+q3
+hang
+hang
+ε
+q3
+q4
+1
+0
+q4
+1
+q2
+0
+ε
+q3
+q3
+hang
+1
+q4
+1
+q4
+q4
+0
+Consider the lowest path in the ﬁgure above:
+• When reading the ﬁrst symbol, the automaton stays in state q1.
+• When reading the second symbol, the automaton switches to state q2.
+• The automaton does not read the third symbol (equivalently, it “reads”
+the empty string ϵ), and switches to state q3. At this moment, the

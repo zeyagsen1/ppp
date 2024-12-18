@@ -1,0 +1,21 @@
+Chapter 7
+Summary
+We have seen several diﬀerent models for “processing” languages, i.e., pro-
+cessing sets of strings over some ﬁnite alphabet. For each of these models,
+we have asked the question which types of languages can be processed, and
+which types of languages cannot be processed. In this ﬁnal chapter, we give
+a brief summary of these results.
+Regular languages:
+This class of languages was considered in Chapter 2.
+The following statements are equivalent:
+1. The language A is regular, i.e., there exists a deterministic ﬁnite au-
+tomaton that accepts A.
+2. There exists a nondeterministic ﬁnite automaton that accepts A.
+3. There exists a regular expression that describes A.
+This claim was proved by the following conversions:
+1. Every nondeterministic ﬁnite automaton can be converted to an equiv-
+alent deterministic ﬁnite automaton.
+2. Every deterministic ﬁnite automaton can be converted to an equivalent
+regular expression.
+3. Every regular expression can be converted to an equivalent nondeter-
+ministic ﬁnite automaton.

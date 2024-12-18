@@ -1,0 +1,46 @@
+40
+Chapter 2.
+Finite Automata and Regular Languages
+As for DFAs, the transition function δ can be thought of as the “program”
+of the ﬁnite automaton M = (Q, Σ, δ, q, F):
+• Let r ∈Q, and let a ∈Σϵ. Then δ(r, a) is a (possibly empty) subset of
+Q. If the NFA M is in state r, and if it reads a (where a may be the
+empty string ϵ), then M can switch from state r to any state in δ(r, a).
+If δ(r, a) = ∅, then M cannot continue and the computation hangs.
+The example given in Section 2.4.1 is an NFA, where Q = {q1, q2, q3, q4},
+Σ = {0, 1}, the start state is q1, the set of accept states is F = {q4}, and the
+transition function δ is given by the following table:
+0
+1
+ϵ
+q1
+{q1}
+{q1, q2}
+∅
+q2
+{q3}
+∅
+{q3}
+q3
+∅
+{q4}
+∅
+q4
+{q4}
+{q4}
+∅
+Deﬁnition 2.4.2 Let M = (Q, Σ, δ, q, F) be an NFA, and let w ∈Σ∗. We
+say that M accepts w, if1
+• w = ϵ and the start state q is an accept state, or
+• there exists an integer m ≥1, such that w can be written as w =
+y1y2 . . . ym, where yi ∈Σϵ for all i with 1 ≤i ≤m, and there exists a
+sequence r0, r1, . . . , rm of states in Q, such that
+– r0 = q,
+– ri+1 ∈δ(ri, yi+1), for i = 0, 1, . . . , m −1, and
+– rm ∈F.
+Otherwise, we say that M rejects the string w.
+The NFA in the example in Section 2.4.1 accepts the string 01100. This
+can be seen by taking
+• m = 6,
+1Thanks to Antoine Vigneron for pointing out an error in a previous version of this
+deﬁnition.

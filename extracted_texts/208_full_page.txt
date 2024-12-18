@@ -1,0 +1,31 @@
+200
+Chapter 6.
+Complexity Theory
+r
+b
+b
+b
+r
+r
+b
+G1
+G2
+Figure 6.1: The graph G1 is 2-colorable; r stands for red; b stands for blue.
+The graph G2 is not 2-colorable.
+Context-free languages
+We have shown in Section 5.1.3 that every context-free language is decid-
+able. The algorithm presented there, however, does not run in polynomial
+time. Using a technique called dynamic programming (which you will learn
+in COMP 3804), the following result can be shown:
+Theorem 6.2.3 Let Σ be an alphabet, and let A ⊆Σ∗be a context-free
+language. Then A ∈P.
+Observe that, obviously, every language in P is decidable.
+The 2-coloring problem
+Let G be a graph with vertex set V and edge set E.
+We say that G is
+2-colorable, if it is possible to give each vertex of V a color such that
+1. for each edge (u, v) ∈E, the vertices u and v have diﬀerent colors, and
+2. only two colors are used to color all vertices.
+See Figure 6.1 for two examples. We deﬁne the following language:
+2Color := {⟨G⟩: the graph G is 2-colorable},
+where ⟨G⟩denotes the binary string that encodes the graph G.

@@ -1,0 +1,41 @@
+2.8.
+Equivalence of regular expressions and regular languages 57
+12. (ϵ ∪R1)(ϵ ∪R1)∗= R∗
+1.
+13. R∗
+1(ϵ ∪R1) = (ϵ ∪R1)R∗
+1 = R∗
+1.
+14. R∗
+1R2 ∪R2 = R∗
+1R2.
+15. R1(R2R1)∗= (R1R2)∗R1.
+16. (R1 ∪R2)∗= (R∗
+1R2)∗R∗
+1 = (R∗
+2R1)∗R∗
+2.
+We will not present the (boring) proofs of these identities, but urge you
+to convince yourself informally that they make perfect sense. To give an
+example, we mentioned above that
+(0 ∪ϵ)1∗= 01∗∪1∗.
+We can verify this identity in the following way:
+(0 ∪ϵ)1∗
+=
+01∗∪ϵ1∗
+(by identity 7)
+=
+01∗∪1∗
+(by identity 2)
+2.8
+Equivalence of regular expressions and reg-
+ular languages
+In the beginning of Section 2.7, we mentioned the following result:
+Theorem 2.8.1 Let L be a language. Then L is regular if and only if there
+exists a regular expression that describes L.
+The proof of this theorem consists of two parts:
+• In Section 2.8.1, we will prove that every regular expression describes
+a regular language.
+• In Section 2.8.2, we will prove that every DFA M can be converted to
+a regular expression that describes the language L(M).
+These two results will prove Theorem 2.8.1.

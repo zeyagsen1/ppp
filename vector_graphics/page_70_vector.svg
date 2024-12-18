@@ -1,0 +1,33 @@
+62
+Chapter 2.
+Finite Automata and Regular Languages
+(a) v is an element of C. In this case,
+u = bv, where b ∈B and v ∈C; thus, u ∈BC.
+(b) v is an element of BL. In this case, there are strings b′ ∈B and
+w ∈L such that v = b′w. Since ϵ ̸∈B, we have b′ ̸= ϵ and,
+therefore, |w| < |v|. Since w is a string in L, which is equal to
+BL∪C, w is a string in BL∪C. Hence, there are two possibilities
+for w.
+i. w is an element of C. In this case,
+u = bb′w, where b, b′ ∈B and w ∈C; thus, u ∈BBC.
+ii. w is an element of BL. In this case, there are strings b′′ ∈B
+and x ∈L such that w = b′′x. Since ϵ ̸∈B, we have b′′ ̸= ϵ
+and, therefore, |x| < |w|. Since x is a string in L, which is
+equal to BL ∪C, x is a string in BL ∪C. Hence, there are
+two possibilities for x.
+A. x is an element of C. In this case,
+u = bb′b′′x, where b, b′, b′′ ∈B and x ∈C; thus, u ∈BBBC.
+B. x is an element of BL. Etc., etc.
+This process hopefully convinces you that any string u in L can be written
+as the concatenation of zero or more strings in B, followed by one string in
+C. In fact, L consists of exactly those strings having this property:
+Lemma 2.8.2 Let Σ be an alphabet, and let B, C, and L be languages in
+Σ∗such that ϵ ̸∈B and
+L = BL ∪C.
+Then
+L = B∗C.
+Proof. First, we show that B∗C ⊆L. Let u be an arbitrary string in B∗C.
+Then u is the concatenation of k strings of B, for some k ≥0, followed by
+one string of C. We proceed by induction on k.
+The base case is when k = 0. In this case, u is a string in C. Hence, u is
+a string in BL ∪C. Since BL ∪C = L, it follows that u is a string in L.

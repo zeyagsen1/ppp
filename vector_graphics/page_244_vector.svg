@@ -1,0 +1,35 @@
+236
+Chapter 6.
+Complexity Theory
+Exercises
+6.1 Prove that the function F : N →N, deﬁned by F(x) := 2x, is not in FP.
+6.2 Prove Theorem 6.5.3.
+6.3 Prove that the language Clique is in the class NP.
+6.4 Prove that the language 3SAT is in the class NP.
+6.5 We deﬁne the following languages:
+• Sum of subset:
+SOS := {⟨a1, a2, . . . , am, b⟩: ∃I ⊆{1, 2, . . . , m},
+X
+i∈I
+ai = b}.
+• Set partition:
+SP := {⟨a1, a2, . . . , am⟩: ∃I ⊆{1, 2, . . . , m},
+X
+i∈I
+ai =
+X
+i̸∈I
+ai}.
+• Bin packing: BP is the set of all strings ⟨s1, s2, . . . , sm, B⟩for which
+1. 0 < si < 1, for all i,
+2. B ∈N,
+3. the numbers s1, s2, . . . , sm ﬁt into B bins, where each bin has size
+one, i.e., there exists a partition of {1, 2, . . . , m} into subsets Ik,
+1 ≤k ≤B, such that P
+i∈Ik si ≤1 for all k, 1 ≤k ≤B.
+For example, ⟨1/6, 1/2, 1/5, 1/9, 3/5, 1/5, 1/2, 11/18, 3⟩∈BP, because
+the eight fractions ﬁt into three bins:
+1/6 + 1/9 + 11/18 ≤1, 1/2 + 1/2 = 1, and 1/5 + 3/5 + 1/5 = 1.
+1. Prove that SOS ≤P SP.
+2. Prove that the language SOS is NP-complete. You may use the fact
+that the language SP is NP-complete.

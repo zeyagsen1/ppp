@@ -1,0 +1,31 @@
+3.1.
+Context-free grammars
+93
+• can be derived from the start variable and
+• only contain terminals.
+For this example, the language is
+{ambn : m ≥1, n ≥1},
+because every string of the form ambn, for some m ≥1 and n ≥1, can be
+derived from the start variable, whereas no other string over the alphabet
+{a, b} can be derived from the start variable.
+Deﬁnition 3.1.1 A context-free grammar is a 4-tuple G = (V, Σ, R, S),
+where
+1. V is a ﬁnite set, whose elements are called variables,
+2. Σ is a ﬁnite set, whose elements are called terminals,
+3. V ∩Σ = ∅,
+4. S is an element of V ; it is called the start variable,
+5. R is a ﬁnite set, whose elements are called rules. Each rule has the
+form A →w, where A ∈V and w ∈(V ∪Σ)∗.
+In our example, we have V = {S, A, B}, Σ = {a, b}, and
+R = {S →AB, A →a, A →aA, B →b, B →bB}.
+Deﬁnition 3.1.2 Let G = (V, Σ, R, S) be a context-free grammar. Let A be
+an element in V and let u, v, and w be strings in (V ∪Σ)∗such that A →w
+is a rule in R. We say that the string uwv can be derived in one step from
+the string uAv, and write this as
+uAv ⇒uwv.
+In other words, by applying the rule A →w to the string uAv, we obtain
+the string uwv. In our example, we see that aaAbb ⇒aaaAbb.
+Deﬁnition 3.1.3 Let G = (V, Σ, R, S) be a context-free grammar. Let u
+and v be strings in (V ∪Σ)∗. We say that v can be derived from u, and write
+this as u
+∗⇒v, if one of the following two conditions holds:

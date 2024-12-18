@@ -1,0 +1,37 @@
+4.2.
+Examples of Turing machines
+143
+The transition function δ is speciﬁed by the following instructions:
+q0a2 →q0aaRR
+q1aa →q1aaLN
+q0b2 →q0bbRR
+q1ab →q1abLN
+q022 →q122LL
+q1ba →q1baLN
+q1bb →q1bbLN
+q12a →q22aRN
+q12b →q22bRN
+q122 →qaccept
+q2aa →q2aaRL
+q2ab →qreject
+q2ba →qreject
+q2bb →q2bbRL
+q222 →qaccept
+Again, you should run this Turing machine for some sample inputs.
+4.2.3
+Accepting anbncn using one tape
+We will construct1 a Turing machine with one tape that accepts the language
+{anbncn : n ≥0}.
+Recall that we have proved in Section 3.8.2 that this language is not context-
+free.
+Start of the computation: The tape contains the input string w and the
+tape head is on the leftmost symbol of w. The Turing machine is in the start
+state.
+Idea: In the previous examples, the tape alphabet Γ was equal to the union
+of the input alphabet Σ and {2}. In this example, we will add one symbol
+d to the tape alphabet. As we will see, this simpliﬁes the construction of
+the Turing machine. Thus, the input alphabet is Σ = {a, b, c} and the tape
+alphabet is Γ = {a, b, c, d, 2}. Recall that the input string w belongs to Σ∗.
+The general approach is to split the computation into two stages.
+1Thanks to Michael Fleming for pointing out an error in a previous version of this
+construction.

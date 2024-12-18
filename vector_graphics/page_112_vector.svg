@@ -1,0 +1,32 @@
+104
+Chapter 3.
+Context-Free Languages
+3.4
+Chomsky normal form
+The rules in a context-free grammar G = (V, Σ, R, S) are of the form
+A →w,
+where A is a variable and w is a string over the alphabet V ∪Σ. In this
+section, we show that every context-free grammar G can be converted to a
+context-free grammar G′, such that L(G) = L(G′), and the rules of G′ are of
+a restricted form, as speciﬁed in the following deﬁnition:
+Deﬁnition 3.4.1 A context-free grammar G = (V, Σ, R, S) is said to be in
+Chomsky normal form, if every rule in R has one of the following three forms:
+1. A →BC, where A, B, and C are elements of V , B ̸= S, and C ̸= S.
+2. A →a, where A is an element of V and a is an element of Σ.
+3. S →ϵ, where S is the start variable.
+You should convince yourself that, for such a grammar, R contains the
+rule S →ϵ if and only if ϵ ∈L(G).
+Theorem 3.4.2 Let Σ be an alphabet and let L ⊆Σ∗be a context-free lan-
+guage. There exists a context-free grammar in Chomsky normal form, whose
+language is L.
+Proof. Since L is a context-free language, there exists a context-free gram-
+mar G = (V, Σ, R, S), such that L(G) = L. We will transform G into a
+grammar that is in Chomsky normal form and whose language is equal to
+L(G). The transformation consists of ﬁve steps.
+Step 1: Eliminate the start variable from the right-hand side of the rules.
+We deﬁne G1 = (V1, Σ, R1, S1), where S1 is the start variable (which is a
+new variable), V1 = V ∪{S1}, and R1 = R ∪{S1 →S}. This grammar has
+the property that
+• the start variable S1 does not occur on the right-hand side of any rule
+in R1, and
+• L(G1) = L(G).

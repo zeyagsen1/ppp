@@ -1,0 +1,36 @@
+3.8.
+The pumping lemma for context-free languages
+129
+Case 2: The substring vxy does not contain any a.
+Consider the string uv2xy2z = uvvxyyz.
+Since |vy| ≥1, this string
+contains more than p many bs or more than p many cs. Since it contains
+exactly p many as, it follows that this string is not in the language A. This
+is a contradiction because, by the pumping lemma, the string uv2xy2z is in
+A.
+Case 3: The substring vxy contains at least one a and at least one c.
+Since s = apbpcp, this implies that |vxy| > p, which again contradicts the
+pumping lemma.
+Thus, in all of the three cases, we have obtained a contradiction. There-
+fore, we have shown that the language A is not context-free.
+Second example
+Consider the languages
+A = {wwR : w ∈{a, b}∗},
+where wR is the string obtained by writing w backwards, and
+B = {ww : w ∈{a, b}∗}.
+Even though these languages look similar, we will show that A is context-free
+and B is not context-free.
+Consider the following context-free grammar, in which S is the start vari-
+able:
+S →ϵ|aSa|bSb.
+It is easy to see that the language of this grammar is exactly the language A.
+Therefore, A is context-free. Alternatively, we can show that A is context-
+free, by constructing a (nondeterministic) pushdown automaton that accepts
+A. This automaton has two states q and q′, where q is the start state. If the
+automaton is in state q, then it did not yet ﬁnish reading the leftmost half of
+the input string; it pushes all symbols read onto the stack. If the automaton
+is in state q′, then it is reading the rightmost half of the input string; for each
+symbol read, it checks whether it is equal to the symbol on top of the stack
+and, if so, pops the top symbol from the stack. The pushdown automaton
+uses nondeterminism to “guess” when to switch from state q to state q′ (i.e.,
+when it has completed reading the leftmost half of the input string).

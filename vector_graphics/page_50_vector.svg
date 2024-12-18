@@ -1,0 +1,37 @@
+42
+Chapter 2.
+Finite Automata and Regular Languages
+Proof.
+Recall that the NFA N can (in general) perform more than one
+computation on a given input string. The idea of the proof is to construct a
+DFA M that runs all these diﬀerent computations simultaneously. (We have
+seen this idea already in the proof of Theorem 2.3.1.) To be more precise,
+the DFA M will have the following property:
+• the state that M is in after having read an initial part of the input
+string corresponds exactly to the set of all states that N can reach
+after having read the same part of the input string.
+We start by presenting the conversion for the case when N does not
+contain ϵ-transitions. In other words, the state diagram of N does not contain
+any edge that has ϵ as a label. (Later, we will extend the conversion to the
+general case.) Let the DFA M be deﬁned as M = (Q′, Σ, δ′, q′, F ′), where
+• the set Q′ of states is equal to Q′ = P(Q); observe that |Q′| = 2|Q|,
+• the start state q′ is equal to q′ = {q}; so M has the “same” start state
+as N,
+• the set F ′ of accept states is equal to the set of all elements R of Q′
+having the property that R contains at least one accept state of N, i.e.,
+F ′ = {R ∈Q′ : R ∩F ̸= ∅},
+• the transition function δ′ : Q′ × Σ →Q′ is deﬁned as follows: For each
+R ∈Q′ and for each a ∈Σ,
+δ′(R, a) =
+[
+r∈R
+δ(r, a).
+Let us see what the transition function δ′ of M does. First observe that,
+since N is an NFA, δ(r, a) is a subset of Q. This implies that δ′(R, a) is the
+union of subsets of Q and, therefore, also a subset of Q. Hence, δ′(R, a) is
+an element of Q′.
+The set δ(r, a) is equal to the set of all states of the NFA N that can be
+reached from state r by reading the symbol a. We take the union of these
+sets δ(r, a), where r ranges over all elements of R, to obtain the new set
+δ′(R, a). This new set is the state that the DFA M reaches from state R, by
+reading the symbol a.

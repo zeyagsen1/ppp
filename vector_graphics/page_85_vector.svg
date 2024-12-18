@@ -1,0 +1,33 @@
+2.10.
+Higman’s Theorem
+77
+it follows that
+M ≡C + B · 2|z| + A · 2|z|+|y|
+(mod N).
+This, together with (2.4), implies that
+M ≡0
+(mod N),
+i.e., N divides M. Since M > N, we conclude that M is not a prime number,
+which is a contradiction. Thus, the language L is not regular.
+2.10
+Higman’s Theorem
+Let Σ be a ﬁnite alphabet. For any two strings x and y in Σ∗, we say that x
+is a subsequence of y, if x can be obtained by deleting zero or more symbols
+from y. For example, 10110 is a subsequence of 0010010101010001. For any
+language L ⊆Σ∗, we deﬁne
+SUBSEQ(L) := {x : there exists a y ∈L such that x is a subsequence of y}.
+That is, SUBSEQ(L) is the language consisting of the subsequences of all
+strings in L. In 1952, Higman proved the following result:
+Theorem 2.10.1 (Higman) For any ﬁnite alphabet Σ and for any lan-
+guage L ⊆Σ∗, the language SUBSEQ(L) is regular.
+2.10.1
+Dickson’s Theorem
+Our proof of Higman’s Theorem will use a theorem that was proved in 1913
+by Dickson.
+Recall that N denotes the set of positive integers. Let n ∈N. For any
+two points p = (p1, p2, . . . , pn) and q = (q1, q2, . . . , qn) in Nn, we say that p is
+dominated by q, if pi ≤qi for all i with 1 ≤i ≤n.
+Theorem 2.10.2 (Dickson) Let S ⊆Nn, and let M be the set consisting of
+all elements of S that are minimal in the relation “is dominated by”. Thus,
+M = {q ∈S : there is no p in S \ {q} such that p is dominated by q}.
+Then, the set M is ﬁnite.

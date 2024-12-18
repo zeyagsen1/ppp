@@ -1,0 +1,36 @@
+3.6.
+Examples of pushdown automata
+115
+Start conﬁguration: Initially, the pushdown automaton is in the start state
+q, the tape head is on the leftmost symbol of the input string a1a2 . . . an, and
+the stack only contains the special symbol $.
+Computation and termination: Starting in the start conﬁguration, the
+pushdown automaton performs a sequence of computation steps as described
+above. It terminates at the moment when the stack becomes empty. (Hence,
+if the stack never gets empty, the pushdown automaton does not terminate.)
+Acceptance: The pushdown automaton accepts the input string a1a2 . . . an ∈
+Σ∗, if
+1. the automaton terminates on this input, and
+2. at the time of termination (i.e., at the moment when the stack gets
+empty), the tape head is on the cell immediately to the right of the cell
+containing the symbol an (this cell must contain the blank symbol 2).
+In all other cases, the pushdown automaton rejects the input string. Thus,
+the pushdown automaton rejects this string if
+1. the automaton does not terminate on this input (i.e., the computation
+“loops forever”) or
+2. at the time of termination, the tape head is not on the cell immediately
+to the right of the cell containing the symbol an.
+We denote by L(M) the language accepted by the pushdown automaton
+M. Thus,
+L(M) = {w ∈Σ∗: M accepts w}.
+The pushdown automaton described above is deterministic. For a non-
+deterministic pushdown automata, the current computation step may not
+be uniquely deﬁned, but the automaton can make a choice out of a ﬁnite
+number of possibilities. In this case, the transition function δ is a function
+δ : Q × (Σ ∪{2}) × Γ →Pf(Q × {N, R} × Γ∗),
+where Pf(K) is the set of all ﬁnite subsets of the set K.
+We say that a nondeterministic pushdown automaton M accepts an input
+string, if there exists an accepting computation, in the sense as described for
+deterministic pushdown automata. We say that M rejects an input string, if
+every computation on this string is rejecting. As before, we denote by L(M)
+the set of all strings in Σ∗that are accepted by M.

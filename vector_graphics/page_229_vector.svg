@@ -1,0 +1,34 @@
+6.5.
+NP-complete languages
+221
+We give a formal proof. Let us ﬁrst assume that B ∈P. We already
+know that P ⊆NP. Hence, it remains to show that NP ⊆P. Let A be an
+arbitrary language in NP. Since B is NP-complete, we have A ≤P B. Then,
+by Theorem 6.5.2, we have A ∈P.
+To prove the converse, assume that P = NP. Since B ∈NP, it follows
+immediately that B ∈P.
+Theorem 6.5.11 Let B and C be languages, such that C ∈NP and B ≤P
+C. If B is NP-complete, then C is also NP-complete.
+Proof. First, we give an intuitive explanation of the claim: By assumption,
+B belongs to the most diﬃcult languages in NP, and C is at least as hard as
+B. Since C ∈NP, it follows that C belongs to the most diﬃcult languages
+in NP. Hence, C is NP-complete.
+To give a formal proof, we have to show that A ≤P C, for all languages A
+in NP. Let A be an arbitrary language in NP. Since B is NP-complete, we
+have A ≤P B. Since B ≤P C, it follows from Theorem 6.5.3, that A ≤P C.
+Therefore, C is NP-complete.
+Theorem 6.5.11 can be used to prove the NP-completeness of languages:
+Let C be a language, and assume that we want to prove that C is NP-
+complete. We can do this in the following way:
+1. We ﬁrst prove that C ∈NP.
+2. Then we ﬁnd a language B that looks “similar” to C, and for which
+we already know that it is NP-complete.
+3. Finally, we prove that B ≤P C.
+4. Then, Theorem 6.5.11 tells us that C is NP-complete.
+Of course, this leads to the question “How do we know that the language
+B is NP-complete?” In order to apply Theorem 6.5.11, we need a “ﬁrst” NP-
+complete language; the NP-completeness of this language must be proven
+using Deﬁnition 6.5.9.
+Observe that it is not clear at all that there exist NP-complete languages!
+For example, consider the language 3SAT. If we want to use Deﬁnition 6.5.9
+to show that this language is NP-complete, then we have to show that

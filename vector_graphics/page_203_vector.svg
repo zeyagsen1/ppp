@@ -1,0 +1,21 @@
+Exercises
+195
+• For any input ⟨P, w⟩, H′ terminates.
+• If P terminates on input w, then H′ (when given ⟨P, w⟩as input),
+terminates in the accept state.
+• If P does not terminate on input w, then H′ (when given ⟨P, w⟩as
+input), terminates in the reject state.
+Now ﬁnish the proof by arguing that the language HW is undecidable.
+5.12 Prove that the language Halt, see Section 5.1.5, is enumerable.
+5.13 We deﬁne the following language:
+L = {u
+:
+u = ⟨0, M, w⟩for some ⟨M, w⟩∈ATM,
+or u = ⟨1, M, w⟩for some ⟨M, w⟩̸∈ATM } .
+Prove that neither L nor its complement L is enumerable.
+Hint: There are two ways to solve this exercise. In the ﬁrst solution, (i)
+you assume that L is enumerable, and then prove that ATM is decidable, and
+(ii) you assume that L is enumerable, and then prove that ATM is decidable.
+In the second solution, (i) you assume that L is enumerable, and then prove
+that ATM is enumerable, and (ii) you assume that L is enumerable, and then
+prove that ATM is enumerable.

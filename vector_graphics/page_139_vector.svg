@@ -1,0 +1,34 @@
+3.8.
+The pumping lemma for context-free languages
+131
+In both cases, we conclude that the string uxz is not an element of the
+language B. But, by the pumping lemma, this string is contained in B.
+Case 2: The substring vxy is in the leftmost half of s.
+In this case, none of the strings uxz, uv2xy2z, uv3xy3z, uv4xy4z, etc.,
+is contained in B.
+But, by the pumping lemma, each of these strings is
+contained in B.
+Case 3: The substring vxy is in the rightmost half of s.
+This case is symmetric to Case 2: None of the strings uxz, uv2xy2z,
+uv3xy3z, uv4xy4z, etc., is contained in B. But, by the pumping lemma, each
+of these strings is contained in B.
+To summarize, in each of the three cases, we have obtained a contradic-
+tion. Therefore, the language B is not context-free.
+Third example
+We have seen in Section 3.2.4 that the language
+{ambncm+n : m ≥0, n ≥0}
+is context-free. Using the pumping lemma for regular languages, it is easy to
+prove that this language is not regular. In other words, context-free gram-
+mars can verify addition, whereas ﬁnite automata are not powerful enough
+for this. We now consider the problem of verifying multiplication: Let A be
+the language deﬁned as
+A = {ambncmn : m ≥0, n ≥0}.
+We will prove by contradiction that A is not a context-free language.
+Assume that A is context-free. Let p ≥1 be the pumping length, as
+given by the pumping lemma. Consider the string s = apbpcp2. Then, s ∈A
+and |s| = 2p + p2 ≥p. Hence, by the pumping lemma, s can be written as
+s = uvxyz, where |vy| ≥1, |vxy| ≤p, and uvixyiz ∈A for all i ≥0.
+There are three possible cases, depending on the locations of v and y in
+the string s.
+Case 1: The substring v does not contain any a and does not contain any
+b, and the substring y does not contain any a and does not contain any b.

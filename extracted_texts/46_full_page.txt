@@ -1,0 +1,33 @@
+38
+Chapter 2.
+Finite Automata and Regular Languages
+This NFA does the following. If it is in the start state q1 and reads the
+symbol 1, then it either stays in state q1 or it “guesses” that this symbol
+is the third symbol from the right in the input string. In the latter case,
+the NFA switches to state q2, and then it “veriﬁes” that there are indeed
+exactly two remaining symbols in the input string. If there are more than
+two remaining symbols, then the NFA hangs (in state q4) after having read
+the next two symbols.
+Observe how this guessing mechanism is used: The automaton can only
+read the input string once, from left to right. Hence, it does not know when
+it reaches the third symbol from the right. When the NFA reads a 1, it can
+guess that this is the third symbol from the right; after having made this
+guess, it veriﬁes whether or not the guess was correct.
+In Section 2.2.3, we have seen a DFA for the same language A. Observe
+that the NFA has a much simpler structure than the DFA.
+2.4.3
+A third example
+Consider the following state diagram, which deﬁnes an NFA whose alphabet
+is {0}.
+ε
+ε
+0
+0
+0
+0
+0
+This NFA accepts the language
+A = {0k : k ≡0 mod 2 or k ≡0 mod 3},
+where 0k is the string consisting of k many 0s. (If k = 0, then 0k = ϵ.)
+Observe that A is the union of the two languages
+A1 = {0k : k ≡0 mod 2}

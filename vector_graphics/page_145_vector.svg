@@ -1,0 +1,23 @@
+Chapter 4
+Turing Machines and the
+Church-Turing Thesis
+In the previous chapters, we have seen several computational devices that
+can be used to accept or generate regular and context-free languages. Even
+though these two classes of languages are fairly large, we have seen in Sec-
+tion 3.8.2 that these devices are not powerful enough to accept simple lan-
+guages such as A = {ambncmn : m ≥0, n ≥0}. In this chapter, we introduce
+the Turing machine, which is a simple model of a real computer. Turing ma-
+chines can be used to accept all context-free languages, but also languages
+such as A. We will argue that every problem that can be solved on a real
+computer can also be solved by a Turing machine (this statement is known
+as the Church-Turing Thesis). In Chapter 5, we will consider the limitations
+of Turing machines and, hence, of real computers.
+4.1
+Deﬁnition of a Turing machine
+We start with an informal description of a Turing machine. Such a machine
+consists of the following, see also Figure 4.1.
+1. There are k tapes, for some ﬁxed k ≥1. Each tape is divided into
+cells, and is inﬁnite both to the left and to the right. Each cell stores
+a symbol belonging to a ﬁnite set Γ, which is called the tape alphabet.
+The tape alphabet contains the blank symbol 2. If a cell contains 2,
+then this means that the cell is actually empty.

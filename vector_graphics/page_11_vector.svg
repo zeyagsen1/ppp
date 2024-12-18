@@ -1,0 +1,35 @@
+1.1.
+Purpose and motivation
+3
+1.1.3
+Automata theory
+Automata Theory deals with deﬁnitions and properties of diﬀerent types of
+“computation models”. Examples of such models are:
+• Finite Automata. These are used in text processing, compilers, and
+hardware design.
+• Context-Free Grammars. These are used to deﬁne programming lan-
+guages and in Artiﬁcial Intelligence.
+• Turing Machines.
+These form a simple abstract model of a “real”
+computer, such as your PC at home.
+Central Question in Automata Theory: Do these models have
+the same power, or can one model solve more problems than the
+other?
+1.1.4
+This course
+In this course, we will study the last two areas in reverse order: We will start
+with Automata Theory, followed by Computability Theory. The ﬁrst area,
+Complexity Theory, will be covered in COMP 3804.
+Actually, before we start, we will review some mathematical proof tech-
+niques. As you may guess, this is a fairly theoretical course, with lots of
+deﬁnitions, theorems, and proofs. You may guess this course is fun stuﬀfor
+math lovers, but boring and irrelevant for others. You guessed it wrong, and
+here are the reasons:
+1. This course is about the fundamental capabilities and limitations of
+computers. These topics form the core of computer science.
+2. It is about mathematical properties of computer hardware and software.
+3. This theory is very much relevant to practice, for example, in the design
+of new programming languages, compilers, string searching, pattern
+matching, computer security, artiﬁcial intelligence, etc., etc.
+4. This course helps you to learn problem solving skills. Theory teaches
+you how to think, prove, argue, solve problems, express, and abstract.

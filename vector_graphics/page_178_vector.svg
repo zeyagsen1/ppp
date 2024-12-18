@@ -1,0 +1,30 @@
+170
+Chapter 5.
+Decidable and Undecidable Languages
+5.3
+Rice’s Theorem
+We have seen two examples of undecidable languages: ATM and Halt. In this
+section, we prove that many languages involving Turing machines (or Java
+programs) are undecidable.
+Deﬁne T to be the set of binary encodings of all Turing machines, i.e.,
+T = {⟨M⟩: M is a Turing machine with input alphabet {0,1}}.
+Theorem 5.3.1 (Rice) Let P be a subset of T such that
+1. P ̸= ∅, i.e., there exists a Turing machine M such that ⟨M⟩∈P,
+2. P is a proper subset of T , i.e., there exists a Turing machine N such
+that ⟨N⟩̸∈P, and
+3. for any two Turing machines M1 and M2 with L(M1) = L(M2),
+(a) either both ⟨M1⟩and ⟨M2⟩are in P or
+(b) none of ⟨M1⟩and ⟨M2⟩is in P.
+Then the language P is undecidable.
+You can think of P as the set of all Turing machines that satisfy a certain
+property. The ﬁrst two conditions state that at least one Turing machine
+satisﬁes this property and not all Turing machines satisfy this property. The
+third condition states that, for any Turing machine M, whether or not M
+satisﬁes this property only depends on the language L(M) of M.
+Here are some examples of languages that satisfy the conditions in Rice’s
+Theorem:
+P1 = {⟨M⟩: M is a Turing machine and ϵ ∈L(M)},
+P2 = {⟨M⟩: M is a Turing machine and L(M) = {1011, 001100}},
+P3 = {⟨M⟩: M is a Turing machine and L(M) is a regular language}.
+You are encouraged to verify that Rice’s Theorem indeed implies that each
+of P1, P2, and P3 is undecidable.

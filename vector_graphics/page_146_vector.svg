@@ -1,0 +1,28 @@
+138
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+state control
+. . . 2 2 2 a a b a b b a b a b 2 2 2
+. . .
+?
+. . . 2 2 2 b a a b 2 a b 2 2 2
+. . .
+?
+Figure 4.1: A Turing machine with k = 2 tapes.
+2. Each tape has a tape head which can move along the tape, one cell
+per move. It can also read the cell it currently scans and replace the
+symbol in this cell by another symbol.
+3. There is a state control, which can be in any one of a ﬁnite number of
+states. The ﬁnite set of states is denoted by Q. The set Q contains
+three special states: a start state, an accept state, and a reject state.
+The Turing machine performs a sequence of computation steps. In one
+such step, it does the following:
+1. Immediately before the computation step, the Turing machine is in a
+state r of Q, and each of the k tape heads is on a certain cell.
+2. Depending on the current state r and the k symbols that are read by
+the tape heads,
+(a) the Turing machine switches to a state r′ of Q (which may be
+equal to r),
+(b) each tape head writes a symbol of Γ in the cell it is currently
+scanning (this symbol may be equal to the symbol currently stored
+in the cell), and

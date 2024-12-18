@@ -1,0 +1,33 @@
+242
+Chapter 7.
+Summary
+Decidable and enumerable languages:
+These classes of languages were
+considered in Chapter 5. They are deﬁned based on “reasonable” computa-
+tional devices, such as Turing machines and Java programs. We have seen
+that
+1. every context-free language is decidable, and
+2. every decidable language is enumerable.
+Moreover,
+1. there exist languages, for example {anbncn : n ≥0}, that are decidable,
+but not context-free,
+2. there exist languages, for example the Halting Problem, that are enu-
+merable, but not decidable,
+3. there exist languages, for example the complement of the Halting Prob-
+lem, that are not enumerable.
+In fact,
+1. the class of all languages is not countable, whereas
+2. the class of all enumerable languages is countable.
+The following statements are equivalent:
+1. The language A is decidable.
+2. Both A and its complement A are enumerable.
+Complexity classes:
+These classes of languages were considered in Chap-
+ter 6.
+1. The class P consists of all languages that can be decided in polynomial
+time by a deterministic Turing machine.
+2. The class NP consists of all languages that can be decided in poly-
+nomial time by a nondeterministic Turing machine. Equivalently, a
+language A is in the class NP, if for every string w ∈A, there exists a
+“solution” s, such that (i) the length of s is polynomial in the length
+of w, and (ii) the correctness of s can be veriﬁed in polynomial time.

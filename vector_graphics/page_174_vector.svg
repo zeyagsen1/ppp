@@ -1,0 +1,35 @@
+166
+Chapter 5.
+Decidable and Undecidable Languages
+Theorem 5.2.4 The set R of real numbers is not countable.
+Proof. Deﬁne
+A = {x ∈R : 0 ≤x < 1}.
+We will prove that the set A is not countable. This will imply that the set
+R is not countable, because A ⊆R.
+The proof that A is not countable is by contradiction. So we assume that
+A is countable. Then there exists a bijection f : N →A. Thus, for each
+n ∈N, f(n) is a real number between zero and one. We can write
+A = {f(1), f(2), f(3), . . .},
+(5.2)
+where every element of A occurs exactly once in the set on the right-hand
+side.
+Consider the real number f(1). We can write this number in decimal
+notation as
+f(1) = 0.d11d12d13 . . . ,
+where each d1i is a digit in the set {0, 1, 2, . . . , 9}. In general, for every n ∈N,
+we can write the real number f(n) as
+f(n) = 0.dn1dn2dn3 . . . ,
+where, again, each dni is a digit in {0, 1, 2, . . . , 9}.
+We deﬁne the real number
+x = 0.d1d2d3 . . . ,
+where, for each integer n ≥1,
+dn =
+ 4
+if dnn ̸= 4,
+5
+if dnn = 4.
+Observe that x is a real number between zero and one, i.e., x ∈A. Therefore,
+by (5.2), there is an element n ∈N, such that f(n) = x. We compare the
+n-th digits of f(n) and x:
+• The n-th digit of f(n) is equal to dnn.
+• The n-th digit of x is equal to dn.

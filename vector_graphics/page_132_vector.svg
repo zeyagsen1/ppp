@@ -1,0 +1,33 @@
+124
+Chapter 3.
+Context-Free Languages
+Theorem 3.7.3 Let Σ be an alphabet and let A ⊆Σ∗be a context-free lan-
+guage. Then there exists a nondeterministic pushdown automaton that ac-
+cepts A and has only one state.
+Proof. Since A is context-free, there exists a context-free grammar G0 such
+that L(G0) = A. By Theorem 3.4.2, there exists a context-free grammar G
+that is in Chomsky normal form and for which L(G) = L(G0). The construc-
+tion given above converts G to a nondeterministic pushdown automaton M
+that has only one state and for which L(M) = L(G).
+3.8
+The pumping lemma for context-free lan-
+guages
+In Section 2.9, we proved the pumping lemma for regular languages and
+used it to prove that certain languages are not regular. In this section, we
+generalize the pumping lemma to context-free languages.
+The idea is to
+consider the parse tree (see Section 3.1) that describes the derivation of a
+suﬃciently long string in the context-free language L. Since the number of
+variables in the corresponding context-free grammar G is ﬁnite, there is at
+least one variable, say Aj, that occurs more than once on the longest root-
+to-leaf path in the parse tree. The subtree which is sandwiched between two
+occurrences of Aj on this path can be copied any number of times. This will
+result in a legal parse tree and, hence, in a “pumped” string that is in the
+language L.
+Theorem 3.8.1 (Pumping Lemma for Context-Free Languages) Let
+L be a context-free language. Then there exists an integer p ≥1, called the
+pumping length, such that the following holds: Every string s in L, with
+|s| ≥p, can be written as s = uvxyz, such that
+1. |vy| ≥1 (i.e., v and y are not both empty),
+2. |vxy| ≤p, and
+3. uvixyiz ∈L, for all i ≥0.

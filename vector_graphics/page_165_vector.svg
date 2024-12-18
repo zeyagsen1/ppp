@@ -1,0 +1,21 @@
+Chapter 5
+Decidable and Undecidable
+Languages
+We have seen in Chapter 4 that Turing machines form a model for “everything
+that is intuitively computable”. In this chapter, we consider the limitations
+of Turing machines. That is, we ask ourselves the question whether or not
+“everything” is computable. As we will see, the answer is “no”. In fact, we
+will even see that “most” problems are not solvable by Turing machines and,
+therefore, not solvable by computers.
+5.1
+Decidability
+In Chapter 4, we have deﬁned when a Turing machine accepts an input string
+and when it rejects an input string. Based on this, we deﬁne the following
+class of languages.
+Deﬁnition 5.1.1 Let Σ be an alphabet and let A ⊆Σ∗be a language. We
+say that A is decidable, if there exists a Turing machine M, such that for
+every string w ∈Σ∗, the following holds:
+1. If w ∈A, then the computation of the Turing machine M, on the input
+string w, terminates in the accept state.
+2. If w ̸∈A, then the computation of the Turing machine M, on the input
+string w, terminates in the reject state.

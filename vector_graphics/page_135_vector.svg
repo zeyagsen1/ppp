@@ -1,0 +1,49 @@
+3.8.
+The pumping lemma for context-free languages
+127
+hold. We start with the third property, i.e., we prove that
+uvixyiz ∈L, for all i ≥0.
+In the grammar G, we have
+S
+∗⇒uAjz.
+(3.3)
+Since Aj
+∗⇒vAky and Ak = Aj, we have
+Aj
+∗⇒vAjy.
+(3.4)
+Finally, since Ak
+∗⇒x and Ak = Aj, we have
+Aj
+∗⇒x.
+(3.5)
+From (3.3) and (3.5), it follows that
+S
+∗⇒uAjz
+∗⇒uxz,
+which implies that the string uxz is in the language L. Similarly, it follows
+from (3.3), (3.4), and (3.5) that
+S
+∗⇒uAjz
+∗⇒uvAjyz
+∗⇒uvvAjyyz
+∗⇒uvvxyyz.
+Hence, the string uv2xy2z is in the language L. In general, for each i ≥0,
+the string uvixyiz is in the language L, because
+S
+∗⇒uAjz
+∗⇒uviAjyiz
+∗⇒uvixyiz.
+This proves that the third property in the pumping lemma holds.
+Next we show that the second property holds. That is, we prove that
+|vxy| ≤p.
+Consider the subtree rooted at the node storing the variable
+Aj.
+The path from the node storing Aj to the leaf storing the terminal
+a is a longest path in this subtree. (Convince yourself that this is true.)
+Moreover, this path consists of ℓ−j edges. Since Aj
+∗⇒vxy, this subtree
+is a parse tree for the string vxy (where Aj is used as the start variable).
+Therefore, by Lemma 3.8.2, we can conclude that |vxy| ≤2ℓ−j−1. We know
+that ℓ−1 −r ≤j, which is equivalent to ℓ−j −1 ≤r. It follows that
+|vxy| ≤2ℓ−j−1 ≤2r = p.

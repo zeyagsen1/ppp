@@ -1,0 +1,58 @@
+146
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+For Stage 1, we use the following states:
+q0 :
+start state; tape head is on the leftmost symbol
+qa :
+leftmost a has been deleted; have not read b
+qb :
+leftmost b has been deleted; have not read c
+qc :
+leftmost c has been read; tape head moves to the right
+q′
+c :
+tape head is on the rightmost c
+q1 :
+rightmost c has been deleted; tape head is on the rightmost
+symbol or 2
+qaccept :
+accept state
+qreject :
+reject state
+The transitions for Stage 1 are speciﬁed by the following instructions:
+q0a →qa2R
+qaa →qaaR
+q0b →qreject
+qab →qb2R
+q0c →qreject
+qac →qreject
+q02 →qaccept
+qa2 →qreject
+qba →qreject
+qca →qreject
+qbb →qbbR
+qcb →qreject
+qbc →qccR
+qcc →qccR
+qb2 →qreject
+qc2 →q′
+c2L
+q′
+cc →q12L
+For Stage 2, we use the following states:
+q1 :
+as above; tape head is on the rightmost symbol or on 2
+qc :
+copy c one cell to the left
+qb :
+copy b one cell to the left
+q2 :
+done with shifting; head moves to the left
+Additionally, we use a state q′
+1 which has the following meaning: If the input
+string is of the form aibc, for some i ≥1, then after Stage 1, the tape contains
+the string ai−122, the tape head is on the 2 immediately to the right of the
+as, and the Turing machine is in state q1. In this case, we move one cell to
+the left; if we then read 2, then i = 1, and we accept; otherwise, we read a,
+and we reject.

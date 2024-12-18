@@ -1,0 +1,20 @@
+Let A be the language
+A = {w ∈{0, 1}∗: w has a 1 in the third position from the right},
+where {0, 1}∗is the set of all binary strings, including the empty string ϵ. We
+claim that A is a regular language. To prove this, we have to construct a ﬁnite
+automaton M such that A = L(M). At ﬁrst sight, it seems diﬃcult (or even
+impossible?) to construct such a ﬁnite automaton: How does the automaton
+“know” that it has reached the third symbol from the right? It is, however,
+possible to construct such an automaton. The main idea is to remember the
+last three symbols that have been read. Thus, the ﬁnite automaton has eight
+states qijk, where i, j, and k range over the two elements of {0, 1}. If the
+automaton is in state qijk, then the following hold:
+• If M has read at least three symbols, then the three most recently read
+symbols are ijk.
+• If M has read only two symbols, then these two symbols are jk; more-
+over, i = 0.
+• If M has read only one symbol, then this symbol is k; moreover, i =
+j = 0.
+• If M has not read any symbol, then i = j = k = 0.
+The start state is q000 and the set of accept states is {q100, q110, q101, q111}.
+The transition function of M is given by the following state diagram.

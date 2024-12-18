@@ -1,0 +1,52 @@
+68
+Chapter 2.
+Finite Automata and Regular Languages
+we obtain
+Li
+=
+ n[
+j=1
+BijLj
+!
+∪Ci
+=
+BinLn ∪
+ n−1
+[
+j=1
+BijLj
+!
+∪Ci
+=
+ n−1
+[
+j=1
+(BinB∗
+nnBnj ∪Bij) Lj
+!
+∪BinB∗
+nnCn ∪Ci.
+Thus, we have obtained n −1 equations in L1, L2, . . . , Ln−1.
+Since ϵ ̸∈
+BinB∗
+nnBnj ∪Bij, it follows from the induction hypothesis that L1 can be
+expressed as a regular expression only involving the regular expressions Bij
+and Ci.
+2.9
+The pumping lemma and nonregular lan-
+guages
+In the previous sections, we have seen that the class of regular languages is
+closed under various operations, and that these languages can be described by
+(deterministic or nondeterministic) ﬁnite automata and regular expressions.
+These properties helped in developing techniques for showing that a language
+is regular. In this section, we will present a tool that can be used to prove
+that certain languages are not regular. Observe that for a regular language,
+1. the amount of memory that is needed to determine whether or not a
+given string is in the language is ﬁnite and independent of the length
+of the string, and
+2. if the language consists of an inﬁnite number of strings, then this lan-
+guage should contain inﬁnite subsets having a fairly repetitive struc-
+ture.
+Intuitively, languages that do not follow 1. or 2. should be nonregular. For
+example, consider the language
+{0n1n : n ≥0}.

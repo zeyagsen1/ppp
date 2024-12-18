@@ -1,0 +1,42 @@
+80
+Chapter 2.
+Finite Automata and Regular Languages
+Thus, if we deﬁne
+Fbk = Abk ∩SUBSEQ(L),
+and use the fact that ϵ ∈SUBSEQ(L) (which is true because L ̸= ∅), then
+A ∩SUBSEQ(L) =
+1[
+b=0
+n[
+k=0
+Fbk.
+(2.8)
+For any b ∈{0, 1} and for any k ≥0, consider the relation “is a subse-
+quence of” on the language Fbk. We deﬁne Mbk to be the language consisting
+of all strings in Fbk that are minimal in this relation. Thus,
+Mbk = {x ∈Fbk : there is no x′ in Fbk \ {x} such that x′ is a subsequence of x}.
+It is clear that
+Fbk =
+[
+x∈Mbk
+{y ∈Fbk : x is a subsequence of y}.
+If x ∈Mbk, y ∈Abk, and x is a subsequence of y, then y must be in
+SUBSEQ(L) and, therefore, y must be in Fbk. To prove this, assume that
+y ∈SUBSEQ(L).
+Then, x ∈SUBSEQ(L), contradicting the fact that
+x ∈Mbk ⊆Fbk ⊆SUBSEQ(L). It follows that
+Fbk =
+[
+x∈Mbk
+{y ∈Abk : x is a subsequence of y}.
+(2.9)
+Lemma 2.10.7 Let b ∈{0, 1} and 0 ≤k ≤n, and let x be an element of
+Mbk. Then, the language
+{y ∈Abk : x is a subsequence of y}
+is regular.
+Proof. We will prove the claim by means of an example. Assume that b = 1,
+k = 3, and x = 11110001000. Then, the language
+{y ∈Abk : x is a subsequence of y}
+is described by the regular expression
+11111∗0000∗11∗0000∗.
+This should convince you that the claim is true in general.

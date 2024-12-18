@@ -1,0 +1,23 @@
+Chapter 6
+Complexity Theory
+In the previous chapters, we have considered the problem of what can be
+computed by Turing machines (i.e., computers) and what cannot be com-
+puted. We did not, however, take the eﬃciency of the computations into
+account. In this chapter, we introduce a classiﬁcation of decidable languages
+A, based on the running time of the “best” algorithm that decides A. That
+is, given a decidable language A, we are interested in the “fastest” algorithm
+that, for any given string w, decides whether or not w ∈A.
+6.1
+The running time of algorithms
+Let M be a Turing machine, and let w be an input string for M. We deﬁne
+the running time tM(w) of M on input w as
+tM(w) := the number of computation steps made by M on input w.
+As usual, we denote by |w|, the number of symbols in the string w. We
+denote the set of non-negative integers by N0.
+Deﬁnition 6.1.1 Let Σ be an alphabet, let T : N0 →N0 be a function, let
+A ⊆Σ∗be a decidable language, and let F : Σ∗→Σ∗be a computable
+function.
+• We say that the Turing machine M decides the language A in time T,
+if
+tM(w) ≤T(|w|)
+for all strings w in Σ∗.

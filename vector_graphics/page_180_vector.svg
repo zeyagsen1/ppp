@@ -1,0 +1,33 @@
+172
+Chapter 5.
+Decidable and Undecidable Languages
+We determine the language L(TMw) of this new Turing machine. In other
+words, we determine which strings x are accepted by TMw.
+• Assume that M terminates on input w, i.e., ⟨M, w⟩∈Halt. Then it
+follows from the pseudocode that for any string x,
+x is accepted by TMw if and only if x is accepted by M2.
+Thus, L(TMw) = L(M2).
+• Assume that M does not terminate on input w, i.e., ⟨M, w⟩̸∈Halt.
+Then it follows from the pseudocode that for any string x, TMw does
+not terminate on input x. Thus, L(TMw) = ∅. In particular, L(TMw) =
+L(M1).
+Recall that ⟨M1⟩̸∈P, whereas ⟨M2⟩∈P. Then the following follows from
+the third condition in Rice’s Theorem:
+• If ⟨M, w⟩∈Halt, then ⟨TMw⟩∈P.
+• If ⟨M, w⟩̸∈Halt, then ⟨TMw⟩̸∈P.
+Thus, we have obtained a connection between the languages P and Halt.
+This suggests that we proceed as follows.
+Assume that the language P is decidable. Let H be a Turing machine
+that decides P. Then, for any Turing machine M,
+• if ⟨M⟩∈P, then H accepts the string ⟨M⟩,
+• if ⟨M⟩̸∈P, then H rejects the string ⟨M⟩, and
+• H terminates on any input string.
+We construct a new Turing machine H′ that takes as input an arbitrary
+string ⟨M, w⟩, where M is a Turing machine and w is a binary string:
+Turing machine H′(⟨M, w⟩):
+construct the Turing machine TMw described above;
+run H on input ⟨TMw⟩;
+if H terminates in the accept state
+then terminate in the accept state
+else terminate in the reject state
+endif

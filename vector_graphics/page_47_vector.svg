@@ -1,0 +1,33 @@
+2.4.
+Nondeterministic ﬁnite automata
+39
+and
+A2 = {0k : k ≡0 mod 3}.
+The NFA basically consists of two DFAs: one of these accepts A1, whereas the
+other accepts A2. Given an input string w, the NFA has to decide whether
+or not w ∈A, which is equivalent to deciding whether or not w ∈A1 or
+w ∈A2. The NFA makes this decision in the following way: At the start, it
+“guesses” whether (i) it is going to check whether or not w ∈A1 (i.e., the
+length of w is even), or (ii) it is going to check whether or not w ∈A2 (i.e.,
+the length of w is a multiple of 3). After having made the guess, it veriﬁes
+whether or not the guess was correct. If w ∈A, then there exists a way of
+making the correct guess and verifying that w is indeed an element of A (by
+ending in an accept state). If w ̸∈A, then no matter which guess is made,
+the NFA will never end in an accept state.
+2.4.4
+Deﬁnition of nondeterministic ﬁnite automaton
+The previous examples give you an idea what nondeterministic ﬁnite au-
+tomata are and how they work. In this section, we give a formal deﬁnition
+of these automata.
+For any alphabet Σ, we deﬁne Σϵ to be the set
+Σϵ = Σ ∪{ϵ}.
+Recall the notion of a power set: For any set Q, the power set of Q, denoted
+by P(Q), is the set of all subsets of Q, i.e.,
+P(Q) = {R : R ⊆Q}.
+Deﬁnition 2.4.1 A nondeterministic ﬁnite automaton (NFA) is a 5-tuple
+M = (Q, Σ, δ, q, F), where
+1. Q is a ﬁnite set, whose elements are called states,
+2. Σ is a ﬁnite set, called the alphabet; the elements of Σ are called symbols,
+3. δ : Q × Σϵ →P(Q) is a function, called the transition function,
+4. q is an element of Q; it is called the start state,
+5. F is a subset of Q; the elements of F are called accept states.

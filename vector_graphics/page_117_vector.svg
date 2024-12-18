@@ -1,0 +1,49 @@
+3.4.
+Chomsky normal form
+109
+3.4.1
+An example
+Consider the context-free grammar G = (V, Σ, R, A), where V = {A, B},
+Σ = {0, 1}, A is the start variable, and R consists of the rules
+A
+→
+BAB|B|ϵ
+B
+→
+00|ϵ
+We apply the construction given in the proof of Theorem 3.4.2 to convert
+this grammar to a context-free grammar in Chomsky normal form whose
+language is the same as that of G. Throughout the construction, upper case
+letters will denote variables.
+Step 1: Eliminate the start variable from the right-hand side of the rules.
+We introduce a new start variable S, and add the rule S →A. This gives
+the following grammar:
+S
+→
+A
+A
+→
+BAB|B|ϵ
+B
+→
+00|ϵ
+Step 2: Eliminate all ϵ-rules.
+We take the ϵ-rule A →ϵ, and remove it. Then we consider all rules that
+contain A on the right-hand side. There are two such rules:
+• S →A; we add the rule S →ϵ;
+• A →BAB; we add the rule A →BB.
+This gives the following grammar:
+S
+→
+A|ϵ
+A
+→
+BAB|B|BB
+B
+→
+00|ϵ
+We take the ϵ-rule B →ϵ, and remove it. Then we consider all rules that
+contain B on the right-hand side. There are three such rules:
+• A →BAB; we add the rules A →AB, A →BA, and A →A;
+• A →B; we do not add the rule A →ϵ, because it has already been
+removed;

@@ -1,0 +1,31 @@
+Chapter 7.
+Summary
+241
+Nondeterministic pushdown automata are more powerful than determin-
+istic pushdown automata: There exists a nondeterministic pushdown au-
+tomaton that accepts the language
+{vbw : v ∈{a, b}∗, w ∈{a, b}∗, |v| = |w|},
+but there is no deterministic pushdown automaton that accepts this language.
+(We did not prove this in this book.)
+We have seen that the class of context-free languages is closed under
+the union, concatenation, and star operations: If A and B are context-free
+languages, then
+1. A ∪B is context-free,
+2. AB is context-free, and
+3. A∗is context-free.
+However,
+1. the intersection of two context-free languages is not necessarily context-
+free, and
+2. the complement of a context-free language is not necessarily context-
+free.
+Finally, the pumping lemma for context-free languages gives a property
+that every context-free language possesses. We have used this to prove that
+languages such as {anbncn : n ≥0} are not context-free.
+The Church-Turing Thesis:
+In Chapter 4, we considered “reasonable”
+computational devices that model real computers. Examples of such devices
+are Turing machines (with one or more tapes) and Java programs. It turns
+out that all known “reasonable” devices are equivalent, i.e., can be converted
+to each other. This led to the Church-Turing Thesis:
+• Every computational process that is intuitively considered to be an
+algorithm can be converted to a Turing machine.

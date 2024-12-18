@@ -1,0 +1,34 @@
+6.5.
+NP-complete languages
+213
+The non-deterministic algorithm that we have seen above decides the
+language SOS in linear time: Let ⟨a1, a2, . . . , am, b⟩∈SOS, and let n be the
+length of this input. Then
+n = |⟨a1⟩| + |⟨a2⟩| + . . . + |⟨am⟩| + |⟨b⟩| ≥m.
+For this input, there is a computation that returns YES and that takes
+O(m) = O(n) time.
+As in Section 6.2, we deﬁne the notion of “polynomial time” for non-
+deterministic algorithms. The following theorem relates this notion to the
+class NP that we deﬁned in Deﬁnition 6.3.6.
+Theorem 6.4.3 A language A is in the class NP if and only if there exists
+a non-deterministic Turing machine (or Java program) that decides A in
+polynomial time.
+6.5
+NP-complete languages
+Languages in the class P are considered easy, i.e., they can be decided in
+polynomial time. People believe (but cannot prove) that P is a proper sub-
+class of NP. If this is true, then there are languages in NP that are hard,
+i.e., cannot be decided in polynomial time.
+Intuition tells us that if P ̸= NP, then the hardest languages in NP are
+not contained in P. These languages are called NP-complete. In this section,
+we will give a formal deﬁnition of this concept.
+If we want to talk about the “hardest” languages in NP, then we have to
+be able to compare two languages according to their “diﬃculty”. The idea is
+as follows: We say that a language B is “at least as hard” as a language A,
+if the following holds: If B can be decided in polynomial time, then A can
+also be decided in polynomial time.
+Deﬁnition 6.5.1 Let A ⊆{0, 1}∗and B ⊆{0, 1}∗be languages. We say
+that A ≤P B, if there exists a function
+f : {0, 1}∗→{0, 1}∗
+such that
+1. f ∈FP and

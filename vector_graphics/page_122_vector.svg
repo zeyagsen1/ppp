@@ -1,0 +1,29 @@
+114
+Chapter 3.
+Context-Free Languages
+1. Σ is a ﬁnite set, called the tape alphabet; the blank symbol 2 is not
+contained in Σ,
+2. Γ is a ﬁnite set, called the stack alphabet; this alphabet contains the
+special symbol $,
+3. Q is a ﬁnite set, whose elements are called states,
+4. q is an element of Q; it is called the start state,
+5. δ is called the transition function, which is a function
+δ : Q × (Σ ∪{2}) × Γ →Q × {N, R} × Γ∗.
+The transition function δ can be thought of as being the “program” of the
+pushdown automaton. This function tells us what the automaton can do in
+one “computation step”: Let r ∈Q, a ∈Σ ∪{2}, and A ∈Γ. Furthermore,
+let r′ ∈Q, σ ∈{R, N}, and w ∈Γ∗be such that
+δ(r, a, A) = (r′, σ, w).
+(3.1)
+This transition means that if
+• the pushdown automaton is in state r,
+• the tape head reads the symbol a, and
+• the top symbol on the stack is A,
+then
+• the pushdown automaton switches to state r′,
+• the tape head moves according to σ: if σ = R, then it moves one cell
+to the right; if σ = N, then it does not move, and
+• the top symbol A on the stack is replaced by the string w.
+We will write the computation step (3.1) in the form of the instruction
+raA →r′σw.
+We now specify the computation of the pushdown automaton M = (Σ, Γ, Q, δ, q).

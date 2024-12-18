@@ -1,0 +1,35 @@
+2.9.
+The pumping lemma and nonregular languages
+73
+Sixth example
+Consider the language
+A = {1n : n is a prime number}.
+We prove by contradiction that A is not a regular language.
+Assume that A is a regular language. Let p ≥1 be the pumping length,
+as given by the pumping lemma. Let n ≥p be a prime number, and consider
+the string s = 1n. Then s ∈A and |s| = n ≥p. By the pumping lemma, s
+can be written as s = xyz, where y ̸= ϵ, |xy| ≤p, and xyiz ∈A for all i ≥0.
+Let k be the integer such that y = 1k. Since y ̸= ϵ, we have k ≥1. For
+each i ≥0, n + (i −1)k is a prime number, because xyiz = 1n+(i−1)k ∈A.
+For i = n + 1, however, we have
+n + (i −1)k = n + nk = n(1 + k),
+which is not a prime number, because n ≥2 and 1 + k ≥2.
+This is a
+contradiction and, therefore, A is not a regular language.
+Seventh example
+Consider the language
+A = {w ∈{0, 1}∗:
+the number of occurrences of 01 in w is equal to
+the number of occurrences of 10 in w }.
+Since this language has the same ﬂavor as the one in the second example,
+we may suspect that A is not a regular language. This is, however, not true:
+As we will show, A is a regular language.
+The key property is the following one: Let w be an arbitrary string in
+{0, 1}∗. Then
+the absolute value of the number of occurrences of 01 in w minus
+the number of occurrences of 10 in w is at most one.
+This property holds, because between any two consecutive occurrences of
+01, there must be exactly one occurrence of 10. Similarly, between any two
+consecutive occurrences of 10, there must be exactly one occurrence of 01.
+We will construct a DFA that accepts A. This DFA uses the following
+ﬁve states:

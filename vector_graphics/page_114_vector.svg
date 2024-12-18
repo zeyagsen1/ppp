@@ -1,0 +1,44 @@
+106
+Chapter 3.
+Context-Free Languages
+We consider all unit-rules, one after another. Let A →B be one such
+rule, where A and B are elements of V2. We know that B ̸= S2. We modify
+G2 as follows:
+1. Remove the rule A →B from the current set R2.
+2. For each rule in the current set R2 that is of the form B →u, where
+u ∈(V2 ∪Σ)∗, add the rule A →u to the current set R2, unless this is
+a unit-rule that has already been eliminated.
+Observe that in this way, we replace the two-step derivation A ⇒B ⇒
+u by the one-step derivation A ⇒u.
+We repeat this process until all unit-rules have been eliminated.
+Let
+R3 be the set of rules, after all unit-rules have been eliminated. We deﬁne
+G3 = (V3, Σ, R3, S3), where V3 = V2 and S3 = S2. This grammar has the
+property that
+• the start variable S3 does not occur on the right-hand side of any rule
+in R3,
+• R3 does not contain any ϵ-rule (it may contain the rule S3 →ϵ),
+• R3 does not contain any unit-rule, and
+• L(G3) = L(G2) = L(G1) = L(G).
+Step 4: Eliminate all rules having more than two symbols on the right-hand
+side.
+For each rule in the current set R3 that is of the form A →u1u2 . . . uk,
+where k ≥3 and each ui is an element of V3 ∪Σ, we modify G3 as follows:
+1. Remove the rule A →u1u2 . . . uk from the current set R3.
+2. Add the following rules to the current set R3:
+A
+→
+u1A1
+A1
+→
+u2A2
+A2
+→
+u3A3
+...
+Ak−3
+→
+uk−2Ak−2
+Ak−2
+→
+uk−1uk

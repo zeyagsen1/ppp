@@ -1,0 +1,23 @@
+Chapter 2
+Finite Automata and Regular
+Languages
+In this chapter, we introduce and analyze the class of languages that are
+known as regular languages. Informally, these languages can be “processed”
+by computers having a very small amount of memory.
+2.1
+An example: Controling a toll gate
+Before we give a formal deﬁnition of a ﬁnite automaton, we consider an
+example in which such an automaton shows up in a natural way. We consider
+the problem of designing a “computer” that controls a toll gate.
+When a car arrives at the toll gate, the gate is closed. The gate opens as
+soon as the driver has payed 25 cents. We assume that we have only three
+coin denominations: 5, 10, and 25 cents. We also assume that no excess
+change is returned.
+After having arrived at the toll gate, the driver inserts a sequence of coins
+into the machine. At any moment, the machine has to decide whether or not
+to open the gate, i.e., whether or not the driver has paid 25 cents (or more).
+In order to decide this, the machine is in one of the following six states, at
+any moment during the process:
+• The machine is in state q0, if it has not collected any money yet.
+• The machine is in state q1, if it has collected exactly 5 cents.
+• The machine is in state q2, if it has collected exactly 10 cents.

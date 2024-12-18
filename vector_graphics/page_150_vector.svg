@@ -1,0 +1,61 @@
+142
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+The transition function δ is speciﬁed by the following instructions:
+q0a →qa2R
+qaa →qaaR
+qba →qbaR
+q0b →qb2R
+qab →qabR
+qbb →qbbR
+q02 →qaccept
+qa2 →q′
+a2L
+qb2 →q′
+b2L
+q′
+aa →qL2L
+q′
+ba →qreject
+qLa →qLaL
+q′
+ab →qreject
+q′
+bb →qL2L
+qLb →qLbL
+q′
+a2 →qaccept
+q′
+b2 →qaccept
+qL2 →q02R
+You should go through the computation of this Turing machine for some
+sample inputs, for example abba, b, abb and the empty string (which is a
+palindrome).
+4.2.2
+Accepting palindromes using two tapes
+We again consider the palindrome problem, but now we use a Turing machine
+with two tapes.
+Start of the computation: The ﬁrst tape contains the input string w and
+the head of the ﬁrst tape is on the leftmost symbol of w. The second tape is
+empty and its tape head is at an arbitrary position. The Turing machine is
+in the start state q0.
+Idea: First, the input string w is copied to the second tape. Then the head
+of the ﬁrst tape moves back to the leftmost symbol of w, while the head of
+the second tape stays at the rightmost symbol of w. Finally, the actual test
+starts: The head of the ﬁrst tape moves to the right and, at the same time,
+the head of the second tape moves to the left. While moving, the Turing
+machine tests whether the two tape heads read the same symbol in each
+step.
+The input alphabet is Σ = {a, b} and the tape alphabet is Γ = {a, b, 2}.
+The set Q of states consists of the following ﬁve states:
+q0 :
+start state; copy w to the second tape
+q1 :
+w has been copied; head of ﬁrst tape moves to the left
+q2 :
+head of ﬁrst tape moves to the right; head of second tape moves
+to the left; until now, all tests were positive
+qaccept :
+accept state
+qreject :
+reject state

@@ -1,0 +1,15 @@
+Chapter 7.
+Summary
+243
+The following properties hold:
+1. Every context-free language is in P. (We did not prove this).
+2. Every language in P is also in NP.
+3. It is not known if there exist languages that are in NP, but not in P.
+4. Every language in NP is decidable.
+We have introduced reductions to deﬁne the notion of a language B to be
+“at least as hard” as a language A. A language B is called NP-complete, if
+1. B belongs to the class NP, and
+2. B is at least as hard as every language in the class NP.
+We have seen that NP-complete exist.
+The ﬁgure below summarizes the relationships among the various classes
+of languages.

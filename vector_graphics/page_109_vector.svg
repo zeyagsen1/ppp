@@ -1,0 +1,30 @@
+3.3.
+Regular languages are context-free
+101
+We guarantee this property by adding to G the rule A →ϵ for every accept
+state A of M.
+We are now ready to give the formal deﬁnition of the context-free gram-
+mar G = (V, Σ, R, S):
+• V = Q, i.e., the variables of G are the states of M.
+• S = q, i.e., the start variable of G is the start state of M.
+• R consists of the rules
+A →aB, where A ∈Q, a ∈Σ, B ∈Q, and δ(A, a) = B,
+and
+A →ϵ, where A ∈F.
+In words,
+• every transition δ(A, a) = B of M (i.e., when M is in the state A and
+reads the symbol a, it switches to the state B) corresponds to a rule
+A →aB in the grammar G,
+• every accept state A of M corresponds to a rule A →ϵ in the grammar
+G.
+We claim that L(G) = L. In order to prove this, we have to show that
+L(G) ⊆L and L ⊆L(G).
+We prove that L ⊆L(G). Let w = w1w2 . . . wn be an arbitrary string
+in L. When the ﬁnite automaton M reads the string w, it visits the states
+r0, r1, . . . , rn, where
+• r0 = q, and
+• ri+1 = δ(ri, wi+1) for i = 0, 1, . . . , n −1.
+Since w ∈L = L(M), we know that rn ∈F.
+It follows from the way we deﬁned the grammar G that
+• for each i = 0, 1, . . . , n −1, ri →wi+1ri+1 is a rule in R, and
+• rn →ϵ is a rule in R.

@@ -1,0 +1,36 @@
+2.9.
+The pumping lemma and nonregular languages
+69
+This language should be nonregular, because it seems unlikely that a DFA can
+remember how many 0s it has seen when it has reached the border between
+the 0s and the 1s. Similarly the language
+{0n : n is a prime number}
+should be nonregular, because the prime numbers do not seem to have any
+repetitive structure that can be used by a DFA. To be more rigorous about
+this, we will establish a property that all regular languages must possess.
+This property is called the pumping lemma. If a language does not have this
+property, then it must be nonregular.
+The pumping lemma states that any suﬃciently long string in a regular
+language can be pumped, i.e., there is a section in that string that can be
+repeated any number of times, so that the resulting strings are all in the
+language.
+Theorem 2.9.1 (Pumping Lemma for Regular Languages) Let A be
+a regular language. Then there exists an integer p ≥1, called the pumping
+length, such that the following holds: Every string s in A, with |s| ≥p, can
+be written as s = xyz, such that
+1. y ̸= ϵ (i.e., |y| ≥1),
+2. |xy| ≤p, and
+3. for all i ≥0, xyiz ∈A.
+In words, the pumping lemma states that by replacing the portion y in s
+by zero or more copies of it, the resulting string is still in the language A.
+Proof. Let Σ be the alphabet of A. Since A is a regular language, there
+exists a DFA M = (Q, Σ, δ, q, F) that accepts A. We deﬁne p to be the
+number of states in Q.
+Let s = s1s2 . . . sn be an arbitrary string in A such that n ≥p. Deﬁne
+r1 = q, r2 = δ(r1, s1), r3 = δ(r2, s2), . . ., rn+1 = δ(rn, sn). Thus, when the
+DFA M reads the string s from left to right, it visits the states r1, r2, . . . , rn+1.
+Since s is a string in A, we know that rn+1 belongs to F.
+Consider the ﬁrst p + 1 states r1, r2, . . . , rp+1 in this sequence. Since the
+number of states of M is equal to p, the pigeonhole principle implies that
+there must be a state that occurs twice in this sequence. That is, there are
+indices j and ℓsuch that 1 ≤j < ℓ≤p + 1 and rj = rℓ.

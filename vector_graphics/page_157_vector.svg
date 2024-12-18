@@ -1,0 +1,42 @@
+4.3.
+Multi-tape Turing machines
+149
+Proof.2
+We will sketch the proof for the case when k = 2.
+Let M =
+(Σ, Γ, Q, δ, q, qaccept, qreject) be a two-tape Turing machine.
+Our goal is to
+convert M to an equivalent one-tape Turing machine N. That is, N should
+have the property that for all strings w ∈Σ∗,
+• M accepts w if and only if N accepts w,
+• M rejects w if and only if N rejects w,
+• M does not terminate on input w if and only if N does not terminate
+on input w.
+The tape alphabet of the one-tape Turing machine N is
+Γ ∪{ ˙x : x ∈Γ} ∪{#}.
+In words, we take the tape alphabet Γ of M, and add, for each x ∈Γ, the
+symbol ˙x. Moreover, we add a special symbol #.
+The Turing machine N will be deﬁned in such a way that any conﬁgura-
+tion of the two-tape Turing machine M, for example
+. . . 2 1 0 0 1 2 . . .
+6
+. . . 2 a a b a 2 . . .
+6
+corresponds to the following conﬁguration of the one-tape Turing machine
+N:
+. . .
+2
+#
+1
+0
+˙0
+1
+#
+a
+˙a
+b
+a
+#
+2 . . .
+6
+2Thanks to Sergio Cabello for pointing out an error in a previous version of this proof.

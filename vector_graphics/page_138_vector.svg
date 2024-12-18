@@ -1,0 +1,39 @@
+130
+Chapter 3.
+Context-Free Languages
+At this point, you should convince yourself that the two approaches above,
+which showed that A is context-free, do not work for B. The reason why
+they do not work is that the language B is not context-free, as we will prove
+now.
+Assume that B is a context-free language. Let p ≥1 be the pumping
+length, as given by the pumping lemma. At this point, we must choose a
+string s in B, whose length is at least p, and that does not satisfy the three
+properties stated in the pumping lemma. Let us try the string s = apbapb.
+Then s ∈B and |s| = 2p + 2 ≥p. Hence, by the pumping lemma, s can be
+written as s = uvxyz, where (i) |vy| ≥1, (ii) |vxy| ≤p, and (iii) uvixyiz ∈B
+for all i ≥0. It may happen that p ≥3, u = ap−1, v = a, x = b, y = a,
+and z = ap−1b. If this is the case, then properties (i), (ii), and (iii) hold,
+and, thus, we do not get a contradiction. In other words, we have chosen
+the “wrong” string s. This string is “wrong”, because there is only one b
+between the as. Because of this, v can be in the leftmost block of as, and
+y can be in the rightmost block of as. Observe that if there were at least p
+many bs between the as, then this would not happen, because |vxy| ≤p.
+Based on the discussion above, we choose s = apbpapbp. Observe that
+s ∈B and |s| = 4p ≥p. Hence, by the pumping lemma, s can be written as
+s = uvxyz, where |vy| ≥1, |vxy| ≤p, and uvixyiz ∈B for all i ≥0. Based
+on the location of vxy in the string s, we distinguish three cases:
+Case 1: The substring vxy overlaps both the leftmost half and the rightmost
+half of s.
+Since |vxy| ≤p, the substring vxy is contained in the “middle” part of s,
+i.e., vxy is contained in the block bpap. Consider the string uv0xy0z = uxz.
+Since |vy| ≥1, we know that at least one of v and y is non-empty.
+• If v ̸= ϵ, then v contains at least one b from the leftmost block of bs in
+s, whereas y does not contain any b from the rightmost block of bs in s.
+Therefore, in the string uxz, the leftmost block of bs contains fewer bs
+than the rightmost block of bs. Hence, the string uxz is not contained
+in B.
+• If y ̸= ϵ, then y contains at least one a from the rightmost block of
+as in s, whereas v does not contain any a from the leftmost block of
+as in s. Therefore, in the string uxz, the leftmost block of as contains
+more as than the rightmost block of as. Hence, the string uxz is not
+contained in B.

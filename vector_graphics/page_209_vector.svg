@@ -1,0 +1,40 @@
+6.2.
+The complexity class P
+201
+We claim that 2Color ∈P. In order to show this, we have to construct an
+algorithm that decides in polynomial time, whether or not any given graph
+is 2-colorable.
+Let G be an arbitrary graph with vertex set V = {1, 2, . . . , m}. The edge
+set of G is given by an adjacency matrix. This matrix, which we denote by
+E, is a two-dimensional array with m rows and m columns. For all i and j
+with 1 ≤i ≤m and 1 ≤j ≤m, we have
+E(i, j) =
+ 1
+if (i, j) is an edge of G,
+0
+otherwise.
+The length of the input G, i.e., the number of bits needed to specify G, is
+equal to m2 =: n. We will present an algorithm that decides, in O(n) time,
+whether or not the graph G is 2-colorable.
+The algorithm uses the colors red and blue. It gives the ﬁrst vertex the
+color red. Then, the algorithm considers all vertices that are connected by
+an edge to the ﬁrst vertex, and colors them blue. Now the algorithm is done
+with the ﬁrst vertex; it marks this ﬁrst vertex.
+Next, the algorithm chooses a vertex i that already has a color, but that
+has not been marked. Then it considers all vertices j that are connected by
+an edge to i. If j has the same color as i, then the input graph G is not
+2-colorable. Otherwise, if vertex j does not have a color yet, the algorithm
+gives j the color that is diﬀerent from i’s color. After having done this for
+all neighbors j of i, the algorithm is done with vertex i, so it marks i.
+It may happen that there is no vertex i that already has a color but that
+has not been marked. (In other words, each vertex i that is not marked does
+not have a color yet.) In this case, the algorithm chooses an arbitrary vertex
+i having this property, and colors it red. (This vertex i is the ﬁrst vertex in
+its connected component that gets a color.)
+This procedure is repeated until all vertices of G have been marked.
+We now give a formal description of this algorithm. Vertex i has been
+marked, if
+1. i has a color,
+2. all vertices that are connected by an edge to i have a color, and
+3. the algorithm has veriﬁed that each vertex that is connected by an edge
+to i has a color diﬀerent from i’s color.

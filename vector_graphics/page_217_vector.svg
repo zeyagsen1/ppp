@@ -1,0 +1,35 @@
+6.3.
+The complexity class NP
+209
+Algorithm NonPrime
+(∗decides whether or not ⟨x⟩∈NPrim ∗)
+if x = 0 or x = 1 or x = 2
+then return NO and terminate
+else a := 2;
+while a < x
+do if x mod a = 0
+then return YES and terminate
+else a := a + 1
+endif
+endwhile;
+return NO
+endif
+Figure 6.3: An algorithm that decides whether or not a number x is contained
+in the language NPrim.
+For example, let A be the language
+NPrim = {⟨x⟩: x ≥2 and x is not a prime number},
+and let x ∈N. The algorithm in Figure 6.3 decides whether or not ⟨x⟩∈
+NPrim.
+It is clear that this algorithm is correct. Let n be the length of the binary
+representation of x, i.e., n = ⌊log x⌋+ 1. If x > 2 and x is a prime number,
+then the while-loop makes x−2 iterations. Therefore, since n−1 = ⌊log x⌋≤
+log x, the running time of this algorithm is at least
+x −2 ≥2n−1 −2,
+i.e., it is at least exponential in the length of the input.
+We now prove that every language in NP can be decided in exponential
+time. Let A be an arbitrary language in NP. Let p be the polynomial, and
+let B ∈P be the language such that for all strings w,
+w ∈A ⇐⇒∃s : |s| ≤p(|w|) and ⟨w, s⟩∈B.
+(6.4)
+The following algorithm decides, for any given string w, whether or not
+w ∈A. It does so by looking at all possible strings s for which |s| ≤p(|w|):

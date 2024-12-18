@@ -1,0 +1,37 @@
+96
+Chapter 3.
+Context-Free Languages
+In order to prove this claim, we have to construct a context-free grammar
+G1 such that L(G1) = L1.
+Observe that any string in L1 is either
+• empty or
+• consists of a 0, followed by an arbitrary string in L1, followed by a 1.
+This leads to the context-free grammar G1 = (V1, Σ, R1, S1), where V1 =
+{S1}, Σ = {0, 1}, and R1 consists of the rules
+S1 →ϵ|0S11.
+Hence, R1 = {S1 →ϵ, S1 →0S11}.
+To derive the string 0n1n from the start variable S1, we do the following:
+• Starting with S1, apply the rule S1 →0S11 exactly n times. This gives
+the string 0nS11n.
+• Apply the rule S1 →ϵ. This gives the string 0n1n.
+It is not diﬃcult to see that these are the only strings that can be derived
+from the start variable S1. Thus, L(G1) = L1.
+In a symmetric way, we see that the context-free grammar G2 = (V2, Σ, R2, S2),
+where V2 = {S2}, Σ = {0, 1}, and R2 consists of the rules
+S2 →ϵ|1S20,
+has the property that L(G2) = L2, where L2 = {1n0n : n ≥0}. Thus, L2 is
+a context-free language.
+Deﬁne L = L1 ∪L2, i.e.,
+L = {0n1n : n ≥0} ∪{1n0n : n ≥0}.
+The context-free grammar G = (V, Σ, R, S), where V = {S, S1, S2}, Σ =
+{0, 1}, and R consists of the rules
+S
+→
+S1|S2
+S1
+→
+ϵ|0S11
+S2
+→
+ϵ|1S20,
+has the property that L(G) = L. Hence, L is a context-free language.

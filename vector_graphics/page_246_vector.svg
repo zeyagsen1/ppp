@@ -1,0 +1,20 @@
+238
+Chapter 6.
+Complexity Theory
+1. Prove that the language DNFSAT is in P.
+2. What is wrong with the following argument: Since we can rewrite
+any Boolean formula in DNF-form, we have CNFSAT ≤P DNFSAT.
+Hence, since CNFSAT is NP-complete and since DNFSAT ∈P, we
+have P = NP.
+3. Prove directly that for every language A in P, A ≤P CNFSAT. “Di-
+rectly” means that you should not use the fact that CNFSAT is NP-
+complete.
+6.9 1 Prove that the polynomial upper bound on the length of the string y
+in the deﬁnition of NP is necessary, in the sense that if it is left out, then
+any enumerable language would satisfy the condition.
+More precisely, we say that the language A belongs to the class E, if there
+exists a language B ∈P, such that for every string w,
+w ∈A ⇐⇒∃y : ⟨w, y⟩∈B.
+Prove that E is equal to the class of all enumerable languages.
+1Thanks to Antoine Vigneron for poining out an error in a previous version of this
+exercise.

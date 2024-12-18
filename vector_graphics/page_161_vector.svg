@@ -1,0 +1,36 @@
+Exercises
+153
+4.2 Construct a Turing machine with one tape, that accepts the language
+{w : w contains twice as many 0s as 1s}.
+Assume that, at the start of the computation, the tape head is on the leftmost
+symbol of the input string.
+4.3 Let A be the language
+A
+=
+{ w ∈{a, b, c}∗
+:
+w contains more bs than as and
+w contains more cs than as }.
+Give an informal description (in plain English) of a Turing machine with one
+tape, that accepts the language A.
+4.4 Construct a Turing machine with one tape that receives as input a non-
+negative integer x and returns as output the integer x + 1.
+Integers are
+represented as binary strings.
+Start of the computation: The tape contains the binary representation
+of the input x. The tape head is on the leftmost symbol and the Turing
+machine is in the start state q0. For example, if x = 431, the tape looks as
+follows:
+. . . 2 2 2 1 1 0 1 0 1 1 1 1 2 2 2
+. . .
+6
+End of the computation: The tape contains the binary representation of
+the integer x + 1. The tape head is on the leftmost symbol and the Turing
+machine is in the ﬁnal state q1. For our example, the tape looks as follows:
+. . . 2 2 2 1 1 0 1 1 0 0 0 0 2 2 2
+. . .
+6
+The Turing machine in this exercise does not have an accept state or a
+reject state; instead, it has a ﬁnal state q1. As soon as state q1 is entered,
+the Turing machine terminates. At termination, the contents of the tape is
+the output of the Turing machine.

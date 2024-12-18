@@ -1,0 +1,35 @@
+5.1.
+Decidability
+163
+5.1.5
+The Halting Problem
+We deﬁne the following language:
+Halt = {⟨P, w⟩:
+P is a Java program that terminates on
+the input string w}.
+Theorem 5.1.7 The language Halt is undecidable.
+Proof. The proof is by contradiction. Thus, we assume that the language
+Halt is decidable. Then there exists a Java program H that takes as input a
+string of the form ⟨P, w⟩, where P is an arbitrary Java program and w is an
+arbitrary input for P. The program H has the following property:
+• If ⟨P, w⟩∈Halt (i.e., program P terminates on input w), then H
+outputs true.
+• If ⟨P, w⟩̸∈Halt (i.e., program P does not terminate on input w), then
+H outputs false.
+• In particular, H terminates on any input ⟨P, w⟩.
+We will write the output of H as H(P, w). Moreover, we will denote by P(w)
+the computation obtained by running the program P on the input w. Hence,
+H(P, w) =
+ true
+if P(w) terminates,
+false
+if P(w) does not terminate.
+Consider the following algorithm Q, which takes as input the encoding
+⟨P⟩of an arbitrary Java program P:
+Algorithm Q(⟨P⟩):
+while H(P, ⟨P⟩) = true
+do have a beer
+endwhile
+Since H is a Java program, this new algorithm Q can also be written as
+a Java program. Observe that
+Q(⟨P⟩) terminates if and only if H(P, ⟨P⟩) = false.

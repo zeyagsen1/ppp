@@ -1,0 +1,45 @@
+6.3.
+The complexity class NP
+203
+Algorithm 2Color
+for i := 1 to m do f(i) := 0; a(i) := 0 endfor;
+f(1) := red; M := 0;
+while M ̸= m
+do (∗Find the minimum index i for which vertex i has not
+been marked, but has a color already ∗)
+bool := false; i := 1;
+while bool = false and i ≤m
+do if a(i) = 0 and f(i) ̸= 0 then bool := true else i := i + 1 endif;
+endwhile;
+(∗If bool = true, then i is the smallest index such that
+a(i) = 0 and f(i) ̸= 0.
+If bool = false, then for all i, the following holds: if a(i) = 0, then
+f(i) = 0; because M < m, there is at least one such i. ∗)
+if bool = true
+then for j := 1 to m
+do if E(i, j) = 1
+then if f(i) = f(j)
+then return NO and terminate
+else if f(j) = 0
+then if f(i) = red
+then f(j) := blue
+else f(j) := red
+endif
+endif
+endif
+endif
+endfor;
+a(i) := 1; M := M + 1;
+else i := 1;
+while a(i) ̸= 0 do i := i + 1 endwhile;
+(∗an unvisited connected component starts at vertex i ∗)
+f(i) := red
+endif
+endwhile;
+return YES
+Figure 6.2:
+An algorithm that decides whether or not a graph G is 2-
+colorable.
+We have seen that for k = 2, this problem is in the class P. For k ≥3, it
+is not known whether there exists an algorithm that decides, in polynomial
+time, whether or not any given graph is k-colorable. In other words, for

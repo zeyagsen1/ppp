@@ -1,0 +1,28 @@
+134
+Chapter 3.
+Context-Free Languages
+• Prove that the star A∗of A is also context-free.
+3.5 Deﬁne the following two languages A and B:
+A = {ambncn : m ≥0, n ≥0}
+and
+B = {ambmcn : m ≥0, n ≥0}.
+• Prove that both A and B are context-free, by constructing two context-
+free grammars, one that generates A and one that generates B.
+• We have seen in Section 3.8.2 that the language
+{anbncn : n ≥0}
+is not context-free. Explain why this implies that the intersection of
+two context-free languages is not necessarily context-free.
+• Use De Morgan’s Law to conclude that the complement of a context-
+free language is not necessarily context-free.
+3.6 Let A be a context-free language and let B be a regular language.
+• Prove that the intersection A ∩B of A and B is context-free.
+• Prove that the set-diﬀerence
+A \ B = {w : w ∈A, w ̸∈B}
+of A and B is context-free.
+• Is the set-diﬀerence of two context-free languages necessarily context-
+free?
+3.7 Let L be the language consisting of all non-empty strings w over the
+alphabet {a, b} such that
+• the number of as in w is equal to the number of bs in w,
+• w does not contain the substring abba, and
+• w does not contain the substring bbaa.

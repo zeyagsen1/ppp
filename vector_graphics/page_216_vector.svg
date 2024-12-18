@@ -1,0 +1,32 @@
+208
+Chapter 6.
+Complexity Theory
+6.3.1
+P is contained in NP
+Intuitively, it is clear that P ⊆NP, because a language is
+• in P, if for every string w, it is possible to compute the “solution” s in
+polynomial time,
+• in NP, if for every string w and for any given “solution” s, it is possible
+to verify in polynomial time whether or not s is a correct solution for
+w (hence, we do not need to compute the solution s ourselves, we only
+have to verify it).
+We give a formal proof of this:
+Theorem 6.3.7 P ⊆NP.
+Proof. Let A ∈P. We will prove that A ∈NP. Deﬁne the polynomial p
+by p(n) := 0 for all n ∈N0, and deﬁne
+B := {⟨w, ϵ⟩: w ∈A}.
+Since A ∈P, the language B is also contained in P. It is easy to see that
+w ∈A ⇐⇒∃s : |s| ≤p(|w|) = 0 and ⟨w, s⟩∈B.
+This completes the proof.
+6.3.2
+Deciding NP-languages in exponential time
+Let us look again at the deﬁnition of the class NP. Let A be a language in
+this class. Then there exist a polynomial p and a language B ∈P, such that
+for all strings w,
+w ∈A ⇐⇒∃s : |s| ≤p(|w|) and ⟨w, s⟩∈B.
+(6.3)
+How do we decide whether or not any given string w belongs to the language
+A? If we can ﬁnd a string s that satisﬁes the right-hand side in (6.3), then
+we know that w ∈A. On the other hand, if there is no such string s, then
+w ̸∈A. How much time do we need to decide whether or not such a string s
+exists?

@@ -1,0 +1,39 @@
+Exercises
+237
+3. Prove that the language BP is NP-complete. Again, you may use the
+fact that the language SP is NP-complete.
+6.6 Prove that 3Color ≤P 3SAT.
+Hint: For each vertex i, and for each of the three colors k, introduce a
+Boolean variable xik.
+6.7 The (0, 1)-integer programming language IP is deﬁned as follows:
+IP := {⟨A, c⟩:
+A is an integer m × n matrix for some m, n ∈N,
+c is an integer vector of length m, and
+∃x ∈{0, 1}n such that Ax ≤c (componentwise) }.
+Prove that the language IP is NP-complete. You may use the fact that
+the language SOS is NP-complete.
+6.8 Let ϕ be a Boolean formula in the variables x1, x2, . . . , xm.
+We say that ϕ is in disjunctive normal form (DNF) if it is of the form
+ϕ = C1 ∨C2 ∨. . . ∨Ck,
+(6.12)
+where each Ci, 1 ≤i ≤k, is of the following form:
+Ci = ℓi
+1 ∧ℓi
+2 ∧. . . ∧ℓi
+ki.
+Each ℓi
+j is a literal, which is either a variable or the negation of a variable.
+We say that ϕ is in conjunctive normal form (CNF) if it is of the form
+ϕ = C1 ∧C2 ∧. . . ∧Ck,
+(6.13)
+where each Ci, 1 ≤i ≤k, is of the following form:
+Ci = ℓi
+1 ∨ℓi
+2 ∨. . . ∨ℓi
+ki.
+Again, each ℓi
+j is a literal.
+We deﬁne the following two languages:
+DNFSAT := {⟨ϕ⟩: ϕ is in DNF-form and is satisﬁable},
+and
+CNFSAT := {⟨ϕ⟩: ϕ is in CNF-form and is satisﬁable}.

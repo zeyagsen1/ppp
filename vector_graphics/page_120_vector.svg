@@ -1,0 +1,35 @@
+112
+Chapter 3.
+Context-Free Languages
+3.5
+Pushdown automata
+In this section, we introduce nondeterministic pushdown automata. As we
+will see, the class of languages that can be accepted by these automata is
+exactly the class of context-free languages.
+We start with an informal description of a deterministic pushdown au-
+tomaton. Such an automaton consists of the following, see also Figure 3.1.
+1. There is a tape which is divided into cells. Each cell stores a symbol
+belonging to a ﬁnite set Σ, called the tape alphabet. There is a special
+symbol 2 that is not contained in Σ; this symbol is called the blank
+symbol. If a cell contains 2, then this means that the cell is actually
+empty.
+2. There is a tape head which can move along the tape, one cell to the
+right per move. This tape head can also read the cell it currently scans.
+3. There is a stack containing symbols from a ﬁnite set Γ, called the stack
+alphabet. This set contains a special symbol $.
+4. There is a stack head which can read the top symbol of the stack. This
+head can also pop the top symbol, and it can push symbols of Γ onto
+the stack.
+5. There is a state control, which can be in any one of a ﬁnite number
+of states. The set of states is denoted by Q. The set Q contains one
+special state q, called the start state.
+The input for a pushdown automaton is a string in Σ∗. This input string
+is stored on the tape of the pushdown automaton and, initially, the tape head
+is on the leftmost symbol of the input string. Initially, the stack only contains
+the special symbol $, and the pushdown automaton is in the start state q.
+In one computation step, the pushdown automaton does the following:
+1. Assume that the pushdown automaton is currently in state r. Let a be
+the symbol of Σ that is read by the tape head, and let A be the symbol
+of Γ that is on top of the stack.
+2. Depending on the current state r, the tape symbol a, and the stack
+symbol A,

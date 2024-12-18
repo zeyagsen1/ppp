@@ -1,0 +1,31 @@
+3.2.
+Examples of context-free grammars
+97
+3.2.3
+A context-free grammar for the complement of
+a nonregular language
+Let L be the (nonregular) language L = {0n1n : n ≥0}. We want to prove
+that the complement L of L is a context-free language. Hence, we want to
+construct a context-free grammar G whose language is equal to L. Observe
+that a binary string w is in L if and only if
+1. w = 0m1n, for some integers m and n with 0 ≤m < n, or
+2. w = 0m1n, for some integers m and n with 0 ≤n < m, or
+3. w contains 10 as a substring.
+Thus, we can write L as the union of the languages of all strings of type 1.,
+type 2., and type 3.
+Any string of type 1. is either
+• the string 1,
+• consists of a string of type 1., followed by one 1, or
+• consists of one 0, followed by an arbitrary string of type 1., followed by
+one 1.
+Thus, using the rules
+S1 →1|S11|0S11,
+we can derive, from S1, all strings of type 1.
+Similarly, using the rules
+S2 →0|0S2|0S21,
+we can derive, from S2, all strings of type 2.
+Any string of type 3.
+• consists of an arbitrary binary string, followed by the string 10, followed
+by an arbitrary binary string.
+Using the rules
+X →ϵ|0X|1X,

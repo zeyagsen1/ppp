@@ -1,0 +1,31 @@
+240
+Chapter 7.
+Summary
+We have seen that the class of regular languages is closed under the regular
+operations: If A and B are regular languages, then
+1. A ∪B is regular,
+2. AB is regular,
+3. A∗is regular,
+4. A is regular, and
+5. A ∩B is regular.
+Finally, the pumping lemma for regular languages gives a property that
+every regular language possesses. We have used this to prove that languages
+such as {anbn : n ≥0} are not regular.
+Context-free languages:
+This class of languages was considered in Chap-
+ter 3. We have seen that every regular language is context-free. Moreover,
+there exist languages, for example {anbn : n ≥0}, that are context-free, but
+not regular. The following statements are equivalent:
+1. The language A is context-free, i.e., there exists a context-free grammar
+whose language is A.
+2. There exists a context-free grammar in Chomsky normal form whose
+language is A.
+3. There exists a nondeterministic pushdown automaton that accepts A.
+This claim was proved by the following conversions:
+1. Every context-free grammar can be converted to an equivalent context-
+free grammar in Chomsky normal form.
+2. Every context-free grammar in Chomsky normal form can be converted
+to an equivalent nondeterministic pushdown automaton.
+3. Every nondeterministic pushdown automaton can be converted to an
+equivalent context-free grammar. (This conversion was not covered in
+this book.)

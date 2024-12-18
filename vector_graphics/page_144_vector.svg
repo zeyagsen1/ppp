@@ -1,0 +1,28 @@
+136
+Chapter 3.
+Context-Free Languages
+• {an b a2n b a3n : n ≥0}.
+• {anbnanbn : n ≥0}.
+• {ambnck : m ≥0, n ≥0, k = max(m, n)}.
+• {w#x : w is a substring of x, and w, x ∈{a, b}∗}.
+For example, the string aba#abbababbb is in the language, whereas the
+string aba#baabbaabb is not in the language. The alphabet is {a, b, #}.
+•
+{ w ∈{a, b, c}∗
+:
+w contains more b’s than a’s and
+w contains more c’s than a’s }.
+• {1n : n is a prime number}.
+• {(abn)n : n ≥0}. (The parentheses are not part of the alphabet; thus,
+the alphabet is {a, b, }.)
+3.11 Let L be a language consisting of ﬁnitely many strings. Show that L
+is regular and, therefore, context-free. Let k be the maximum length of any
+string in L.
+• Prove that every context-free grammar in Chomsky normal form that
+generates L has more than log k variables. (The logarithm is in base
+2.)
+• Prove that there is a context-free grammar that generates L and that
+has only one variable.
+3.12 Let L be a context-free language. Prove that there exists an integer
+p ≥1, such that the following is true: For every string s in L with |s| ≥p,
+there exists a string s′ in L such that |s| < |s′| ≤|s| + p.

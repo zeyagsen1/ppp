@@ -1,0 +1,37 @@
+202
+Chapter 6.
+Complexity Theory
+The algorithm uses two arrays f(1 . . . m) and a(1 . . . m), and a variable
+M. The value of f(i) is equal to the color (red or blue) of vertex i; if i does
+not have a color yet, then f(i) = 0. The value of a(i) is equal to
+a(i) =
+ 1
+if vertex i has been marked,
+0
+otherwise.
+The value of M is equal to the number of marked vertices. The algorithm
+is presented in Figure 6.2. You are encouraged to convince yourself of the
+correctness of this algorithm. That is, you should convince yourself that this
+algorithm returns YES if the graph G is 2-colorable, whereas it returns NO
+otherwise.
+What is the running time of this algorithm? First we count the number
+of iterations of the outer while-loop. In one iteration, either M increases by
+one, or a vertex i, for which a(i) = 0, gets the color red. In the latter case,
+the variable M is increased during the next iteration of the outer while-loop.
+Since, during the entire outer while-loop, the value of M is increased from
+zero to m, it follows that there are at most 2m iterations of the outer while-
+loop. (In fact, the number of iterations is equal to m plus the number of
+connected components of G minus one.)
+One iteration of the outer while-loop takes O(m) time. Hence, the total
+running time of the algorithm is O(m2), which is O(n). Therefore, we have
+shown that 2Color ∈P.
+6.3
+The complexity class NP
+Before we deﬁne the class NP, we consider some examples.
+Example 6.3.1 Let G be a graph with vertex set V and edge set E, and
+let k ≥1 be an integer. We say that G is k-colorable, if it is possible to give
+each vertex of V a color such that
+1. for each edge (u, v) ∈E, the vertices u and v have diﬀerent colors, and
+2. at most k diﬀerent colors are used to color all vertices.
+We deﬁne the following language:
+kColor := {⟨G⟩: the graph G is k-colorable}.

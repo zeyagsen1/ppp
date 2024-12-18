@@ -1,0 +1,29 @@
+5.3.
+Rice’s Theorem
+169
+Algorithm D:
+On input ⟨Pn⟩, where n is a positive integer, the
+new Java program D does the following:
+Step 1: Run the Java program H on the input ⟨Pn, ⟨Pn⟩⟩.
+Step 2:
+• If H returns true, then D goes into an inﬁnite loop.
+• If H returns false, then D returns true and terminates its com-
+putation.
+Observe that D can be written as a Java program. Therefore, there exists
+an integer n ≥1 such that D = Pn. The next two observations follow from
+the pseudocode:
+• If D terminates on input ⟨Pn⟩, then H returns false on input ⟨Pn, ⟨Pn⟩⟩,
+i.e., Pn does not terminate on input ⟨Pn⟩.
+• If D does not terminate on input ⟨Pn⟩, then H returns true on input
+⟨Pn, ⟨Pn⟩⟩, i.e., Pn terminates on input ⟨Pn⟩.
+Thus,
+• D terminates on input ⟨Pn⟩if and only if Pn does not terminate on
+input ⟨Pn⟩.
+Since D = Pn, this becomes
+• D terminates on input ⟨D⟩if and only if D does not terminate on input
+⟨D⟩.
+Thus, we have obtained a contradiction.
+Remark 5.2.6 We deﬁned the Java program D in such a way that, for each
+n ≥1, the computation of D on input ⟨Pn⟩diﬀers from the computation of
+Pn on input ⟨Pn⟩. Hence, for each n ≥1, D ̸= Pn. However, since D is a
+Java program, there must be an integer n ≥1 such that D = Pn.

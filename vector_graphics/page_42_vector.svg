@@ -1,0 +1,40 @@
+34
+Chapter 2.
+Finite Automata and Regular Languages
+The latter equality implies that (2.1) is true and, therefore, M indeed accepts
+the language A ∪B.
+What about the closure of the regular languages under the concatenation
+and star operations? It turns out that the regular languages are closed under
+these operations. But how do we prove this?
+Let A and B be two regular languages, and let M1 and M2 be ﬁnite
+automata that accept A and B, respectively. How do we construct a ﬁnite
+automaton M that accepts the concatenation AB? Given an input string
+u, M has to decide whether or not u can be broken into two strings w and
+w′ (i.e., write u as u = ww′), such that w ∈A and w′ ∈B. In words, M
+has to decide whether or not u can be broken into two substrings, such that
+the ﬁrst substring is accepted by M1 and the second substring is accepted by
+M2. The diﬃculty is caused by the fact that M has to make this decision by
+scanning the string u only once. If u ∈AB, then M has to decide, during
+this single scan, where to break u into two substrings. Similarly, if u ̸∈AB,
+then M has to decide, during this single scan, that u cannot be broken into
+two substrings such that the ﬁrst substring is in A and the second substring
+is in B.
+It seems to be even more diﬃcult to prove that A∗is a regular language,
+if A itself is regular. In order to prove this, we need a ﬁnite automaton that,
+when given an arbitrary input string u, decides whether or not u can be
+broken into substrings such that each substring is in A. The problem is that,
+if u ∈A∗, the ﬁnite automaton has to determine into how many substrings,
+and where, the string u has to be broken; it has to do this during one single
+scan of the string u.
+As we mentioned already, if A and B are regular languages, then both
+AB and A∗are also regular. In order to prove these claims, we will introduce
+a more general type of ﬁnite automaton.
+The ﬁnite automata that we have seen so far are deterministic.
+This
+means the following:
+• If the ﬁnite automaton M is in state r and if it reads the symbol a,
+then M switches from state r to the uniquely deﬁned state δ(r, a).
+From now on, we will call such a ﬁnite automaton a deterministic ﬁnite
+automaton (DFA). In the next section, we will deﬁne the notion of a nonde-
+terministic ﬁnite automaton (NFA). For such an automaton, there are zero
+or more possible states to switch to. At ﬁrst sight, nondeterministic ﬁnite

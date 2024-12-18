@@ -1,0 +1,36 @@
+168
+Chapter 5.
+Decidable and Undecidable Languages
+5.2.1
+The Halting Problem revisited
+Now that we know about countability, we give a diﬀerent way to look at the
+proof in Section 5.1.5 of the fact that the language
+Halt = {⟨P, w⟩:
+P is a Java program that terminates on
+the input string w}
+is undecidable.
+You should convince yourself that the proof given below
+follows the same reasoning as the one used in the proof of Theorem 5.2.4.
+We ﬁrst argue that the set of all Java programs is countable. Indeed,
+every Java program P can be described by a ﬁnite amount of text. In fact,
+we have been using ⟨P⟩to denote such a description by a binary string. For
+any integer n ≥0, there are at most 2n (i.e., ﬁnitely many) Java programs
+P whose description ⟨P⟩has length n. Therefore, to obtain a list of all Java
+programs, we do the following:
+• List all Java programs P whose description ⟨P⟩has length 0. (Well,
+the empty string does not describe any Java program, so in this step,
+nothing happens.)
+• List all Java programs P whose description ⟨P⟩has length 1.
+• List all Java programs P whose description ⟨P⟩has length 2.
+• List all Java programs P whose description ⟨P⟩has length 3.
+• Etcetera, etcetera.
+In this inﬁnite list, every Java program occurs exactly once. Therefore, the
+set of all Java programs is countable.
+Consider an inﬁnite list
+P1, P2, P3, . . .
+in which every Java program occurs exactly once.
+Assume that the language Halt is decidable. Then there exists a Java
+program H that decides this language. We may assume that, on input ⟨P, w⟩,
+H returns true if P terminates on input w, and false if P does not terminate
+on input w.
+We construct a new Java program D that does the following:

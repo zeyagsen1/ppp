@@ -1,0 +1,36 @@
+72
+Chapter 2.
+Finite Automata and Regular Languages
+Fourth example
+Consider the language
+A = {0m1n : m > n ≥0}.
+We prove by contradiction that A is not a regular language.
+Assume that A is a regular language. Let p ≥1 be the pumping length,
+as given by the pumping lemma. Consider the string s = 0p+11p. Then s ∈A
+and |s| = 2p + 1 ≥p. By the pumping lemma, s can be written as s = xyz,
+where y ̸= ϵ, |xy| ≤p, and xyiz ∈A for all i ≥0.
+Since |xy| ≤p, the string y contains only 0s. Since y ̸= ϵ, y contains at
+least one 0. Consider the string xy0z = xz. The number of 1s in this string
+is equal to p, whereas the number of 0s is at most equal to p. Therefore, the
+string xy0z is not contained in A. But, by the pumping lemma, this string
+is contained in A. This is a contradiction and, therefore, A is not a regular
+language.
+Fifth example
+Consider the language
+A = {1n2 : n ≥0}.
+We prove by contradiction that A is not a regular language.
+Assume that A is a regular language. Let p ≥1 be the pumping length,
+as given by the pumping lemma. Consider the string s = 1p2. Then s ∈A
+and |s| = p2 ≥p. By the pumping lemma, s can be written as s = xyz,
+where y ̸= ϵ, |xy| ≤p, and xyiz ∈A for all i ≥0.
+Observe that
+|s| = |xyz| = p2
+and
+|xy2z| = |xyyz| = |xyz| + |y| = p2 + |y|.
+Since |xy| ≤p, we have |y| ≤p. Since y ̸= ϵ, we have |y| ≥1. It follows that
+p2 < |xy2z| ≤p2 + p < (p + 1)2.
+Hence, the length of the string xy2z is strictly between two consecutive
+squares.
+It follows that this length is not a square and, therefore, xy2z
+is not contained in A. But, by the pumping lemma, this string is contained
+in A. This is a contradiction and, therefore, A is not a regular language.

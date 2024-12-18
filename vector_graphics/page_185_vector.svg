@@ -1,0 +1,31 @@
+5.5.
+Where does the term “enumerable” come from?
+177
+1. It simulates the computation of M on input w.
+2. If M terminates in its accept state, then P terminates in its accept
+state.
+3. If M terminates in its reject state, then P terminates in its reject state.
+4. If M does not terminate, then P does not terminate.
+Hence, if u = ⟨M, w⟩∈ATM, then M accepts w and, therefore, P accepts
+u. On the other hand, if u = ⟨M, w⟩̸∈ATM, then M does not accept w. This
+means that, on input w, M either terminates in its reject state or does not
+terminate. But this implies that, on input u, P either terminates in its reject
+state or does not terminate. This proves that algorithm P has the properties
+that are needed in order to show that the language ATM is enumerable. We
+have proved the following result:
+Theorem 5.4.4 The language ATM is enumerable.
+5.5
+Where does the term “enumerable” come
+from?
+In Deﬁnition 5.4.1, we have deﬁned what it means for a language to be
+enumerable. In this section, we will see where this term comes from.
+Deﬁnition 5.5.1 Let Σ be an alphabet and let A ⊆Σ∗be a language. An
+enumerator for A is a Turing machine E having the following properties:
+1. Besides the standard features as in Section 4.1, E has a print tape and
+a print state. During its computation, E writes symbols of Σ on the
+print tape. Each time, E enters the print state, the current string on
+the print tape is sent to the printer and the print tape is made empty.
+2. At the start of the computation, all tapes are empty and E is in the
+start state.
+3. Every string w in A is sent to the printer at least once.
+4. Every string w that is not in A is never sent to the printer.

@@ -1,0 +1,33 @@
+126
+Chapter 3.
+Context-Free Languages
+of variables is well-deﬁned.
+Observe that this sequence consists of r + 1
+variables. Since the number of variables in the grammar G is equal to r,
+the pigeonhole principle implies that there is a variable that occurs at least
+twice in this sequence. In other words, there are indices j and k, such that
+ℓ−1 −r ≤j < k ≤ℓ−1 and Aj = Ak. Refer to the ﬁgure below for an
+illustration.
+S
+A j
+Ak
+u
+v
+x
+y
+z
+s
+A0 = S
+A1
+Aℓ−1−r
+Aℓ−r
+Aℓ−2
+Aℓ−1
+a
+r +1
+variables
+Recall that T is a parse tree for the string s. Therefore, the terminals
+stored at the leaves of T, in the order from left to right, form s. As indicated
+in the ﬁgure above, the nodes storing the variables Aj and Ak partition s
+into ﬁve substrings u, v, x, y, and z, such that s = uvxyz.
+It remains to prove that the three properties stated in the pumping lemma

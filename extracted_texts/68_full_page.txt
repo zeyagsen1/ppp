@@ -1,0 +1,29 @@
+60
+Chapter 2.
+Finite Automata and Regular Languages
+a
+M1
+Next, we construct an NFA M2 that accepts the language described by
+the regular expression b:
+M2
+b
+Next, we apply the construction given in the proof of Theorem 2.6.2 to
+M1 and M2. This gives an NFA M3 that accepts the language described by
+the regular expression ab:
+M3
+a
+ε
+b
+Next, we apply the construction given in the proof of Theorem 2.6.1 to
+M3 and M1. This gives an NFA M4 that accepts the language described by
+the regular expression ab ∪a:
+a
+ε
+b
+a
+ε
+ε
+M4
+Finally, we apply the construction given in the proof of Theorem 2.6.3
+to M4. This gives an NFA M5 that accepts the language described by the
+regular expression (ab ∪a)∗:

@@ -1,0 +1,43 @@
+6.5.
+NP-complete languages
+233
+The formula ϕ is the conjunction of all these formulas C1
+ij, C2
+ijℓℓ′, C3
+ijℓℓ′, and
+C4
+jℓ. The complete formula ϕ consists of
+O(t2k + t2k2 + t2k2 + tk) = O(t2k2)
+terms, i.e., its length is polynomial in the length of the domino game. This
+implies that ϕ can be constructed in polynomial time. Hence, the function
+f that maps the domino game D to the Boolean formula ϕ, is in the class
+FP. It is not diﬃcult to see that (6.10) holds for this function f. Therefore,
+we have proved the following result.
+Theorem 6.5.13 The language SAT is NP-complete.
+In Section 6.5.1, we have deﬁned the language 3SAT.
+Theorem 6.5.14 The language 3SAT is NP-complete.
+Proof. It is clear that 3SAT ∈NP. If we can show that
+SAT ≤P 3SAT,
+then the claim follows from Theorem 6.5.11. Let
+ϕ = C1 ∧C2 ∧. . . ∧Ck
+be an input for SAT, in the variables x1, x2, . . . , xm. We map ϕ, in polynomial
+time, to an input ϕ′ for 3SAT, such that
+ϕ is satisﬁable ⇐⇒ϕ′ is satisﬁable.
+(6.11)
+For each i with 1 ≤i ≤k, we do the following. Consider
+Ci = ℓi
+1 ∨ℓi
+2 ∨. . . ∨ℓi
+ki.
+• If ki = 1, then we deﬁne
+C′
+i := ℓi
+1 ∨ℓi
+1 ∨ℓi
+1.
+• If ki = 2, then we deﬁne
+C′
+i := ℓi
+1 ∨ℓi
+2 ∨ℓi
+2.

@@ -1,0 +1,34 @@
+5.8.
+Both A and A not enumerable
+187
+• Assume that M does not terminate on input w, i.e., ⟨M, w⟩∈Halt.
+Then it follows from the pseudocode that, for any string x, TMw does
+not terminate on input x. Thus, L(TMw) = ∅.
+Assume that the language EQTM is enumerable. We will show that Halt
+is enumerable as well, which will contradict Theorem 5.7.3.
+Since EQTM is enumerable, there exists a Turing machine H having the
+following property, for any two Turing machines M1 and M2:
+• If L(M1) = L(M2), then, on input ⟨M1, M2⟩, H terminates in the accept
+state.
+• If L(M1) ̸= L(M2), then, on input ⟨M1, M2⟩, H either terminates in
+the reject state or does not terminate.
+We construct a new Turing machine H′ that takes as input an arbitrary
+string ⟨M, w⟩, where M is a Turing machine and w is a binary string:
+Turing machine H′(⟨M, w⟩):
+construct a Turing machine M1 that rejects every input string;
+construct the Turing machine TMw described above;
+run H on input ⟨M1, TMw⟩;
+if H terminates in the accept state
+then terminate in the accept state
+else if H terminates in the reject state
+then terminate in the reject state
+endif
+endif
+We observe the following:
+• Assume that ⟨M, w⟩∈Halt. Then we have seen before that L(TMw) =
+∅. By our choice of M1, we have L(M1) = ∅as well. Therefore, H
+accepts (and terminates on) the input ⟨M1, TMw⟩. It follows from the
+pseudocode that H′ accepts (and terminates on) the string ⟨M, w⟩.
+• Assume that ⟨M, w⟩̸∈Halt, i.e., ⟨M, w⟩∈Halt. Then we have seen
+before that L(TMw) ̸= ∅= L(M1). Therefore, on input ⟨M1, TMw⟩, H
+either terminates in the reject state or does not terminate. It follows

@@ -1,0 +1,32 @@
+2.8.
+Equivalence of regular expressions and regular languages 61
+a
+ε
+b
+a
+ε
+ε
+ε
+ε
+ε
+M5
+2.8.2
+Converting a DFA to a regular expression
+In this section, we will prove that every DFA M can be converted to a regular
+expression that describes the language L(M). In order to prove this result,
+we need to solve recurrence relations involving languages.
+Solving recurrence relations
+Let Σ be an alphabet, let B and C be “known” languages in Σ∗such that
+ϵ ̸∈B, and let L be an “unknown” language such that
+L = BL ∪C.
+Can we “solve” this equation for L? That is, can we express L in terms of
+B and C?
+Consider an arbitrary string u in L. We are going to determine how u
+looks like. Since u ∈L and L = BL ∪C, we know that u is a string in
+BL ∪C. Hence, there are two possibilities for u.
+1. u is an element of C.
+2. u is an element of BL. In this case, there are strings b ∈B and v ∈L
+such that u = bv. Since ϵ ̸∈B, we have b ̸= ϵ and, therefore, |v| < |u|.
+(Recall that |v| denotes the length, i.e., the number of symbols, of the
+string v.) Since v is a string in L, which is equal to BL ∪C, v is a
+string in BL ∪C. Hence, there are two possibilities for v.

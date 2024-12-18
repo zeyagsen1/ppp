@@ -1,0 +1,42 @@
+6.3.
+The complexity class NP
+207
+It is obvious that B ∈P: For any three positive integers x, a, and b, we
+can verify in polynomial time whether or not ⟨x, a, b⟩∈B. In order to do
+this, we only have to verify whether or not x ≥2, 2 ≤a < x, 2 ≤b < x,
+and x = ab. If all these four conditions are satisﬁed, then ⟨x, a, b⟩∈B. If at
+least one of them is not satisﬁed, then ⟨x, a, b⟩̸∈B.
+It remains to show that for all x ∈N:
+⟨x⟩∈NPrim ⇐⇒∃a, b : |⟨a, b⟩| ≤|⟨x⟩| + 2 and ⟨x, a, b⟩∈B.
+(6.2)
+(Remember that |⟨x⟩| denotes the number of bits in the binary representation
+of x; |⟨a, b⟩| denotes the total number of bits of a and b, i.e., |⟨a, b⟩| =
+|⟨a⟩| + |⟨b⟩|.)
+Let x ∈NPrim. It follows from (6.1) that there exist a and b in N, such
+that 2 ≤a < x, 2 ≤b < x, and x = ab. Since x = ab ≥2 · 2 = 4 ≥2, it
+follows that ⟨x, a, b⟩∈B. Hence, it remains to show that
+|⟨a, b⟩| ≤|⟨x⟩| + 2.
+The binary representation of x contains ⌊log x⌋+1 bits, i.e., |⟨x⟩| = ⌊log x⌋+1.
+We have
+|⟨a, b⟩|
+=
+|⟨a⟩| + |⟨b⟩|
+=
+(⌊log a⌋+ 1) + (⌊log b⌋+ 1)
+≤
+log a + log b + 2
+=
+log ab + 2
+=
+log x + 2
+≤
+⌊log x⌋+ 3
+=
+|⟨x⟩| + 2.
+This proves one direction of (6.2).
+To prove the other direction, we assume that there are positive integers
+a and b, such that |⟨a, b⟩| ≤|⟨x⟩| + 2 and ⟨x, a, b⟩∈B. Then it follows
+immediately from (6.1) and the deﬁnition of the language B, that x ∈NPrim.
+Hence, we have proved the other direction of (6.2). This completes the proof
+of the claim that
+NPrim ∈NP.

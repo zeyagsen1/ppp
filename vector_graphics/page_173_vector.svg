@@ -1,0 +1,33 @@
+5.2.
+Countable sets
+165
+In other words, if A is an inﬁnite and countable set, then there exists a
+bijection f : N →A, and we can write A as
+A = {f(1), f(2), f(3), f(4), . . .}.
+Since f is a bijection, every element of A occurs exactly once in the set on
+the right-hand side. This means that we can number the elements of A using
+the positive integers: Every element of A receives a unique number.
+Theorem 5.2.3 The following sets are countable:
+1. The set Z of integers:
+Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . .}.
+2. The Cartesian product N × N:
+N × N = {(m, n) : m ∈N, n ∈N}.
+3. The set Q of rational numbers:
+Q = {m/n : m ∈Z, n ∈Z, n ̸= 0}.
+Proof. To prove that the set Z is countable, we have to give each element of
+Z a unique number in N. We obtain this numbering, by listing the elements
+of Z in the following order:
+0, 1, −1, 2, −2, 3, −3, 4, −4, . . .
+In this (inﬁnite) list, every element of Z occurs exactly once. The number of
+an element of Z is given by its position in this list.
+Formally, deﬁne the function f : N →Z by
+f(n) =
+ n/2
+if n is even,
+−(n −1)/2
+if n is odd.
+This function f is a bijection and, therefore, the sets N and Z have the same
+size. Hence, the set Z is countable.
+For the proofs of the other two claims, we refer to the course COMP 1805.
+We now use Cantor’s Diagonalization principle to prove that the set of
+real numbers is not countable:

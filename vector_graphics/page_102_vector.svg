@@ -1,0 +1,31 @@
+94
+Chapter 3.
+Context-Free Languages
+1. u = v or
+2. there exist an integer k ≥2 and a sequence u1, u2, . . . , uk of strings in
+(V ∪Σ)∗, such that
+(a) u = u1,
+(b) v = uk, and
+(c) u1 ⇒u2 ⇒. . . ⇒uk.
+In other words, by starting with the string u and applying rules zero or
+more times, we obtain the string v. In our example, we see that aaAbB
+∗⇒
+aaaabbbB.
+Deﬁnition 3.1.4 Let G = (V, Σ, R, S) be a context-free grammar.
+The
+language of G is deﬁned to be the set of all strings in Σ∗that can be derived
+from the start variable S:
+L(G) = {w ∈Σ∗: S
+∗⇒w}.
+Deﬁnition 3.1.5 A language L is called context-free, if there exists a context-
+free grammar G such that L(G) = L.
+3.2
+Examples of context-free grammars
+3.2.1
+Properly nested parentheses
+Consider the context-free grammar G = (V, Σ, R, S), where V = {S}, Σ =
+{a, b}, and
+R = {S →ϵ, S →aSb, S →SS}.
+We write the three rules in R as
+S →ϵ|aSb|SS,
+where you can think of “|” as being a short-hand for “or”.

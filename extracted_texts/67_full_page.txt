@@ -1,0 +1,34 @@
+2.8.
+Equivalence of regular expressions and regular languages 59
+q1
+q2
+a
+The ﬁrst case of the induction step: Assume that R = R1 ∪R2, where
+R1 and R2 are regular expressions. Let L1 and L2 be the languages described
+by R1 and R2, respectively, and assume that L1 and L2 are regular. Then R
+describes the language L1 ∪L2, which, by Theorem 2.6.1, is regular.
+The second case of the induction step: Assume that R = R1R2, where
+R1 and R2 are regular expressions. Let L1 and L2 be the languages described
+by R1 and R2, respectively, and assume that L1 and L2 are regular. Then R
+describes the language L1L2, which, by Theorem 2.6.2, is regular.
+The third case of the induction step: Assume that R = (R1)∗, where
+R1 is a regular expression.
+Let L1 be the language described by R1 and
+assume that L1 is regular. Then R describes the language (L1)∗, which, by
+Theorem 2.6.3, is regular.
+This concludes the proof of the claim that every regular expression de-
+scribes a regular language.
+To give an example, consider the regular expression
+(ab ∪a)∗,
+where the alphabet is {a, b}. We will prove that this regular expression de-
+scribes a regular language, by constructing an NFA that accepts the language
+described by this regular expression. Observe how the regular expression is
+“built”:
+• Take the regular expressions a and b, and combine them into the regular
+expression ab.
+• Take the regular expressions ab and a, and combine them into the
+regular expression ab ∪a.
+• Take the regular expression ab ∪a, and transform it into the regular
+expression (ab ∪a)∗.
+First, we construct an NFA M1 that accepts the language described by
+the regular expression a:

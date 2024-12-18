@@ -1,0 +1,89 @@
+14
+Chapter 1.
+Introduction
+We have to prove that the theorem is true for n + 1, i.e., we have to prove
+that
+1 + 2 + 3 + . . . + (n + 1) = (n + 1)(n + 2)
+2
+.
+Here is the proof:
+1 + 2 + 3 + . . . + (n + 1)
+=
+1 + 2 + 3 + . . . + n
+|
+{z
+}
+= n(n+1)
+2
++(n + 1)
+=
+n(n + 1)
+2
++ (n + 1)
+=
+(n + 1)(n + 2)
+2
+.
+By the way, here is an alternative proof of the theorem above: Let S =
+1 + 2 + 3 + . . . + n. Then,
+S
+=
+1
++
+2
++
+3
++
+. . .
++
+(n −2)
++
+(n −1)
++
+n
+S
+=
+n
++
+(n −1)
++
+(n −2)
++
+. . .
++
+3
++
+2
++
+1
+2S
+=
+(n + 1)
++
+(n + 1)
++
+(n + 1)
++
+. . .
++
+(n + 1)
++
+(n + 1)
++
+(n + 1)
+Since there are n terms on the right-hand side, we have 2S = n(n + 1). This
+implies that S = n(n + 1)/2.
+Theorem 1.3.12 For every positive integer n, a −b is a factor of an −bn.
+Proof. A direct proof can be given by providing a factorization of an −bn:
+an −bn = (a −b)(an−1 + an−2b + an−3b2 + . . . + abn−2 + bn−1).
+We now prove the theorem by induction. For the basis, let n = 1. The claim
+in the theorem is “a −b is a factor of a −b”, which is obviously true.
+Let n ≥1 and assume that a −b is a factor of an −bn. We have to prove
+that a −b is a factor of an+1 −bn+1. We have
+an+1 −bn+1 = an+1 −anb + anb −bn+1 = an(a −b) + (an −bn)b.
+The ﬁrst term on the right-hand side is divisible by a −b. By the induction
+hypothesis, the second term on the right-hand side is divisible by a −b as
+well. Therefore, the entire right-hand side is divisible by a −b. Since the
+right-hand side is equal to an+1 −bn+1, it follows that a −b is a factor of
+an+1 −bn+1.
+We now give an alternative proof of Theorem 1.3.3:

@@ -1,0 +1,36 @@
+4.1.
+Deﬁnition of a Turing machine
+139
+(c) each tape head either moves one cell to the left, moves one cell to
+the right, or stays at the current cell.
+We now give a formal deﬁnition of a deterministic Turing machine.
+Deﬁnition 4.1.1 A deterministic Turing machine is a 7-tuple
+M = (Σ, Γ, Q, δ, q, qaccept, qreject),
+where
+1. Σ is a ﬁnite set, called the input alphabet; the blank symbol 2 is not
+contained in Σ,
+2. Γ is a ﬁnite set, called the tape alphabet; this alphabet contains the
+blank symbol 2, and Σ ⊆Γ,
+3. Q is a ﬁnite set, whose elements are called states,
+4. q is an element of Q; it is called the start state,
+5. qaccept is an element of Q; it is called the accept state,
+6. qreject is an element of Q; it is called the reject state,
+7. δ is called the transition function, which is a function
+δ : Q × Γk →Q × Γk × {L, R, N}k.
+The transition function δ is basically the “program” of the Turing ma-
+chine. This function tells us what the machine can do in “one computation
+step”: Let r ∈Q, and let a1, a2, . . . , ak ∈Γ.
+Furthermore, let r′ ∈Q,
+a′
+1, a′
+2, . . . , a′
+k ∈Γ, and σ1, σ2, . . . , σk ∈{L, R, N} be such that
+δ(r, a1, a2, . . . , ak) = (r′, a′
+1, a′
+2, . . . , a′
+k, σ1, σ2, . . . , σk).
+(4.1)
+This transition means that if
+• the Turing machine is in state r, and
+• the head of the i-th tape reads the symbol ai, 1 ≤i ≤k,
+then

@@ -1,0 +1,39 @@
+2.4.
+Nondeterministic ﬁnite automata
+35
+automata seem to be more powerful than their deterministic counterparts.
+We will prove, however, that DFAs have the same power as NFAs. As we will
+see, using this fact, it will be easy to prove that the class of regular languages
+is closed under the concatenation and star operations.
+2.4
+Nondeterministic ﬁnite automata
+We start by giving three examples of nondeterministic ﬁnite automata. These
+examples will show the diﬀerence between this type of automata and the
+deterministic versions that we have considered in the previous sections. After
+these examples, we will give a formal deﬁnition of a nondeterministic ﬁnite
+automaton.
+2.4.1
+A ﬁrst example
+Consider the following state diagram:
+q1
+q2
+q3
+q4
+0,1
+1
+0,ε
+1
+0,1
+You will notice three diﬀerences with the ﬁnite automata that we have
+seen until now. First, if the automaton is in state q1 and reads the symbol 1,
+then it has two options: Either it stays in state q1, or it switches to state q2.
+Second, if the automaton is in state q2, then it can switch to state q3 without
+reading a symbol; this is indicated by the edge having the empty string ϵ as
+label. Third, if the automaton is in state q3 and reads the symbol 0, then it
+cannot continue.
+Let us see what this automaton can do when it gets the string 010110 as
+input. Initially, the automaton is in the start state q1.
+• Since the ﬁrst symbol in the input string is 0, the automaton stays in
+state q1 after having read this symbol.
+• The second symbol is 1, and the automaton can either stay in state q1
+or switch to state q2.

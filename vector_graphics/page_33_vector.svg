@@ -1,0 +1,37 @@
+2.2.
+Deterministic ﬁnite automata
+25
+0
+1
+q1
+q1
+q2
+q2
+q3
+q2
+q3
+q2
+q2
+Let us denote this ﬁnite automaton by M. The language of M, denoted
+by L(M), is the set of all binary strings that are accepted by M. As we have
+seen before, we have
+L(M) = {w : w contains at least one 1 and ends with an even number of 0s}.
+We now give a formal deﬁnition of the language of a ﬁnite automaton:
+Deﬁnition 2.2.2 Let M = (Q, Σ, δ, q, F) be a ﬁnite automaton and let w =
+w1w2 . . . wn be a string over Σ. Deﬁne the sequence r0, r1, . . . , rn of states, in
+the following way:
+• r0 = q,
+• ri+1 = δ(ri, wi+1), for i = 0, 1, . . . , n −1.
+1. If rn ∈F, then we say that M accepts w.
+2. If rn ̸∈F, then we say that M rejects w.
+In this deﬁnition, w may be the empty string, which we denote by ϵ, and
+whose length is zero; thus in the deﬁnition above, n = 0. In this case, the
+sequence r0, r1, . . . , rn of states has length one; it consists of just the state
+r0 = q. The empty string is accepted by M if and only if the start state q
+belongs to F.
+Deﬁnition 2.2.3 Let M = (Q, Σ, δ, q, F) be a ﬁnite automaton. The lan-
+guage L(M) accepted by M is deﬁned to be the set of all strings that are
+accepted by M:
+L(M) = {w : w is a string over Σ and M accepts w }.
+Deﬁnition 2.2.4 A language A is called regular, if there exists a ﬁnite au-
+tomaton M such that A = L(M).

@@ -1,0 +1,35 @@
+150
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+Thus, the contents of the two tapes of M are encoded on the single tape of
+N. The dotted symbols are used to indicate the positions of the two tape
+heads of M, whereas the three occurrences of the special symbol # are used
+to mark the boundaries of the strings on the two tapes of M.
+The Turing machine N simulates one computation step of M, in the
+following way:
+• Throughout the simulation of this step, N “remembers” the current
+state of M.
+• At the start of the simulation, the tape head of N is on the leftmost
+symbol #.
+• N walks along the string to the right until it ﬁnds the ﬁrst dotted
+symbol. (This symbol indicates the location of the head on the ﬁrst tape
+of M.) N remembers this ﬁrst dotted symbol and continues walking
+to the right until it ﬁnds the second dotted symbol.
+(This symbol
+indicates the location of the head on the second tape of M.) Again, N
+remembers this second dotted symbol.
+• At this moment, N is still at the second dotted symbol. N updates
+this part of the tape, by making the change that M would make on its
+second tape. (This change is given by the transition function of M; it
+depends on the current state of M and the two symbols that M reads
+on its two tapes.)
+• N walks to the left until it ﬁnds the ﬁrst dotted symbol.
+Then, it
+updates this part of the tape, by making the change that M would
+make on its ﬁrst tape.
+• In the previous two steps, in which the tape is updated, it may be
+necessary to shift a part of the tape.
+• Finally, N remembers the new state of M and walks back to the left-
+most symbol #.
+It should be clear that the Turing machine N can be constructed by
+introducing appropriate states.

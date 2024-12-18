@@ -1,0 +1,32 @@
+184
+Chapter 5.
+Decidable and Undecidable Languages
+Theorem 5.6.3 There exist languages that are not enumerable.
+The proof given above shows the existence of languages that are not
+enumerable. However, the proof does not give us a speciﬁc example of a
+language that is not enumerable. In the next sections, we will see examples
+of such languages. Before we move on to these examples, we mention the
+diﬀerence between being countable and being enumerable:
+• Any language A is countable, i.e., we can number the elements of A
+and, thus, write
+A = {s1, s2, s3, s4, . . .}.
+• If the language A is enumerable, then, by Theorem 5.5.2, there is an
+algorithm that produces this numbering.
+• If the language A is not enumerable, then, again by Theorem 5.5.2,
+there does not exist an algorithm that produces this numbering.
+5.7
+The relationship between decidable and
+enumerable languages
+We know from Theorem 5.4.2 that every decidable language is enumerable.
+On the other hand, we know from Theorems 5.1.6 and 5.4.4 that the converse
+is not true. The following result should not come as a surprise:
+Theorem 5.7.1 Let Σ be an alphabet and let A ⊆Σ∗be a language. Then,
+A is decidable if and only if both A and its complement A are enumerable.
+Proof. We ﬁrst assume that A is decidable. Then, by Theorem 5.4.2, A
+is enumerable. Since A is decidable, it is not diﬃcult to see that A is also
+decidable. Then, again by Theorem 5.4.2, A is enumerable.
+To prove the converse, we assume that both A and A are enumerable.
+Since A is enumerable, there exists a Turing machine M1, such that for any
+string w ∈Σ∗, the following holds:
+• If w ∈A, then the computation of M1, on the input string w, terminates
+in the accept state of M1.

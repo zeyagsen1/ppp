@@ -1,0 +1,41 @@
+3.7.
+Equivalence of PDA’s and CFG’s
+123
+a1 · · ·
+ai · · · an 2
+6
+A1
+...
+Ak
+-
+Proof. The claim can be proved by induction. Let
+w = a1a2 . . . ai−1AkAk−1 . . . A1.
+Assume that k ≥1 and assume that the claim is true for the string w. Then
+we have to show that the claim is still true after applying a rule in R to the
+leftmost variable Ak in w. Since the grammar is in Chomsky normal form,
+the rule to be applied is either of the form Ak →BC or of the form Ak →ai.
+In both cases, the property mentioned in the claim is maintained.
+We now use Claim 3.7.2 to prove that L(M) = L(G). Let w = a1a2 . . . an
+be an arbitrary string in Σ∗. By applying Claim 3.7.2, with i = n + 1 and
+k = 0, we see that w ∈L(G), i.e.,
+$
+∗⇒a1a2 . . . an,
+if and only if there exists a computation of M from the initial conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+$
+-
+to the conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+∅
+-
+But this means that w ∈L(G) if and only if the automaton M accepts the
+string w.
+This concludes the proof of the fact that every context-free grammar can
+be converted to a nondeterministic pushdown automaton.
+As mentioned
+already, we will not give the conversion in the other direction. We ﬁnish this
+section with the following observation:

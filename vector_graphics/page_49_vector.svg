@@ -1,0 +1,39 @@
+2.5.
+Equivalence of DFAs and NFAs
+41
+• w = 01ϵ100 = y1y2y3y4y5y6, and
+• r0 = q1, r1 = q1, r2 = q2, r3 = q3, r4 = q4, r5 = q4, and r6 = q4.
+Deﬁnition 2.4.3 Let M = (Q, Σ, δ, q, F) be an NFA. The language L(M)
+accepted by M is deﬁned as
+L(M) = {w ∈Σ∗: M accepts w }.
+2.5
+Equivalence of DFAs and NFAs
+You may have the impression that nondeterministic ﬁnite automata are more
+powerful than deterministic ﬁnite automata. In this section, we will show
+that this is not the case.
+That is, we will prove that a language can be
+accepted by a DFA if and only if it can be accepted by an NFA. In order
+to prove this, we will show how to convert an arbitrary NFA to a DFA that
+accepts the same language.
+What about converting a DFA to an NFA? Well, there is (almost) nothing
+to do, because a DFA is also an NFA. This is not quite true, because
+• the transition function of a DFA maps a state and a symbol to a state,
+whereas
+• the transition function of an NFA maps a state and a symbol to a set
+of zero or more states.
+The formal conversion of a DFA to an NFA is done as follows: Let M =
+(Q, Σ, δ, q, F) be a DFA. Recall that δ is a function δ : Q × Σ →Q. We
+deﬁne the function δ′ : Q × Σϵ →P(Q) as follows. For any r ∈Q and for
+any a ∈Σϵ,
+δ′(r, a) =
+ {δ(r, a)}
+if a ̸= ϵ,
+∅
+if a = ϵ.
+Then N = (Q, Σ, δ′, q, F) is an NFA, whose behavior is exactly the same as
+that of the DFA M; the easiest way to see this is by observing that the state
+diagrams of M and N are equal. Therefore, we have L(M) = L(N).
+In the rest of this section, we will show how to convert an NFA to a DFA:
+Theorem 2.5.1 Let N = (Q, Σ, δ, q, F) be a nondeterministic ﬁnite automa-
+ton. There exists a deterministic ﬁnite automaton M, such that L(M) =
+L(N).

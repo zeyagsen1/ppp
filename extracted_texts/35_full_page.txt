@@ -1,0 +1,35 @@
+2.2.
+Deterministic ﬁnite automata
+27
+number of states. But, the deﬁnition of ﬁnite automaton requires the number
+of states to be ﬁnite.
+A better, and correct approach, is to keep track of whether the number
+of 1s read so far is even or odd. This leads to the following ﬁnite automaton:
+• The set of states is Q = {qe, qo}. If the ﬁnite automaton is in state qe,
+then it has read an even number of 1s; if it is in state qo, then it has
+read an odd number of 1s.
+• The alphabet is Σ = {0, 1}.
+• The start state is qe, because at the start, the number of 1s read by the
+automaton is equal to 0, and 0 is even.
+• The set F of accept states is F = {qo}.
+• The transition function δ is given by the following table:
+0
+1
+qe
+qe
+qo
+qo
+qo
+qe
+This ﬁnite automaton M = (Q, Σ, δ, qe, F) can also be described by its state
+diagram, which is given in the ﬁgure below. The arrow that comes “out of
+the blue” and enters the state qe, indicates that qe is the start state. The
+state depicted with double circles indicates the accept state.
+qe
+qo
+0
+0
+1
+1
+We have constructed a ﬁnite automaton M that accepts the language A.
+Therefore, A is a regular language.

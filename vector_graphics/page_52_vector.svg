@@ -1,0 +1,36 @@
+44
+Chapter 2.
+Finite Automata and Regular Languages
+How do we deﬁne the start state q′ of the DFA M? Before the NFA N
+reads its ﬁrst “real” symbol of Σ, it makes zero or more ϵ-transitions. In
+other words, at the moment when N reads the ﬁrst symbol of Σ, it can be
+in any state of Cϵ(q). Therefore, we deﬁne q′ to be
+q′ = Cϵ(q) = Cϵ({q}).
+How do we deﬁne the transition function δ′ of the DFA M? Assume that
+M is in state R, and reads the symbol a. At this moment, the NFA N would
+have been in any state r of R. By reading the symbol a, N can switch to
+any state in δ(r, a), and then make zero or more ϵ-transitions. Hence, the
+NFA can switch to any state in the set Cϵ(δ(r, a)). Based on this, we deﬁne
+δ′(R, a) to be
+δ′(R, a) =
+[
+r∈R
+Cϵ(δ(r, a)).
+To summarize, the NFA N = (Q, Σ, δ, q, F) is converted to the DFA
+M = (Q′, Σ, δ′, q′, F ′), where
+• Q′ = P(Q),
+• q′ = Cϵ({q}),
+• F ′ = {R ∈Q′ : R ∩F ̸= ∅},
+• δ′ : Q′ × Σ →Q′ is deﬁned as follows: For each R ∈Q′ and for each
+a ∈Σ,
+δ′(R, a) =
+[
+r∈R
+Cϵ(δ(r, a)).
+The results proved until now can be summarized in the following theorem.
+Theorem 2.5.2 Let A be a language. Then A is regular if and only if there
+exists a nondeterministic ﬁnite automaton that accepts A.
+2.5.1
+An example
+Consider the NFA N = (Q, Σ, δ, q, F), where Q = {1, 2, 3}, Σ = {a, b}, q = 1,
+F = {2}, and δ is given by the following table:

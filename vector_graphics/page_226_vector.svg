@@ -1,0 +1,49 @@
+218
+Chapter 6.
+Complexity Theory
+Proof. We have to show that there exists a function f ∈FP, that maps
+input strings for 3SAT to input strings for Clique, such that for each Boolean
+formula ϕ that is of the form (6.6),
+⟨ϕ⟩∈3SAT ⇐⇒f(⟨ϕ⟩) ∈Clique.
+The function f maps the binary string encoding an arbitrary Boolean formula
+ϕ to a binary string encoding a pair (G, k), where G is a graph and k is a
+positive integer. We have to deﬁne this function f in such a way that
+ϕ is satisﬁable ⇐⇒G has a clique with k vertices.
+Let
+ϕ = C1 ∧C2 ∧. . . ∧Ck
+be an arbitrary Boolean formula in the variables x1, x2, . . . , xm, where each
+Ci, 1 ≤i ≤k, is of the form
+Ci = ℓi
+1 ∨ℓi
+2 ∨ℓi
+3.
+Remember that each ℓi
+a is either a variable or the negation of a variable.
+The formula ϕ is mapped to the pair (G, k), where the vertex set V and
+the edge set E of the graph G are deﬁned as follows:
+• V = {v1
+1, v1
+2, v1
+3, . . . , vk
+1, vk
+2, vk
+3}. The idea is that each vertex vi
+a corre-
+sponds to one term ℓi
+a.
+• The pair (vi
+a, vj
+b) of vertices form an edge in E if and only if
+– i ̸= j and
+– ℓi
+a is not the negation of ℓj
+b.
+To give an example, let ϕ be the Boolean formula
+ϕ = (x1 ∨¬x2 ∨¬x3) ∧(¬x1 ∨x2 ∨x3) ∧(x1 ∨x2 ∨x3),
+(6.7)
+i.e., k = 3, C1 = x1 ∨¬x2 ∨¬x3, C2 = ¬x1 ∨x2 ∨x3, and C3 = x1 ∨x2 ∨x3.
+The graph G that corresponds to this formula is given in Figure 6.4.
+It is not diﬃcult to see that the function f can be computed in polynomial
+time. So it remains to prove that
+ϕ is satisﬁable ⇐⇒G has a clique with k vertices.
+(6.8)

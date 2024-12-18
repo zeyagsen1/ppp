@@ -1,0 +1,35 @@
+188
+Chapter 5.
+Decidable and Undecidable Languages
+from the pseudocode that, on input ⟨M, w⟩, H′ either terminates in the
+reject state or does not terminate.
+Thus, the Turing machine H′ has the properties needed to show that
+the language Halt is enumerable. This is a contradiction and, therefore, we
+conclude that the language EQTM is not enumerable.
+5.8.2
+EQTM is not enumerable
+This proof is symmetric to the one in Section 5.8.1.
+For a ﬁxed Turing
+machine M and a ﬁxed binary string w, we will use the same Turing machine
+TMw as in Section 5.8.1.
+Assume that the language EQTM is enumerable. We will show that Halt
+is enumerable as well, which will contradict Theorem 5.7.3.
+Since EQTM is enumerable, there exists a Turing machine H having the
+following property, for any two Turing machines M1 and M2:
+• If L(M1) ̸= L(M2), then, on input ⟨M1, M2⟩, H terminates in the accept
+state.
+• If L(M1) = L(M2), then, on input ⟨M1, M2⟩, H either terminates in
+the reject state or does not terminate.
+We construct a new Turing machine H′ that takes as input an arbitrary
+string ⟨M, w⟩, where M is a Turing machine and w is a binary string:
+Turing machine H′(⟨M, w⟩):
+construct a Turing machine M1 that accepts every input string;
+construct the Turing machine TMw of Section 5.8.1;
+run H on input ⟨M1, TMw⟩;
+if H terminates in the accept state
+then terminate in the accept state
+else if H terminates in the reject state
+then terminate in the reject state
+endif
+endif
+We observe the following:

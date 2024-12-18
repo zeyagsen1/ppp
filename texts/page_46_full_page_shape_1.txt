@@ -1,0 +1,20 @@
+Consider the following state diagram, which de nes an NFA whose alphabet
+ is 0 .
+ This NFA accepts the language
+A = {0k : k ≡0 mod 2 or k ≡0 mod 3},
+where 0k is the string consisting of k many 0s. (If k = 0, then 0k = ϵ.)
+Observe that A is the union of the two languages
+A1 = {0k : k ≡0 mod 2}
+and
+A2 = {0k : k ≡0 mod 3}.
+The NFA basically consists of two DFAs: one of these accepts A1, whereas the
+other accepts A2. Given an input string w, the NFA has to decide whether
+or not w ∈A, which is equivalent to deciding whether or not w ∈A1 or
+w ∈A2. The NFA makes this decision in the following way: At the start, it
+“guesses” whether (i) it is going to check whether or not w ∈A1 (i.e., the
+length of w is even), or (ii) it is going to check whether or not w ∈A2 (i.e.,
+the length of w is a multiple of 3). After having made the guess, it veriﬁes
+whether or not the guess was correct. If w ∈A, then there exists a way of
+making the correct guess and verifying that w is indeed an element of A (by
+ending in an accept state). If w ̸∈A, then no matter which guess is made,
+the NFA will never end in an accept state.

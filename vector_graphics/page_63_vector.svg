@@ -1,0 +1,29 @@
+2.7.
+Regular expressions
+55
+• Since 10 and 1 are regular expressions, by 5., 101 is a regular expression.
+• Since (0 ∪1)∗and 101 are regular expressions, by 5., (0 ∪1)∗101 is a
+regular expression.
+• Since (0 ∪1)∗101 and (0 ∪1)∗are regular expressions, by 5., (0 ∪
+1)∗101(0 ∪1)∗is a regular expression.
+Next we deﬁne the language that is described by a regular expression:
+Deﬁnition 2.7.2 Let Σ be a non-empty alphabet.
+1. The regular expression ϵ describes the language {ϵ}.
+2. The regular expression ∅describes the language ∅.
+3. For each a ∈Σ, the regular expression a describes the language {a}.
+4. Let R1 and R2 be regular expressions and let L1 and L2 be the lan-
+guages described by them, respectively. The regular expression R1∪R2
+describes the language L1 ∪L2.
+5. Let R1 and R2 be regular expressions and let L1 and L2 be the languages
+described by them, respectively. The regular expression R1R2 describes
+the language L1L2.
+6. Let R be a regular expression and let L be the language described by
+it. The regular expression R∗describes the language L∗.
+We consider some examples:
+• The regular expression (0∪ϵ)(1∪ϵ) describes the language {01, 0, 1, ϵ}.
+• The regular expression 0 ∪ϵ describes the language {0, ϵ}, whereas the
+regular expression 1∗describes the language {ϵ, 1, 11, 111, . . .}. There-
+fore, the regular expression (0 ∪ϵ)1∗describes the language
+{0, 01, 011, 0111, . . . , ϵ, 1, 11, 111, . . .}.
+Observe that this language is also described by the regular expression
+01∗∪1∗.

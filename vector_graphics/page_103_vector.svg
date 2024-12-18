@@ -1,0 +1,45 @@
+3.2.
+Examples of context-free grammars
+95
+By applying the rules in R, starting with the start variable S, we obtain,
+for example,
+S
+⇒
+SS
+⇒
+aSbS
+⇒
+aSbSS
+⇒
+aSSbSS
+⇒
+aaSbSbSS
+⇒
+aabSbSS
+⇒
+aabbSS
+⇒
+aabbaSbS
+⇒
+aabbabS
+⇒
+aabbabaSb
+⇒
+aabbabab
+What is the language L(G) of this context-free grammar G? If we think
+of a as being a left-parenthesis “(”, and of b as being a right-parenthesis “)”,
+then L(G) is the language consisting of all strings of properly nested paren-
+theses. Here is the explanation: Any string of properly nested parentheses is
+either
+• empty (which we derive from S by the rule S →ϵ),
+• consists of a left-parenthesis, followed by an arbitrary string of properly
+nested parentheses, followed by a right-parenthesis (these are derived
+from S by ﬁrst applying the rule S →aSb), or
+• consists of an arbitrary string of properly nested parentheses, followed
+by an arbitrary string of properly nested parentheses (these are derived
+from S by ﬁrst applying the rule S →SS).
+3.2.2
+A context-free grammar for a nonregular lan-
+guage
+Consider the language L1 = {0n1n : n ≥0}. We have seen in Section 2.9.1
+that L1 is not a regular language. We claim that L1 is a context-free language.

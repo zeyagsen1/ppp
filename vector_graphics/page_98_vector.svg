@@ -1,0 +1,7 @@
+90
+Chapter 2.
+Finite Automata and Regular Languages
+2. Consider the equivalence relation RA that was deﬁned in Exercise 2.26.
+Let n and n′ be two distinct non-negative integers and consider the two
+strings u = abn and u′ = abn′. Prove that ¬(uRAu′).
+3. Prove that A is not a regular language.

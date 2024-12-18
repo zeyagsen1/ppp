@@ -1,0 +1,34 @@
+6.2.
+The complexity class P
+199
+6.2
+The complexity class P
+Deﬁnition 6.2.1 We say that algorithm M decides the language A (resp.
+computes the function F) in polynomial time, if there exists an integer k ≥1,
+such that the running time of M is O(nk), for any input string of length n.
+It follows from Theorem 6.1.2 that this notion of “polynomial time” does
+not depend on the model of computation:
+Theorem 6.2.2 Consider the models of computation “Java program”, “k-
+tape Turing machine”, and “one-tape Turing machine”. If a language can
+be decided (resp. a function can be computed) in polynomial time in one of
+these models, then it can be decided (resp. computed) in polynomial time in
+all of these models.
+Because of this theorem, we can deﬁne the following two complexity
+classes:
+P := {A : the language A is decidable in polynomial time},
+and
+FP := {F : the function F is computable in polynomial time}.
+6.2.1
+Some examples
+Palindromes
+Let Pal be the language
+Pal := {w ∈{a, b}∗: w is a palindrome}.
+We have seen that there exists a one-tape Turing machine that decides Pal
+in O(n2) time. Therefore, Pal ∈P.
+Some functions in FP
+The following functions are in the class FP:
+• F1 : N0 →N0 deﬁned by F1(x) := x + 1,
+• F2 : N2
+0 →N0 deﬁned by F2(x, y) := x + y,
+• F3 : N2
+0 →N0 deﬁned by F3(x, y) := xy.

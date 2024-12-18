@@ -1,0 +1,31 @@
+54
+Chapter 2.
+Finite Automata and Regular Languages
+• The language {w :
+the ﬁrst and last symbols of w are equal} is de-
+scribed by the expression
+0(0 ∪1)∗0 ∪1(0 ∪1)∗1 ∪0 ∪1.
+After these examples, we give a formal (and inductive) deﬁnition of regular
+expressions:
+Deﬁnition 2.7.1 Let Σ be a non-empty alphabet.
+1. ϵ is a regular expression.
+2. ∅is a regular expression.
+3. For each a ∈Σ, a is a regular expression.
+4. If R1 and R2 are regular expressions, then R1 ∪R2 is a regular expres-
+sion.
+5. If R1 and R2 are regular expressions, then R1R2 is a regular expression.
+6. If R is a regular expression, then R∗is a regular expression.
+You can regard 1., 2., and 3. as being the “building blocks” of regular
+expressions.
+Items 4., 5., and 6. give rules that can be used to combine
+regular expressions into new (and “larger”) regular expressions. To give an
+example, we claim that
+(0 ∪1)∗101(0 ∪1)∗
+is a regular expression (where the alphabet Σ is equal to {0, 1}). In order
+to prove this, we have to show that this expression can be “built” using the
+“rules” given in Deﬁnition 2.7.1. Here we go:
+• By 3., 0 is a regular expression.
+• By 3., 1 is a regular expression.
+• Since 0 and 1 are regular expressions, by 4., 0∪1 is a regular expression.
+• Since 0∪1 is a regular expression, by 6., (0∪1)∗is a regular expression.
+• Since 1 and 0 are regular expressions, by 5., 10 is a regular expression.

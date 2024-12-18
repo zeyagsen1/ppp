@@ -1,0 +1,30 @@
+88
+Chapter 2.
+Finite Automata and Regular Languages
+2.22
+1. Give an example of a regular language A and a non-regular lan-
+guage B for which A ⊆B.
+2. Give an example of a non-regular language A and a regular language
+B for which A ⊆B.
+2.23 Let A be a language consisting of ﬁnitely many strings.
+1. Prove that A is a regular language.
+2. Let n be the maximum length of any string in A. Prove that every
+deterministic ﬁnite automaton (DFA) that accepts A has at least n+1
+states. (Hint: How is the pumping length chosen in the proof of the
+pumping lemma?)
+2.24 Let L be a regular language, let M be a DFA whose language is equal
+to L, and let p be the number of states of M. Prove that L ̸= ∅if and only
+if L contains a string of length less than p.
+2.25 Let L be a regular language, let M be a DFA whose language is equal
+to L, and let p be the number of states of M. Prove that L is an inﬁnite
+language if and only if L contains a string w with p ≤|w| ≤2p −1.
+2.26 Let Σ be a non-empty alphabet, and let L be a language over Σ, i.e.,
+L ⊆Σ∗. We deﬁne a binary relation RL on Σ∗× Σ∗, in the following way:
+For any two strings u and u′ in Σ∗,
+uRLu′ if and only if (∀v ∈Σ∗: uv ∈L ⇔u′v ∈L) .
+Prove that RL is an equivalence relation.
+2.27 Let Σ = {0, 1}, let
+L = {w ∈Σ∗: |w| is odd},
+and consider the relation RL deﬁned in Exercise 2.26.
+1. Prove that for any two strings u and u′ in Σ∗,
+uRLu′ ⇔|u| −|u′| is even.

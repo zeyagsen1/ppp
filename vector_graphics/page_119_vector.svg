@@ -1,0 +1,57 @@
+3.5.
+Pushdown automata
+111
+Since all unit-rules have been eliminated, this concludes Step 3.
+Step 4: Eliminate all rules having more than two symbols on the right-hand
+side. There are two such rules:
+• We take the rule S →BAB, remove it, and add the rules S →BA1
+and A1 →AB.
+• We take the rule A →BAB, remove it, and add the rules A →BA2
+and A2 →AB.
+This gives the following grammar:
+S
+→
+ϵ|BB|AB|BA|00|BA1
+A
+→
+BB|AB|BA|00|BA2
+B
+→
+00
+A1
+→
+AB
+A2
+→
+AB
+Step 4 is now completed.
+Step 5: Eliminate all rules, whose right-hand side contains exactly two
+symbols, which are not both variables. There are three such rules:
+• We replace the rule S →00 by the rules S →A3A3 and A3 →0.
+• We replace the rule A →00 by the rules A →A4A4 and A4 →0.
+• We replace the rule B →00 by the rules B →A5A5 and A5 →0.
+This gives the following grammar, which is in Chomsky normal form:
+S
+→
+ϵ|BB|AB|BA|BA1|A3A3
+A
+→
+BB|AB|BA|BA2|A4A4
+B
+→
+A5A5
+A1
+→
+AB
+A2
+→
+AB
+A3
+→
+0
+A4
+→
+0
+A5
+→
+0

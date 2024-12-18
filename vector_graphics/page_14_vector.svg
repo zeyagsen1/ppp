@@ -1,0 +1,29 @@
+6
+Chapter 1.
+Introduction
+(a) R is reﬂexive: For every element in a ∈A, we have (a, a) ∈R.
+(b) R is symmetric: For all a and b in A, if (a, b) ∈R, then also
+(b, a) ∈R.
+(c) R is transitive: For all a, b, and c in A, if (a, b) ∈R and (b, c) ∈R,
+then also (a, c) ∈R.
+13. A graph G = (V, E) is a pair consisting of a set V , whose elements are
+called vertices, and a set E, where each element of E is a pair of distinct
+vertices. The elements of E are called edges. The ﬁgure below shows
+some well-known graphs: K5 (the complete graph on ﬁve vertices), K3,3
+(the complete bipartite graph on 2 × 3 = 6 vertices), and the Peterson
+graph.
+K5
+K3,3
+Peterson graph
+The degree of a vertex v, denoted by deg(v), is deﬁned to be the number
+of edges that are incident on v.
+A path in a graph is a sequence of vertices that are connected by edges.
+A path is a cycle, if it starts and ends at the same vertex. A simple
+path is a path without any repeated vertices. A graph is connected, if
+there is a path between every pair of vertices.
+14. In the context of strings, an alphabet is a ﬁnite set, whose elements
+are called symbols. Examples of alphabets are Σ = {0, 1} and Σ =
+{a, b, c, . . . , z}.
+15. A string over an alphabet Σ is a ﬁnite sequence of symbols, where each
+symbol is an element of Σ. The length of a string w, denoted by |w|, is
+the number of symbols contained in w. The empty string, denoted by

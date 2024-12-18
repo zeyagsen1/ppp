@@ -1,0 +1,29 @@
+Exercises
+87
+2. For any string w = w1w2 . . . wn, we denote by wR the string obtained
+by reading w backwards, i.e., wR = wnwn−1 . . . w2w1. For any language
+A, we deﬁne AR to be the language obtained by reading all strings in
+A backwards, i.e.,
+AR = {wR : w ∈A}.
+Let A be a non-empty regular language. Prove that the language AR
+is also regular.
+2.19 If n ≥1 is an integer and w = a1a2 . . . an is a string, then for any i
+with 0 ≤i < n, the string a1a2 . . . ai is called a proper preﬁx of w. (If i = 0,
+then a1a2 . . . ai = ϵ.)
+For any language L, we deﬁne MIN(L) to be the language
+MIN(L) = {w ∈L : no proper preﬁx of w belongs to L}.
+Prove the following claim: If L is a regular language, then MIN(L) is regular
+as well.
+2.20 Use the pumping lemma to prove that the following languages are not
+regular.
+1. {anbmcn+m : n ≥0, m ≥0}.
+2. {anbnc2n : n ≥0}.
+3. {anbman : n ≥0, m ≥0}.
+4. {a2n : n ≥0}. (Remark: a2n is the string consisting of 2n many a’s.)
+5. {anbmck : n ≥0, m ≥0, k ≥0, n2 + m2 = k2}.
+6. {uvu : u ∈{a, b}∗, u ̸= ϵ, v ∈{a, b}∗}.
+2.21 Prove that the language
+{ambn : m ≥0, n ≥0, m ̸= n}
+is not regular. (Using the pumping lemma for this one is a bit tricky. You
+can avoid using the pumping lemma by combining results about the closure
+under regular operations.)

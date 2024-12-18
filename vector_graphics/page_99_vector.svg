@@ -1,0 +1,35 @@
+Chapter 3
+Context-Free Languages
+In this chapter, we introduce the class of context-free languages.
+As we
+will see, this class contains all regular languages, as well as some nonregular
+languages such as {0n1n : n ≥0}.
+The class of context-free languages consists of languages that have some
+sort of recursive structure. We will see two equivalent methods to obtain this
+class. We start with context-free grammars, which are used for deﬁning the
+syntax of programming languages and their compilation. Then we introduce
+the notion of (nondeterministic) pushdown automata, and show that these
+automata have the same power as context-free grammars.
+3.1
+Context-free grammars
+We start with an example. Consider the following ﬁve (substitution) rules:
+S
+→
+AB
+A
+→
+a
+A
+→
+aA
+B
+→
+b
+B
+→
+bB
+Here, S, A, and B are variables, S is the start variable, and a and b are
+terminals. We use these rules to derive strings consisting of terminals (i.e.,
+elements of {a, b}∗), in the following manner:
+1. Initialize the current string to be the string consisting of the start
+variable S.

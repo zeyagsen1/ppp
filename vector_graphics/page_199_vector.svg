@@ -1,0 +1,32 @@
+Exercises
+191
+For every Turing machine M ∈TM n, we deﬁne f(M) to be the number of
+ones on the tape, after the computation of M, on the empty input string,
+has terminated.
+The busy beaver function BB : N →N is deﬁned as
+BB(n) := max{f(M) : M ∈TM n}, for every n ≥1.
+In words, BB(n) is the maximum number of ones that any Turing machine
+with n states can produce, when given the empty string as input, and as-
+suming the Turing machine terminates on this input.
+Prove that the function BB is not computable.
+Hint: Assume that BB is computable. Then there exists a Turing ma-
+chine M that, for any given n ≥1, computes the value of BB(n). Fix a large
+integer n ≥1. Deﬁne (in plain English) a Turing machine that, when given
+the empty string as input, terminates and outputs a string consisting of more
+than BB(n) many ones. Use Exercises 5.4 and 5.5 to argue that there exists
+such a Turing machine having O(log n) states. Then, if you assume that n
+is large enough, the number of states is at most n.
+5.7 Since the set
+T = {M : M is a Turing machine}
+is countable, there is an inﬁnite list
+M1, M2, M3, M4, . . . ,
+such that every Turing machine occurs exactly once in this list.
+For any positive integer n, let ⟨n⟩denote the binary representation of n;
+observe that ⟨n⟩is a binary string.
+Let A be the language deﬁned as
+A = {⟨n⟩:
+the Turing machine Mn terminates on the input string ⟨n⟩,
+and it rejects this string}.
+Prove that the language A is undecidable.
+5.8 Consider the three languages
+Empty = {⟨M⟩: M is a Turing machine for which L(M) = ∅},

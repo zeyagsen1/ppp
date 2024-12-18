@@ -1,0 +1,33 @@
+152
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+Does there exist a ﬁnite process that decides whether or not any
+given polynomial with integer coeﬃcients has integral roots?
+Of course, in our language, Hilbert asked whether or not there exists an
+algorithm that decides, when given an arbitrary polynomial equation (with
+integer coeﬃcients) such as
+12x3y7z5 + 7x2y4z −x4 + y2z7 −z3 + 10 = 0,
+whether or not this equation has a solution in integers. In 1970, Matiyasevich
+proved that such an algorithm does not exist. Of course, in order to prove
+this claim, we ﬁrst have to agree on what an algorithm is. In the beginning
+of the twentieth century, mathematicians gave several deﬁnitions, such as
+Turing machines (1936) and the λ-calculus (1936), and they proved that all
+these are equivalent. Later, after programming languages were invented, it
+was shown that these older notions of an algorithm are equivalent to notions
+of an algorithm that are based on C programs, Java programs, Lisp programs,
+Pascal programs, etc.
+In other words, all attempts to give a rigorous deﬁnition of the notion of
+an algorithm led to the same concept. Because of this, computer scientists
+nowadays agree on what is called the Church-Turing Thesis:
+Church-Turing Thesis:
+Every computational process that is intuitively
+considered to be an algorithm can be converted to a Turing machine.
+In other words, this basically states that we deﬁne an algorithm to be a
+Turing machine. At this point, you should ask yourself, whether the Church-
+Turing Thesis can be proved. Alternatively, what has to be done in order to
+disprove this thesis?
+Exercises
+4.1 Construct a Turing machine with one tape, that accepts the language
+{02n1n : n ≥0}.
+Assume that, at the start of the computation, the tape head is on the leftmost
+symbol of the input string.

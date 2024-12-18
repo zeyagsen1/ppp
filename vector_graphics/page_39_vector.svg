@@ -1,0 +1,30 @@
+2.3.
+Regular operations
+31
+2.3
+Regular operations
+In this section, we deﬁne three operations on languages. Later, we will answer
+the question whether the set of all regular languages is closed under these
+operations. Let A and B be two languages over the same alphabet.
+1. The union of A and B is deﬁned as
+A ∪B = {w : w ∈A or w ∈B}.
+2. The concatenation of A and B is deﬁned as
+AB = {ww′ : w ∈A and w′ ∈B}.
+In words, AB is the set of all strings obtained by taking an arbitrary
+string w in A and an arbitrary string w′ in B, and gluing them together
+(such that w is to the left of w′).
+3. The star of A is deﬁned as
+A∗= {u1u2 . . . uk : k ≥0 and ui ∈A for all i = 1, 2, . . . , k}.
+In words, A∗is obtained by taking any ﬁnite number of strings in A, and
+gluing them together. Observe that k = 0 is allowed; this corresponds
+to the empty string ϵ. Thus, ϵ ∈A∗.
+To give an example, let A = {0, 01} and B = {1, 10}. Then
+A ∪B = {0, 01, 1, 10},
+AB = {01, 010, 011, 0110},
+and
+A∗= {ϵ, 0, 01, 00, 001, 010, 0101, 000, 0001, 00101, . . .}.
+As another example, if Σ = {0, 1}, then Σ∗is the set of all binary strings
+(including the empty string). Observe that a string always has a ﬁnite length.
+Before we proceed, we give an alternative (and equivalent) deﬁnition of
+the star of the language A: Deﬁne
+A0 = {ϵ}

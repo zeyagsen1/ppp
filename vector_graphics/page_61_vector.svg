@@ -1,0 +1,30 @@
+2.7.
+Regular expressions
+53
+Before formally deﬁning the notion of a regular expression, we give some
+examples. Consider the expression
+(0 ∪1)01∗.
+The language described by this expression is the set of all binary strings
+1. that start with either 0 or 1 (this is indicated by (0 ∪1)),
+2. for which the second symbol is 0 (this is indicated by 0), and
+3. that end with zero or more 1s (this is indicated by 1∗).
+That is, the language described by this expression is
+{00, 001, 0011, 00111, . . . , 10, 101, 1011, 10111, . . .}.
+Here are some more examples (in all cases, the alphabet is {0, 1}):
+• The language {w : w contains exactly two 0s} is described by the ex-
+pression
+1∗01∗01∗.
+• The language {w : w contains at least two 0s} is described by the ex-
+pression
+(0 ∪1)∗0(0 ∪1)∗0(0 ∪1)∗.
+• The language {w : 1011 is a substring of w} is described by the ex-
+pression
+(0 ∪1)∗1011(0 ∪1)∗.
+• The language {w : the length of w is even} is described by the expres-
+sion
+((0 ∪1)(0 ∪1))∗.
+• The language {w : the length of w is odd} is described by the expres-
+sion
+(0 ∪1) ((0 ∪1)(0 ∪1))∗.
+• The language {1011, 0} is described by the expression
+1011 ∪0.

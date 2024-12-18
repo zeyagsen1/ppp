@@ -1,0 +1,58 @@
+1.3.
+Proof techniques
+7
+ϵ, is the string having length zero. For example, if the alphabet Σ is
+equal to {0, 1}, then 10, 1000, 0, 101, and ϵ are strings over Σ, having
+lengths 2, 4, 1, 3, and 0, respectively.
+16. A language is a set of strings.
+17. The Boolean values are 1 and 0, that represent true and false, respec-
+tively. The basic Boolean operations include
+(a) negation (or NOT), represented by ¬,
+(b) conjunction (or AND), represented by ∧,
+(c) disjunction (or OR), represented by ∨,
+(d) exclusive-or (or XOR), represented by ⊕,
+(e) equivalence, represented by ↔or ⇔,
+(f) implication, represented by →or ⇒.
+The following table explains the meanings of these operations.
+NOT
+AND
+OR
+XOR
+equivalence
+implication
+¬0 = 1
+0 ∧0 = 0
+0 ∨0 = 0
+0 ⊕0 = 0
+0 ↔0 = 1
+0 →0 = 1
+¬1 = 0
+0 ∧1 = 0
+0 ∨1 = 1
+0 ⊕1 = 1
+0 ↔1 = 0
+0 →1 = 1
+1 ∧0 = 0
+1 ∨0 = 1
+1 ⊕0 = 1
+1 ↔0 = 0
+1 →0 = 0
+1 ∧1 = 1
+1 ∨1 = 1
+1 ⊕1 = 0
+1 ↔1 = 1
+1 →1 = 1
+1.3
+Proof techniques
+In mathematics, a theorem is a statement that is true. A proof is a sequence
+of mathematical statements that form an argument to show that a theorem is
+true. The statements in the proof of a theorem include axioms (assumptions
+about the underlying mathematical structures), hypotheses of the theorem
+to be proved, and previously proved theorems. The main question is “How
+do we go about proving theorems?” This question is similar to the question
+of how to solve a given problem. Of course, the answer is that ﬁnding proofs,
+or solving problems, is not easy; otherwise life would be dull! There is no
+speciﬁed way of coming up with a proof, but there are some generic strategies
+that could be of help. In this section, we review some of these strategies,
+that will be suﬃcient for this course. The best way to get a feeling of how
+to come up with a proof is by solving a large number of problems. Here are

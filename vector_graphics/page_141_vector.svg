@@ -1,0 +1,43 @@
+Exercises
+133
+• {w : w is a palindrome}.
+A palindrome is a string w having the property that w = wR, i.e.,
+reading w from left to right gives the same result as reading w from
+right to left.
+• {w : w starts and ends with the same symbol}
+• {w : w starts and ends with diﬀerent symbols}
+3.2 Let G = (V, Σ, R, S) be the context-free grammar, where V = {A, B, S},
+Σ = {0, 1}, S is the start variable, and R consists of the rules
+S
+→
+0S|1A|ϵ
+A
+→
+0B|1S
+B
+→
+0A|1B
+Deﬁne the following language L:
+L = {w ∈{0, 1}∗:
+w is the binary representation of a non-negative
+integer that is divisible by three } ∪{ϵ}.
+Prove that L = L(G). (Hint: The variables S, A, and B are used to
+remember the remainder after division by three.)
+3.3 Let G = (V, Σ, R, S) be the context-free grammar, where V = {A, B, S},
+Σ = {a, b}, S is the start variable, and R consists of the rules
+S
+→
+aB|bA
+A
+→
+a|aS|BAA
+B
+→
+b|bS|ABB
+• Prove that ababba ∈L(G).
+• Prove that L(G) is the set of all non-empty strings w over the alphabet
+{a, b} such that the number of as in w is equal to the number of bs in
+w.
+3.4 Let A and B be context-free languages over the same alphabet Σ.
+• Prove that the union A ∪B of A and B is also context-free.
+• Prove that the concatenation AB of A and B is also context-free.

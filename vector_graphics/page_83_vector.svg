@@ -1,0 +1,31 @@
+2.9.
+The pumping lemma and nonregular languages
+75
+and end with the same symbol. As a result, A is the language described by
+the regular expression
+ϵ ∪0 ∪1 ∪0(0 ∪1)∗0 ∪1(0 ∪1)∗1.
+This gives an alternative proof for the fact that A is a regular language.
+Eighth example
+Consider the language
+L = {w ∈{0, 1}∗: w is the binary representation of a prime number}.
+We assume that for any positive integer, the leftmost bit in its binary repre-
+sentation is 1. In other words, we assume that there are no 0’s added to the
+left of such a binary representation. Thus,
+L = {10, 11, 101, 111, 1011, 1101, 10001, . . .}.
+We will prove that L is not a regular language.
+Assume that L is a regular language. Let p ≥1 be the pumping length.
+Let N > 2p be a prime number and let s ∈{0, 1}∗be the binary representa-
+tion of N. Observe that |s| ≥p + 1. Also, the leftmost and rightmost bits of
+s are 1.
+Since s ∈L and |s| ≥p + 1 ≥p, the Pumping Lemma implies that we
+can write s = xyz, such that
+1. |y| ≥1,
+2. |xy| ≤p (and, thus, |z| ≥1), and
+3. for all i ≥0, xyiz ∈L, i.e., xyiz is the binary representation of a prime
+number.
+Deﬁne A, B, and C to be the integers whose binary representations are
+x, y, and z, respectively. Note that both y and z may have leading 0’s. In
+fact, y may be a string consisting of 0’s only, in which case B = 0. However,
+since the rightmost bit of z is 1, we have C ≥1. Observe that
+N = C + B · 2|z| + A · 2|z|+|y|.
+(2.4)

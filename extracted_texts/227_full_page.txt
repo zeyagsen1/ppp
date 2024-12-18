@@ -1,0 +1,45 @@
+6.5.
+NP-complete languages
+219
+¬x2
+¬x3
+x1
+¬x1
+x2
+x3
+x1
+x2
+x3
+Figure 6.4: The formula ϕ in (6.7) is mapped to this graph. The vertices on
+the top represent C1; the vertices on the left represent C2; the vertices on
+the right represent C3.
+To prove this, we ﬁrst assume that the formula
+ϕ = C1 ∧C2 ∧. . . ∧Ck
+is satisﬁable. Then there exists a truth-value in {0, 1} for each of the variables
+x1, x2, . . . , xm, such that the entire formula ϕ is true. Hence, for each i with
+1 ≤i ≤k, there is at least one term ℓi
+a in
+Ci = ℓi
+1 ∨ℓi
+2 ∨ℓi
+3
+that is true (i.e., has value 1).
+Let V ′ be the set of vertices obtained by choosing for each i, 1 ≤i ≤k,
+exactly one vertex vi
+a such that ℓi
+a has value 1.
+It is clear that V ′ contains exactly k vertices. We claim that this set is
+a clique in G. To prove this claim, let vi
+a and vj
+b be two distinct vertices in
+V ′. It follows from the deﬁnition of V ′ that i ̸= j and ℓi
+a = ℓj
+b = 1. Hence,
+ℓi
+a is not the negation of ℓj
+b. But this means that the vertices vi
+a and vj
+b are
+connected by an edge in G.
+This proves one direction of (6.8). To prove the other direction, we assume
+that the graph G contains a clique V ′ with k vertices.

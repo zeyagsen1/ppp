@@ -1,0 +1,32 @@
+5.2.
+Countable sets
+167
+Since f(n) and x are equal, their n-th digits must be equal, i.e., dnn = dn.
+But, by the deﬁnition of dn, we have dnn ̸= dn. This is a contradiction and,
+therefore, the set A is not countable.
+Notice how we deﬁned the real number x: For each n ≥1, the n-th digit
+of x is not equal to the n-th digit of f(n). Therefore, for each n ≥1, x ̸= f(n)
+and, thus, x ̸∈A.
+The ﬁnal result of this section is the fact that for every set A, its power
+set
+P(A) = {B : B ⊆A}
+is “strictly larger” than A. Deﬁne the function f : A →P(A) by
+f(a) = {a},
+for any a in A. Since f is one-to-one, we can say that P(A) is “at least as
+large as” A.
+Theorem 5.2.5 Let A be an arbitrary set. Then A and P(A) do not have
+the same size.
+Proof. The proof is by contradiction. Thus, we assume that there exists a
+bijection g : A →P(A). Deﬁne the set B as
+B = {a ∈A : a ̸∈g(a)}.
+Since B ∈P(A) and g is a bijection, there exists an element a in A such that
+g(a) = B.
+First assume that a ∈B. Since g(a) = B, we have a ∈g(a). But then,
+from the deﬁnition of the set B, we have a ̸∈B, which is a contradiction.
+Next assume that a ̸∈B.
+Since g(a) = B, we have a ̸∈g(a).
+But
+then, from the deﬁnition of the set B, we have a ∈B, which is again a
+contradiction.
+We conclude that the bijection g does not exist. Therefore, A and P(A)
+do not have the same size.

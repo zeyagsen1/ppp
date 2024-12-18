@@ -1,0 +1,34 @@
+178
+Chapter 5.
+Decidable and Undecidable Languages
+Thus, an enumerator E for A really enumerates all strings in the language
+A. There is no particular order in which the strings of A are sent to the
+printer. Moreover, a string in A may be sent to the printer multiple times.
+If the language A is inﬁnite, then the Turing machine E obviously does not
+terminate; however, every string in A (and only strings in A) will be sent to
+the printer at some time during the computation.
+To give an example, let A = {0n : n ≥0}. The following Turing machine
+is an enumerator for A.
+Turing machine StringsOfZeros:
+n := 0;
+while 1 + 1 = 2
+do for i := 1 to n
+do write 0 on the print tape
+endfor;
+enter the print state;
+n := n + 1
+endwhile
+In the rest of this section, we will prove the following result.
+Theorem 5.5.2 A language is enumerable if and only if it has an enumer-
+ator.
+For the ﬁrst part of the proof, assume that the language A has an enu-
+merator E. We construct the following Turing machine M, which takes an
+arbitrary string w as input:
+Turing machine M(w):
+run E; every time E enters the print state:
+let v be the string on the print tape;
+if w = v
+then terminate in the accept state
+endif
+The Turing machine M has the following properties:
+• If w ∈A, then w will be sent to the printer at some time during the

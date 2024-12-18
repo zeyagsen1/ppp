@@ -1,0 +1,22 @@
+ You will notice three di erences with the nite automata that we have
+ seen until now. First, if the automaton is in state q1 and reads the symbol 1,
+ then it has two options: Either it stays in state q1, or it switches to state q2.
+ Second, if the automaton is in state q2, then it can switch to state q3 without
+ reading a symbol; this is indicated by the edge having the empty string as
+ label. Third, if the automaton is in state q3 and reads the symbol 0, then it
+ cannot continue.
+ Let us see what this automaton can do when it gets the string 010110 as
+ input. Initially, the automaton is in the start state q1.
+ Since the rst symbol in the input string is 0, the automaton stays in
+ state q1 after having read this symbol.
+ The second symbol is 1, and the automaton can either stay in state q1
+ or switch to state q2.If the automaton stays in state q1, then it is still in this state after
+ having read the third symbol.
+ If the automaton switches to state q2, then it again has two op
+tions:
+ Either read the third symbol in the input string, which is 0,
+ and switch to state q3,
+ or switch to state q3, without reading the third symbol.
+ If we continue in this way, then we see that, for the input string 010110,
+ there are seven possible computations. All these computations are given in
+ the gure below.

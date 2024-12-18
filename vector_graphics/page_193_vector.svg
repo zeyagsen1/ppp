@@ -1,0 +1,30 @@
+5.7.
+Decidable versus enumerable languages
+185
+• If w ̸∈A, then the computation of M1, on the input string w, terminates
+in the reject state of M1 or does not terminate.
+Similarly, since A is enumerable, there exists a Turing machine M2, such that
+for any string w ∈Σ∗, the following holds:
+• If w ∈A, then the computation of M2, on the input string w, terminates
+in the accept state of M2.
+• If w ̸∈A, then the computation of M2, on the input string w, terminates
+in the reject state of M2 or does not terminate.
+We construct a two-tape Turing machine M:
+Two-tape Turing machine M: For any input string w ∈Σ∗, M
+does the following:
+• M simulates the computation of M1, on input w, on the ﬁrst
+tape, and, simultaneously, it simulates the computation of M2,
+on input w, on the second tape.
+• If the simulation of M1 terminates in the accept state of M1,
+then M terminates in its accept state.
+• If the simulation of M2 terminates in the accept state of M2,
+then M terminates in its reject state.
+Observe the following:
+• If w ∈A, then M1 terminates in its accept state and, therefore, M
+terminates in its accept state.
+• If w ̸∈A, then M2 terminates in its accept state and, therefore, M
+terminates in its reject state.
+We conclude that the Turing machine M accepts all strings in A, and rejects
+all strings that are not in A. This proves that the language A is decidable.
+We now use Theorem 5.7.1 to give examples of languages that are not
+enumerable:

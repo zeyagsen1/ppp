@@ -1,0 +1,67 @@
+5.6.
+Most languages are not enumerable
+183
+{0, 1}∗
+A
+g(A)
+ϵ
+not in A
+0
+0
+in A
+1
+1
+not in A
+0
+00
+in A
+1
+01
+in A
+1
+10
+not in A
+0
+11
+not in A
+0
+000
+in A
+1
+001
+in A
+1
+010
+in A
+1
+100
+not in A
+0
+011
+in A
+1
+101
+not in A
+0
+110
+not in A
+0
+111
+not in A
+0
+...
+...
+...
+The function g deﬁned above has the following properties:
+• If A and A′ are two diﬀerent languages in L, then g(A) ̸= g(A′).
+• For every inﬁnite binary sequence w in B, there exists a language A in
+L, such that g(A) = w.
+This means that the function g is a bijection from L to B.
+5.6.3
+There are languages that are not enumerable
+We have proved that the set
+E = {A : A ⊆{0, 1}∗is an enumerable language}
+is countable, whereas the set
+L = {A : A ⊆{0, 1}∗is a language}
+is not countable. This means that there are “more” languages in L than
+there are in E, proving the following result:

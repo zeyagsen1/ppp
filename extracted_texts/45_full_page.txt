@@ -1,0 +1,48 @@
+2.4.
+Nondeterministic ﬁnite automata
+37
+automaton cannot continue: The third symbol is 0, but there is no
+edge leaving q3 that is labeled 0, and there is no edge leaving q3 that
+is labeled ϵ. Therefore, the computation hangs at this point.
+From the ﬁgure, you can see that, out of the seven possible computations,
+exactly two end in the accept state q4 (after the entire input string 010110 has
+been read). We say that the automaton accepts the string 010110, because
+there is at least one computation that ends in the accept state.
+Now consider the input string 010. In this case, there are three possible
+computations:
+1. q1
+0→q1
+1→q1
+0→q1
+2. q1
+0→q1
+1→q2
+0→q3
+3. q1
+0→q1
+1→q2
+ϵ→q3 →hang
+None of these computations ends in the accept state (after the entire input
+string 010 has been read). Therefore, we say that the automaton rejects the
+input string 010.
+The state diagram given above is an example of a nondeterministic ﬁnite
+automaton (NFA). Informally, an NFA accepts a string, if there exists at least
+one path in the state diagram that (i) starts in the start state, (ii) does not
+hang before the entire string has been read, and (iii) ends in an accept state.
+A string for which (i), (ii), and (iii) does not hold is rejected by the NFA.
+The NFA given above accepts all binary strings that contain 101 or 11 as
+a substring. All other binary strings are rejected.
+2.4.2
+A second example
+Let A be the language
+A = {w ∈{0, 1}∗: w has a 1 in the third position from the right}.
+The following state diagram deﬁnes an NFA that accepts all strings that are
+in A, and rejects all strings that are not in A.
+q1
+q2
+q3
+q4
+0,1
+1
+0,1
+0,1

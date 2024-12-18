@@ -1,0 +1,26 @@
+162
+Chapter 5.
+Decidable and Undecidable Languages
+First observe that this new Turing machine D terminates on any input
+string ⟨M⟩, because H terminates on every input. Next observe that, for any
+input string ⟨M⟩for D:
+• If ⟨M, ⟨M⟩⟩∈ATM (i.e., M accepts ⟨M⟩), then D terminates in its
+reject state.
+• If ⟨M, ⟨M⟩⟩̸∈ATM (i.e., M rejects ⟨M⟩or M does not terminate on
+input ⟨M⟩), then D terminates in its accept state.
+This means that for any string ⟨M⟩:
+• If M accepts ⟨M⟩, then D rejects ⟨M⟩.
+• If M rejects ⟨M⟩or M does not terminate on input ⟨M⟩, then D
+accepts ⟨M⟩.
+We now consider what happens if we give the Turing machine D the string
+⟨D⟩as input, i.e., we take M = D:
+• If D accepts ⟨D⟩, then D rejects ⟨D⟩.
+• If D rejects ⟨D⟩or D does not terminate on input ⟨D⟩, then D accepts
+⟨D⟩.
+Since D terminates on every input string, this means that
+• If D accepts ⟨D⟩, then D rejects ⟨D⟩.
+• If D rejects ⟨D⟩, then D accepts ⟨D⟩.
+This is clearly a contradiction. Therefore, the Turing machine H that decides
+the language ATM cannot exist and, thus, ATM is undecidable. We have
+proved the following result:
+Theorem 5.1.6 The language ATM is undecidable.

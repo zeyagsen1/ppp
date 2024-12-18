@@ -1,0 +1,49 @@
+4.2.
+Examples of Turing machines
+147
+The transitions for Stage 2 are speciﬁed by the following instructions:
+q1a →cannot happen
+q′
+1a →qreject
+q1b →qreject
+q′
+1b →cannot happen
+q1c →qc2L
+q′
+1c →cannot happen
+q12 →q′
+12L
+q′
+12 →qaccept
+qca →cannot happen
+qba →cannot happen
+qcb →qbcL
+qbb →qbbL
+qcc →qccL
+qbc →cannot happen
+qc2 →qreject
+qb2 →q2bL
+q2a →q2aL
+q2b →cannot happen
+q2c →cannot happen
+q22 →q02R
+4.2.5
+Accepting ambncmn using one tape
+We will sketch how to construct a Turing machine with one tape that accepts
+the language
+{ambncmn : m ≥0, n ≥0}.
+Recall that we have proved in Section 3.8.2 that this language is not context-
+free.
+The input alphabet is Σ = {a, b, c} and the tape alphabet is Γ = {a, b, c, $, 2},
+where the purpose of the symbol $ will become clear below.
+Start of the computation: The tape contains the input string w and the
+tape head is on the leftmost symbol of w. The Turing machine is in the start
+state.
+Idea: Observe that a string ambnck is in the language if and only if for every
+a, the string contains n many cs. Based on this, the computation consists of
+the following stages:
+Stage 1. Walk along the input string w from left to right and check whether
+w is an element of the language described by the regular expression a∗b∗c∗.
+If this is not the case, then reject the input string. Otherwise, go to Stage 2.
+Stage 2. Walk back to the leftmost symbol of w. Go to Stage 3.
+Stage 3. In this stage, the Turing machine does the following:

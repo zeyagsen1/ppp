@@ -1,0 +1,39 @@
+6.5.
+NP-complete languages
+223
+We denote the language of all solvable domino games by Domino:
+Domino
+:=
+{⟨m, k, t, R, T1, . . . , Tk⟩:
+m ≥1, k ≥1, t ≥1, R ∈Σ4t, Ti ∈Σ4, 1 ≤i ≤k,
+frame R can be ﬁlled using tiles of types
+T1, . . . , Tk.}
+We will prove the following theorem.
+Theorem 6.5.12 The language Domino is NP-complete.
+Proof. It is clear that Domino ∈NP: A solution consists of a t × t matrix,
+in which the (i, j)-entry indicates the type of the tile that occupies position
+(i, j) in the frame. The number of bits needed to specify such a solution is
+polynomial in the length of the input. Moreover, we can verify in polynomial
+time whether or not any given “solution” is correct.
+It remains to show that
+A ≤P Domino, for every language A in NP.
+Let A be an arbitrary language in NP. Then there exist a polynomial p and
+a non-deterministic Turing machine M, that decides the language A in time
+p. We may assume that this Turing machine has only one tape.
+On input w = a1a2 . . . an, the Turing machine M starts in the start state
+z0, with its tape head on the cell containing the symbol a1. We may assume
+that during the entire computation, the tape head never moves to the left of
+this initial cell. Hence, the entire computation “takes place” in and to the
+right of the initial cell. We know that
+w ∈A
+⇐⇒
+on input w, there exists an accepting computation
+that makes at most p(n) computation steps.
+At the end of such an accepting computation, the tape only contains the
+symbol 1, which we may assume to be in the initial cell, and M is in the ﬁnal
+state z1. In this case, we may assume that the accepting computation makes
+exactly p(n) computation steps. (If this is not the case, then we extend the
+computation using the instruction z11 →z11N.)
+We need one more technical detail: We may assume that za →z′bR and
+za′ →z′′b′L are not both instructions of M. Hence, the state of the Turing
+machine uniquely determines the direction in which the tape head moves.

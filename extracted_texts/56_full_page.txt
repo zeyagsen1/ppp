@@ -1,0 +1,27 @@
+48
+Chapter 2.
+Finite Automata and Regular Languages
+/0
+{1,2}
+{2,3}
+{1,2,3}
+a,b
+a
+b
+b
+a
+b
+a
+2.6
+Closure under the regular operations
+In Section 2.3, we have deﬁned the regular operations union, concatenation,
+and star. We proved in Theorem 2.3.1 that the union of two regular lan-
+guages is a regular language. We also explained why it is not clear that the
+concatenation of two regular languages is regular, and that the star of a reg-
+ular language is regular. In this section, we will see that the concept of NFA,
+together with Theorem 2.5.2, can be used to give a simple proof of the fact
+that the regular languages are indeed closed under the regular operations.
+We start by giving an alternative proof of Theorem 2.3.1:
+Theorem 2.6.1 The set of regular languages is closed under the union op-
+eration, i.e., if A1 and A2 are regular languages over the same alphabet Σ,
+then A1 ∪A2 is also a regular language.

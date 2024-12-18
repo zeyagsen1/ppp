@@ -1,0 +1,40 @@
+vi
+Contents
+6
+Complexity Theory
+197
+6.1
+The running time of algorithms . . . . . . . . . . . . . . . . . 197
+6.2
+The complexity class P . . . . . . . . . . . . . . . . . . . . . . 199
+6.2.1
+Some examples . . . . . . . . . . . . . . . . . . . . . . 199
+6.3
+The complexity class NP . . . . . . . . . . . . . . . . . . . . . 202
+6.3.1
+P is contained in NP . . . . . . . . . . . . . . . . . . . 208
+6.3.2
+Deciding NP-languages in exponential time
+. . . . . . 208
+6.3.3
+Summary
+. . . . . . . . . . . . . . . . . . . . . . . . . 211
+6.4
+Non-deterministic algorithms
+. . . . . . . . . . . . . . . . . . 211
+6.5
+NP-complete languages
+. . . . . . . . . . . . . . . . . . . . . 213
+6.5.1
+Two examples of reductions . . . . . . . . . . . . . . . 215
+6.5.2
+Deﬁnition of NP-completeness . . . . . . . . . . . . . . 220
+6.5.3
+An NP-complete domino game
+. . . . . . . . . . . . . 222
+6.5.4
+Examples of NP-complete languages . . . . . . . . . . 231
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 235
+7
+Summary
+239

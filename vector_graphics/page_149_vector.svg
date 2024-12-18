@@ -1,0 +1,46 @@
+4.2.
+Examples of Turing machines
+141
+4.2
+Examples of Turing machines
+4.2.1
+Accepting palindromes using one tape
+We will show how to construct a Turing machine with one tape, that decides
+whether or not any input string w ∈{a, b}∗is a palindrome. Recall that the
+string w is called a palindrome, if reading w from left to right gives the same
+result as reading w from right to left. Examples of palindromes are abba,
+baabbbbaab, and the empty string ϵ.
+Start of the computation: The tape contains the input string w, the tape
+head is on the leftmost symbol of w, and the Turing machine is in the start
+state q0.
+Idea: The tape head reads the leftmost symbol of w, deletes this symbol
+and “remembers” it by means of a state.
+Then the tape head moves to
+the rightmost symbol and tests whether it is equal to the (already deleted)
+leftmost symbol.
+• If they are equal, then the rightmost symbol is deleted, the tape head
+moves to the new leftmost symbol, and the whole process is repeated.
+• If they are not equal, the Turing machine enters the reject state, and
+the computation terminates.
+The Turing machine enters the accept state as soon as the string currently
+stored on the tape is empty.
+We will use the input alphabet Σ = {a, b} and the tape alphabet Γ =
+{a, b, 2}. The set Q of states consists of the following eight states:
+q0 :
+start state; tape head is on the leftmost symbol
+qa :
+leftmost symbol was a; tape head is moving to the right
+qb :
+leftmost symbol was b; tape head is moving to the right
+q′
+a :
+reached rightmost symbol; test whether it is equal to a, and delete it
+q′
+b :
+reached rightmost symbol; test whether it is equal to b, and delete it
+qL :
+test was positive; tape head is moving to the left
+qaccept :
+accept state
+qreject :
+reject state

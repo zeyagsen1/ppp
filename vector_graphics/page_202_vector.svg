@@ -1,0 +1,30 @@
+194
+Chapter 5.
+Decidable and Undecidable Languages
+Consider the language
+HW = {⟨P⟩: P is a Hello-World-program}.
+The questions below will lead you through a proof of the claim that the
+language HW is undecidable.
+Consider a ﬁxed Java program P and a ﬁxed binary string w. We write
+a new Java program JPw which takes as input an arbitrary binary string x:
+Java program JPw(x):
+run P on the input w;
+print Hello World
+• Argue that P terminates on input w if and only if ⟨JPw⟩∈HW .
+The goal is to prove that the language HW is undecidable. We will prove this
+by contradiction. Thus, we assume that H is a Java program that decides
+HW . Recall what this means:
+• If P is a Hello-World-program, then H, when given ⟨P⟩as input, will
+terminate in the accept state.
+• If P is not a Hello-World-program, then H, when given ⟨P⟩as input,
+will terminate in the reject state.
+We write a new Java program H′ which takes as input the binary encoding
+⟨P, w⟩of an arbitrary Java program P and an arbitrary binary string w:
+Java program H′(⟨P, w⟩):
+construct the Java program JPw described above;
+run H on the input ⟨JPw⟩;
+if H terminates in the accept state
+then terminate in the accept state
+else terminate in the reject state
+endif
+Argue that the following are true:

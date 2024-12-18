@@ -1,0 +1,33 @@
+190
+Chapter 5.
+Decidable and Undecidable Languages
+Start of the computation: The tape is empty, i.e., every cell of the tape
+contains 2, and the Turing machine is in the start state q0.
+End of the computation: The tape contains the binary representation of
+the integer n, the tape head is on the rightmost bit of the binary represen-
+tation of n, and the Turing machine is in the ﬁnal state qk.
+The Turing machine in this exercise does not have an accept state or a
+reject state; instead, it has a ﬁnal state qk. As soon as state qk is entered,
+the Turing machine terminates.
+5.5 Give an informal description (in plain English) of a Turing machine
+with three tapes, that gets as input the binary representation of an arbitrary
+integer m ≥1, and returns as output the unary representation of m.
+Start of the computation: The ﬁrst tape contains the binary representa-
+tion of the input m. The other two tapes are empty (i.e., contain only 2s).
+The Turing machine is in the start state.
+End of the computation: The third tape contains the unary representation
+of m, i.e., a string consisting of m many ones. The Turing machine is in the
+ﬁnal state.
+The Turing machine in this exercise does not have an accept state or a
+reject state; instead, it has a ﬁnal state. As soon as this ﬁnal state is entered,
+the Turing machine terminates.
+Hint: Use the second tape to maintain a string of ones, whose length is
+a power of two.
+5.6 In this exercise, you are asked to prove that the busy beaver function
+BB : N →N is not computable.
+For any integer n ≥1, we deﬁne TM n to be the set of all Turing machines
+M, such that
+• M has one tape,
+• M has exactly n states,
+• the tape alphabet of M is {0, 1, 2}, and
+• M terminates, when given the empty string ϵ as input.

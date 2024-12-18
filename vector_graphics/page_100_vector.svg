@@ -1,0 +1,40 @@
+92
+Chapter 3.
+Context-Free Languages
+2. Take any variable in the current string and take any rule that has this
+variable on the left-hand side. Then, in the current string, replace this
+variable by the right-hand side of the rule.
+3. Repeat 2. until the current string only contains terminals.
+For example, the string aaaabb can be derived in the following way:
+S
+⇒
+AB
+⇒
+aAB
+⇒
+aAbB
+⇒
+aaAbB
+⇒
+aaaAbB
+⇒
+aaaabB
+⇒
+aaaabb
+This derivation can also be represented using a parse tree, as in the ﬁgure
+below:
+S
+A
+A
+A
+A
+a
+a
+a
+a
+b
+b
+B
+B
+The ﬁve rules in this example constitute a context-free grammar. The
+language of this grammar is the set of all strings that

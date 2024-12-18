@@ -1,0 +1,31 @@
+204
+Chapter 6.
+Complexity Theory
+k ≥3, it is not known whether or not kColor is in the class P.
+Example 6.3.2 Let G be a graph with vertex set V = {1, 2, . . . , m} and
+edge set E. A Hamilton cycle is a cycle in G that visits each vertex exactly
+once. Formally, it is a sequence v1, v2, . . . , vm of vertices such that
+1. {v1, v2, . . . , vm} = V , and
+2. {(v1, v2), (v2, v3), . . . , (vm−1, vm), (vm, v1)} ⊆E.
+We deﬁne the following language:
+HC := {⟨G⟩: the graph G contains a Hamilton cycle}.
+It is not known whether or not HC is in the class P.
+Example 6.3.3 The sum of subset language is deﬁned as follows:
+SOS := {⟨a1, a2, . . . , am, b⟩:
+m, a1, a2, . . . , am, b ∈N0 and
+∃I ⊆{1, 2, . . . , m}, P
+i∈I ai = b}.
+Also in this case, no polynomial-time algorithm is known that decides the
+language SOS. That is, it is not known whether or not SOS is in the class
+P.
+Example 6.3.4 An integer x ≥2 is a prime number, if there are no a, b ∈N
+such that a ̸= x, b ̸= x, and x = ab. Hence, the language of all non-primes
+that are greater than or equal to two, is
+NPrim := {⟨x⟩: x ≥2 and x is not a prime number}.
+It is not obvious at all, whether or not NPrim is in the class P. In fact, it
+was shown only in 2002 that NPrim is in the class P.
+Observation 6.3.5 The four languages above have the following in com-
+mon: If someone gives us a “solution” for any given input, then we can
+easily, i.e., in polynomial time, verify whether or not this “solution” is a cor-
+rect solution. Moreover, for any input to each of these four problems, there
+exists a “solution” whose length is polynomial in the length of the input.

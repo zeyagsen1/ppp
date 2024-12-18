@@ -1,0 +1,45 @@
+102
+Chapter 3.
+Context-Free Languages
+Therefore, we have
+S = q = r0 ⇒w1r1 ⇒w1w2r2 ⇒. . . ⇒w1w2 . . . wnrn ⇒w1w2 . . . wn = w.
+This proves that w ∈L(G).
+The proof of the claim that L(G) ⊆L is left as an exercise.
+In Sections 2.9.1 and 3.2.2, we have seen that the language {0n1n : n ≥
+0} is not regular, but context-free. Therefore, the class of all context-free
+languages properly contains the class of regular languages.
+3.3.1
+An example
+Let L be the language deﬁned as
+L = {w ∈{0, 1}∗: 101 is a substring of w}.
+In Section 2.2.2, we have seen that L is a regular language. In that section,
+we constructed the following deterministic ﬁnite automaton M that accepts
+L (we have renamed the states):
+0
+1
+1
+0
+0
+1
+0,1
+S
+A
+B
+C
+We apply the construction given in the proof of Theorem 3.3.1 to convert
+M to a context-free grammar G whose language is equal to L. According
+to this construction, we have G = (V, Σ, R, S), where V = {S, A, B, C},
+Σ = {0, 1}, the start variable S is the start state of M, and R consists of the
+rules
+S
+→
+0S|1A
+A
+→
+0B|1A
+B
+→
+0S|1C
+C
+→
+0C|1C|ϵ

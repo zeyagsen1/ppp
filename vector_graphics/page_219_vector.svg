@@ -1,0 +1,37 @@
+6.4.
+Non-deterministic algorithms
+211
+6.3.3
+Summary
+• P ⊆NP. It is not known whether P is a proper subclass of NP, or
+whether P = NP. This is one of the most important open problems in
+computer science. If you can solve this problem, then you will get one
+million dollars; not from us, but from the Clay Mathematics Institute,
+see
+http://www.claymath.org/prizeproblems/index.htm
+Most people believe that P is a proper subclass of NP.
+• NP ⊆EXP, i.e., each language in NP can be decided in exponential
+time. It is not known whether NP is a proper subclass of EXP, or
+whether NP = EXP.
+• It follows from P ⊆NP and NP ⊆EXP, that P ⊆EXP. It can
+be shown that P is a proper subset of EXP, i.e., there exist languages
+that can be decided in exponential time, but that cannot be decided in
+polynomial time.
+• P is the class of those languages that can be decided eﬃciently, i.e., in
+polynomial time. Sets that are not in P, are not eﬃciently decidable.
+6.4
+Non-deterministic algorithms
+The abbreviation NP stands for Non-deterministic Polynomial time. The al-
+gorithms that we have considered so far are deterministic, which means that
+at any time during the computation, the next computation step is uniquely
+determined. In a non-deterministic algorithm, there are one or more possi-
+bilities for being the next computation step, and the algorithm chooses one
+of them.
+To give an example, we consider the language SOS, see Example 6.3.3.
+Let m, a1, a2, . . . , am, and b be elements of N0. Then
+⟨a1, a2, . . . , am, b⟩∈SOS
+⇐⇒
+there exist c1, c2, . . . , cm ∈{0, 1},
+such that Pm
+i=1 ciai = b.
+The following non-deterministic algorithm decides the language SOS:

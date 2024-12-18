@@ -1,0 +1,35 @@
+18
+Chapter 1.
+Introduction
+unbounded face) of this embedding, respectively. Moreover, let c be the number
+of connected components of G. Then
+v −e + f = c + 1.
+Proof. The proof is by induction on the number of edges of G. To be more
+precise, we start with a graph having no edges, and prove that the theorem
+holds for this case. Then, we add the edges one by one, and show that the
+relation v −e + f = c + 1 is maintained.
+So we ﬁrst assume that G has no edges, i.e., e = 0. Then the embedding
+consists of a collection of v points. In this case, we have f = 1 and c = v.
+Hence, the relation v −e + f = c + 1 holds.
+Let e > 0 and assume that Euler’s formula holds for a subgraph of G
+having e −1 edges. Let {u, v} be an edge of G that is not in the subgraph,
+and add this edge to the subgraph. There are two cases depending on whether
+this new edge joins two connected components or joins two vertices in the
+same connected component.
+Case 1: The new edge {u, v} joins two connected components.
+In this case, the number of vertices and the number of faces do not change,
+the number of connected components goes down by 1, and the number of
+edges increases by 1. It follows that the relation in the theorem is still valid.
+Case 2: The new edge {u, v} joins two vertices in the same connected com-
+ponent.
+In this case, the number of vertices and the number of connected com-
+ponents do not change, the number of edges increases by 1, and the number
+of faces increases by 1 (because the new edge splits one face into two faces).
+Therefore, the relation in the theorem is still valid.
+Euler’s theorem is usually stated as follows:
+Theorem 1.3.18 (Euler) Consider an embedding of a connected planar
+graph G. Let v, e, and f be the number of vertices, edges, and faces (in-
+cluding the single unbounded face) of this embedding, respectively. Then
+v −e + f = 2.
+If you like surprising proofs of various mathematical results, you should
+read the book Proofs from THE BOOK by Aigner and Ziegler.

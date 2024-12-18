@@ -1,0 +1,42 @@
+226
+Chapter 6.
+Complexity Theory
+(z0, a1)
+a2
+. . .
+an
+✷
+. . .
+✷
+#
+#
+#
+#
+#
+...
+#
+...
+✷
+✷
+✷
+✷
+✷
+. . .
+(z1, 1)
+p(n)
+p(n)
+Figure 6.5: The p(n) × p(n) frame for the domino game.
+Therefore, we have A ≤P Domino. Hence, the language Domino is NP-
+complete.
+An example of a domino game
+We have deﬁned the domino game corresponding to a Turing machine that
+solves a decision problem. Of course, we can also do this for Turing machines
+that compute functions. In this section, we will exactly do this for a Turing
+machine that computes the successor function x →x + 1.
+We will design a Turing machine with one tape, that gets as input the
+binary representation of a natural number x, and that computes the binary
+representation of x + 1.
+Start of the computation: The tape contains a 0 followed by the binary
+representation of the integer x ∈N0. The tape head is on the leftmost bit
+(which is 0), and the Turing machine is in the start state z0. Here is an
+example, where x = 431:

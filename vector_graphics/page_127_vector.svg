@@ -1,0 +1,50 @@
+3.7.
+Equivalence of PDA’s and CFG’s
+119
+In this way, the number of symbols S on the stack will always be equal to the
+diﬀerence of (i) the number of symbols in the part to the left of the middle
+symbol b that have been read and (ii) the number of symbols in the part
+to the right of the middle symbol b that have been read; additionally, the
+bottom of the stack will contain the special symbol $.
+The input string is accepted if and only if, at the moment when the blank
+symbol 2 is read, the automaton is in state q′ and the top symbol on the
+stack is $. In this case, the stack is made empty and, thus, the computation
+terminates.
+We obtain the nondeterministic pushdown automaton M = (Σ, Γ, Q, δ, q),
+where Σ = {a, b}, Γ = {$, S}, Q = {q, q′}, q is the start state, and the
+transition function δ is speciﬁed by the following instructions:
+qa$ →qR$S
+push S onto the stack
+qaS →qRSS
+push S onto the stack
+qb$ →q′R$
+reached the middle
+qb$ →qR$S
+did not reach the middle; push S onto the stack
+qbS →q′RS
+reached the middle
+qbS →qRSS
+did not reach the middle; push S onto the stack
+q2$ →qN$
+input string is empty; loop forever
+q2S →qNS
+loop forever
+q′a$ →q′Nϵ
+stack is empty; terminate, but reject, because
+the entire input string has not been read
+q′aS →q′Rϵ
+pop top symbol from stack
+q′b$ →q′Nϵ
+stack is empty; terminate, but reject, because
+the entire input string has not been read
+q′bS →q′Rϵ
+pop top symbol from stack
+q′2$ →q′Nϵ
+accept
+q′2S →q′NS
+loop forever
+Remark 3.6.1 It can be shown that there is no deterministic pushdown
+automaton that accepts the language L. The reason is that a deterministic
+pushdown automaton cannot determine when it reaches the middle of the
+input string. Thus, unlike as for ﬁnite automata, nondeterministic pushdown
+automata are more powerful than their deterministic counterparts.

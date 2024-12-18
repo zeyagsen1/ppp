@@ -1,0 +1,33 @@
+Exercises
+189
+• Assume that ⟨M, w⟩∈Halt. Then we have seen before that L(TMw) =
+∅. Thus, by our choice of M1, we have L(TMw) ̸= L(M1). Therefore, H
+accepts (and terminates on) the input ⟨M1, TMw⟩. It follows from the
+pseudocode that H′ accepts (and terminates on) the string ⟨M, w⟩.
+• Assume that ⟨M, w⟩̸∈Halt. Then L(TMw) = {0, 1}∗= L(M1) and, on
+input ⟨M1, TMw⟩, H either terminates in the reject state or does not
+terminate. It follows from the pseudocode that, on input ⟨M, w⟩, H′
+either terminates in the reject state or does not terminate.
+Thus, the Turing machine H′ has the properties needed to show that
+the language Halt is enumerable. This is a contradiction and, therefore, we
+conclude that the language EQTM is not enumerable.
+Exercises
+5.1 Prove that the language
+{w ∈{0, 1}∗: w is the binary representation of 2n for some n ≥0}
+is decidable. In other words, construct a Turing machine that gets as input
+an arbitrary number x ∈N, represented in binary as a string w, and that
+decides whether or not x is a power of two.
+5.2 Let F be the set of all functions f : N →N.
+Prove that F is not
+countable.
+5.3 A function f : N →N is called computable, if there exists a Turing
+machine, that gets as input an arbitrary positive integer n, written in binary,
+and gives as output the value of f(n), again written in binary. This Turing
+machine has a ﬁnal state. As soon as the Turing machine enters this ﬁnal
+state, the computation terminates, and the output is the binary string that
+is written on its tape.
+Prove that there exist functions f : N →N that are not computable.
+5.4 Let n be a ﬁxed positive integer, and let k be the number of bits in the
+binary representation of n. (Hence, k = 1 + ⌊log n⌋.) Construct a Turing
+machine with one tape, tape alphabet {0, 1, 2}, and exactly k + 1 states
+q0, q1, . . . , qk, that does the following:

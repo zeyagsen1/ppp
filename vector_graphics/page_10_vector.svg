@@ -1,0 +1,33 @@
+2
+Chapter 1.
+Introduction
+1.1.1
+Complexity theory
+The main question asked in this area is “What makes some problems com-
+putationally hard and other problems easy?”
+Informally, a problem is called “easy”, if it is eﬃciently solvable. Exam-
+ples of “easy” problems are (i) sorting a sequence of, say, 1,000,000 numbers,
+(ii) searching for a name in a telephone directory, and (iii) computing the
+fastest way to drive from Ottawa to Miami. On the other hand, a problem is
+called “hard”, if it cannot be solved eﬃciently, or if we don’t know whether
+it can be solved eﬃciently. Examples of “hard” problems are (i) time table
+scheduling for all courses at Carleton, (ii) factoring a 300-digit integer into
+its prime factors, and (iii) computing a layout for chips in VLSI.
+Central Question in Complexity Theory: Classify problems ac-
+cording to their degree of “diﬃculty”. Give a rigorous proof that
+problems that seem to be “hard” are really “hard”.
+1.1.2
+Computability theory
+In the 1930’s, G¨odel, Turing, and Church discovered that some of the fun-
+damental mathematical problems cannot be solved by a “computer”. (This
+may sound strange, because computers were invented only in the 1940’s).
+An example of such a problem is “Is an arbitrary mathematical statement
+true or false?” To attack such a problem, we need formal deﬁnitions of the
+notions of
+• computer,
+• algorithm, and
+• computation.
+The theoretical models that were proposed in order to understand solvable
+and unsolvable problems led to the development of real computers.
+Central Question in Computability Theory: Classify problems
+as being solvable or unsolvable.

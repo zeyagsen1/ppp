@@ -1,0 +1,32 @@
+122
+Chapter 3.
+Context-Free Languages
+– For each rule in R that is of the form A →BC, with A, B, C ∈V ,
+the pushdown automaton M has the instructions
+qaA →qNCB, for all a ∈Σ.
+– For each rule in R that is of the form A →a, with A ∈V and
+a ∈Σ, the pushdown automaton M has the instruction
+qaA →qRϵ.
+– If R contains the rule $ →ϵ, then the pushdown automaton M
+has the instruction
+q2$ →qNϵ.
+This concludes the deﬁnition of M. It remains to prove that L(M) =
+L(G), i.e., the language of the nondeterministic pushdown automaton M is
+equal to the language of the context-free grammar G. Hence, we have to
+show that for every string w ∈Σ∗,
+w ∈L(G) if and only if w ∈L(M),
+which can be rewritten as
+$
+∗⇒w if and only if M accepts w.
+Claim 3.7.2 Let a1a2 . . . an be a string in Σ∗, let A1, A2, . . . , Ak be variables
+in V , and let i and k be integers with 1 ≤i ≤n + 1 and k ≥0. Then the
+following holds:
+$
+∗⇒a1a2 . . . ai−1AkAk−1 . . . A1
+if and only if there exists a computation of M from the initial conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+$
+-
+to the conﬁguration

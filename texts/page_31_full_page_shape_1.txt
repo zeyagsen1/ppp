@@ -1,0 +1,26 @@
+ We say that q1 is the start state and q2 is an accept state. Consider the
+ input string 1101. This string is processed in the following way:
+ Initially, the machine is in the start state q1.
+ After having read the rst 1, the machine switches from state q1 to
+ state q2.
+ After having read the second 1, the machine switches from state q2 to
+ state q2. (So actually, it does not switch.)
+ After having read the rst 0, the machine switches from state q2 to
+ state q3.
+ After having read the third 1, the machine switches from state q3 to
+ state q2.
+ After the entire string 1101 has been processed, the machine is in state q2,
+ which is an accept state. We say that the string 1101 is accepted by the
+ machine.
+ Consider now the input string 0101010. After having read this string
+ from left to right (starting in the start state q1), the machine is in state q3.
+ Since q3 is not an accept state, we say that the machine rejects the string
+ 0101010.
+ Wehope you are able to see that this machine accepts every binary string
+ that ends with a 1. In fact, the machine accepts more strings:
+ Every binary string having the property that there are an even number
+ of 0s following the rightmost 1, is accepted by this machine.
+Every other binary string is rejected by the machine. Observe that each
+ such string is either empty, consists of 0s only, or has an odd number
+ of 0s following the rightmost 1.
+ We now come to the formal de nition of a nite automaton:

@@ -1,0 +1,38 @@
+66
+Chapter 2.
+Finite Automata and Regular Languages
+In the third equation, Lq2 is expressed in terms of Lq0 and Lq1. Hence, if we
+substitute the third equation into the ﬁrst one, and use Theorem 2.7.4, then
+we get
+Lq0
+=
+a · Lq0 ∪b · (ϵ ∪a · Lq1 ∪b · Lq0)
+=
+(a ∪bb) · Lq0 ∪ba · Lq1 ∪b.
+We obtain the following set of equations.
+ Lq0
+=
+(a ∪bb) · Lq0 ∪ba · Lq1 ∪b
+Lq1
+=
+b · Lq1 ∪a · Lq0
+Let L = Lq1, B = b, and C = a · Lq0. Then ϵ ̸∈B and the second equation
+reads L = BL ∪C. Hence, by Lemma 2.8.2,
+Lq1 = L = B∗C = b∗a · Lq0.
+If we substitute Lq1 into the ﬁrst equation, then we get (again using Theo-
+rem 2.7.4)
+Lq0
+=
+(a ∪bb) · Lq0 ∪ba · b∗a · Lq0 ∪b
+=
+(a ∪bb ∪bab∗a)Lq0 ∪b.
+Again applying Lemma 2.8.2, this time with L = Lq0, B = a∪bb∪bab∗a and
+C = b, gives
+Lq0 = (a ∪bb ∪bab∗a)∗b.
+Thus, the regular expression that describes the language accepted by M is
+(a ∪bb ∪bab∗a)∗b.
+Completing the correctness of the conversion
+It remains to prove that, for any DFA, the system of equations (2.2) and (2.3)
+can be solved. This will follow from the following (more general) lemma.
+(You should verify that the equations (2.2) and (2.3) are in the form as
+speciﬁed in this lemma.)

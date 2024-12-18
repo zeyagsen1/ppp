@@ -1,0 +1,33 @@
+5.1.
+Decidability
+161
+5.1.4
+The language ATM
+After having seen the languages ADFA, ANFA, and ACFG, it is natural to
+consider the language
+ATM = {⟨M, w⟩: M is a Turing machine that accepts the string w}.
+We will prove that this language is undecidable. Before we give the proof,
+let us mention what this means:
+There is no algorithm that, when given an arbitrary algorithm M
+and an arbitrary input string w for M, decides in a ﬁnite amount
+of time, whether or not M accepts w.
+The proof of the claim that ATM is undecidable is by contradiction. Thus,
+we assume that ATM is decidable. Then there exists a Turing machine H
+that has the following property. For every input string ⟨M, w⟩for H:
+• If ⟨M, w⟩∈ATM (i.e., M accepts w), then H terminates in its accept
+state.
+• If ⟨M, w⟩̸∈ATM (i.e., M rejects w or M does not terminate on input
+w), then H terminates in its reject state.
+• In particular, H terminates on any input ⟨M, w⟩.
+We construct a new Turing machine D, that does the following: On input
+⟨M⟩, the Turing machine D uses H as a subroutine to determine what M
+does when it is given its own description as input. Once D has determined
+this information, it does the opposite of what H does.
+Turing machine D: On input ⟨M⟩, where M is a Turing machine,
+the new Turing machine D does the following:
+Step 1: Run the Turing machine H on the input ⟨M, ⟨M⟩⟩.
+Step 2:
+• If H terminates in its accept state, then D terminates in its
+reject state.
+• If H terminates in its reject state, then D terminates in its
+accept state.

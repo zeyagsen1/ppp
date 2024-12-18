@@ -1,0 +1,34 @@
+186
+Chapter 5.
+Decidable and Undecidable Languages
+Theorem 5.7.2 The language ATM is not enumerable.
+Proof. We know from Theorems 5.4.4 and 5.1.6 that the language ATM is
+enumerable but not decidable. Combining these facts with Theorem 5.7.1
+implies that the language ATM is not enumerable.
+The following result can be proved in exactly the same way:
+Theorem 5.7.3 The language Halt is not enumerable.
+5.8
+A language A such that both A and A are
+not enumerable
+In Theorem 5.7.2, we have seen that the complement of the language ATM
+is not enumerable.
+In Theorem 5.4.4, however, we have shown that the
+language ATM itself is enumerable. In this section, we consider the language
+EQTM = {⟨M1, M2⟩:
+M1 and M2 are Turing machines
+and L(M1) = L(M2)}.
+We will show the following result:
+Theorem 5.8.1 Both EQTM and its complement EQTM are not enumer-
+able.
+5.8.1
+EQTM is not enumerable
+Consider a ﬁxed Turing machine M and a ﬁxed binary string w. We construct
+a new Turing machine TMw that takes as input an arbitrary binary string x:
+Turing machine TMw(x):
+run Turing machine M on input w;
+terminate in the accept state
+We determine the language L(TMw) of this new Turing machine. In other
+words, we determine which strings x are accepted by TMw.
+• Assume that M terminates on input w, i.e., ⟨M, w⟩∈Halt. Then it
+follows from the pseudocode that every string x is accepted by TMw.
+Thus, L(TMw) = {0, 1}∗.

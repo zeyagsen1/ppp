@@ -1,0 +1,35 @@
+6.3.
+The complexity class NP
+205
+Let us again consider the language kColor. Let G be a graph with vertex
+set V = {1, 2, . . . , m} and edge set E, and let k be a positive integer. We
+want to decide whether or not G is k-colorable. A “solution” is a coloring of
+the nodes using at most k diﬀerent colors. That is, a solution is a sequence
+f1, f2, . . . , fm. (Interpret this as: vertex i receives color fi, 1 ≤i ≤m). This
+sequence is a correct solution if and only if
+1. fi ∈{1, 2, . . . , k}, for all i with 1 ≤i ≤m, and
+2. for all i with 1 ≤i ≤m, and for all j with 1 ≤j ≤m, if (i, j) ∈E,
+then fi ̸= fj.
+If someone gives us this solution (i.e., the sequence f1, f2, . . . , fm), then
+we can verify in polynomial time whether or not these two conditions are
+satisﬁed. The length of this solution is O(m log k): for each i, we need about
+log k bits to represent fi. Hence, the length of the solution is polynomial in
+the length of the input, i.e., it is polynomial in the number of bits needed to
+represent the graph G and the number k.
+For the Hamilton cycle problem, a solution consists of a sequence v1,
+v2, . . . , vm of vertices. This sequence is a correct solution if and only if
+1. {v1, v2, . . . , vm} = {1, 2, . . . , m} and
+2. {(v1, v2), (v2, v3), . . . , (vm−1, vm), (vm, v1)} ⊆E.
+These two conditions can be veriﬁed in polynomial time.
+Moreover, the
+length of the solution is polynomial in the length of the input graph.
+Consider the sum of subset problem. A solution is a sequence c1, c2, . . . , cm.
+It is a correct solution if and only if
+1. ci ∈{0, 1}, for all i with 1 ≤i ≤m, and
+2. Pm
+i=1 ciai = b.
+Hence, the set I ⊆{1, 2, . . . , m} in the deﬁnition of SOS is the set of indices
+i for which ci = 1. Again, these two conditions can be veriﬁed in polynomial
+time, and the length of the solution is polynomial in the length of the input.
+Finally, let us consider the language NPrim. Let x ≥2 be an integer.
+The integers a and b form a “solution” for x if and only if

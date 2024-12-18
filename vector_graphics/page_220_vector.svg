@@ -1,0 +1,35 @@
+212
+Chapter 6.
+Complexity Theory
+Algorithm SOS(m, a1, a2, . . . , am, b):
+s := 0;
+for i := 1 to m
+do s := s | s := s + ai
+endfor;
+if s = b
+then return YES
+else return NO
+endif
+The line
+s := s | s := s + ai
+means that either the instruction “s := s” or the instruction “s := s + ai” is
+executed.
+Let us assume that ⟨a1, a2, . . . , am, b⟩∈SOS. Then there are c1, c2, . . . , cm ∈
+{0, 1} such that Pm
+i=1 ciai = b. Assume our algorithm does the following, for
+each i with 1 ≤i ≤m: In the i-th iteration,
+• if ci = 0, then it executes the instruction “s := s”,
+• if ci = 1, then it executes the instruction “s := s + ai”.
+Then after the for-loop, we have s = b, and the algorithm returns YES;
+hence, the algorithm has correctly found out that ⟨a1, a2, . . . , am, b⟩∈SOS.
+In other words, in this case, there exists at least one accepting computation.
+On the other hand, if ⟨a1, a2, . . . , am, b⟩̸∈SOS, then the algorithm always
+returns NO, no matter which of the two instructions is executed in each
+iteration of the for-loop. In this case, there is no accepting computation.
+Deﬁnition 6.4.1 Let M be a non-deterministic algorithm. We say that M
+accepts a string w, if there exists at least one computation that, on input w,
+returns YES.
+Deﬁnition 6.4.2 We say that a non-deterministic algorithm M decides a
+language A in time T, if for every string w, the following holds: w ∈A if
+and only if there exists at least one computation that, on input w, returns
+YES and that takes at most T(|w|) time.

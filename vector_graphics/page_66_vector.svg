@@ -1,0 +1,39 @@
+58
+Chapter 2.
+Finite Automata and Regular Languages
+2.8.1
+Every regular expression describes a regular lan-
+guage
+Let R be an arbitrary regular expression over the alphabet Σ. We will prove
+that the language described by R is a regular language. The proof is by
+induction on the structure of R (i.e., by induction on the way R is “built”
+using the “rules” given in Deﬁnition 2.7.1).
+The ﬁrst base case: Assume that R = ϵ.
+Then R describes the lan-
+guage {ϵ}. In order to prove that this language is regular, it suﬃces, by
+Theorem 2.5.2, to construct an NFA M = (Q, Σ, δ, q, F) that accepts this
+language. This NFA is obtained by deﬁning Q = {q}, q is the start state,
+F = {q}, and δ(q, a) = ∅for all a ∈Σϵ. The ﬁgure below gives the state
+diagram of M:
+q
+The second base case: Assume that R = ∅. Then R describes the language
+∅. In order to prove that this language is regular, it suﬃces, by Theorem 2.5.2,
+to construct an NFA M = (Q, Σ, δ, q, F) that accepts this language. This
+NFA is obtained by deﬁning Q = {q}, q is the start state, F = ∅, and
+δ(q, a) = ∅for all a ∈Σϵ. The ﬁgure below gives the state diagram of M:
+q
+The third base case: Let a ∈Σ and assume that R = a. Then R describes
+the language {a}. In order to prove that this language is regular, it suﬃces,
+by Theorem 2.5.2, to construct an NFA M = (Q, Σ, δ, q1, F) that accepts
+this language. This NFA is obtained by deﬁning Q = {q1, q2}, q1 is the start
+state, F = {q2}, and
+δ(q1, a)
+=
+{q2},
+δ(q1, b)
+=
+∅for all b ∈Σϵ \ {a},
+δ(q2, b)
+=
+∅for all b ∈Σϵ.
+The ﬁgure below gives the state diagram of M:

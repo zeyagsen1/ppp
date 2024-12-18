@@ -1,0 +1,23 @@
+Chapter 1
+Introduction
+1.1
+Purpose and motivation
+This course is on the Theory of Computation, which tries to answer the
+following questions:
+• What are the mathematical properties of computer hardware and soft-
+ware?
+• What is a computation and what is an algorithm? Can we give rigorous
+mathematical deﬁnitions of these notions?
+• What are the limitations of computers?
+Can “everything” be com-
+puted? (As we will see, the answer to this question is “no”.)
+Purpose of the Theory of Computation: Develop formal math-
+ematical models of computation that reﬂect real-world computers.
+This ﬁeld of research was started by mathematicians and logicians in the
+1930’s, when they were trying to understand the meaning of a “computation”.
+A central question asked was whether all mathematical problems can be
+solved in a systematic way. The research that started in those days led to
+computers as we know them today.
+Nowadays, the Theory of Computation can be divided into the follow-
+ing three areas: Complexity Theory, Computability Theory, and Automata
+Theory.

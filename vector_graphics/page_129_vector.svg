@@ -1,0 +1,38 @@
+3.7.
+Equivalence of PDA’s and CFG’s
+121
+and ends in the conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+∅
+-
+where ∅indicates that the stack is empty.
+Assume that $
+∗⇒a1a2 . . . an. Then there exists a derivation (using the
+rules of R) of the string a1a2 . . . an from the start variable $. We may assume
+that in each step in this derivation, a rule is applied to the leftmost variable
+in the current string. Hence, because the grammar G is in Chomsky normal
+form, at any moment during the derivation, the current string has the form
+a1a2 . . . ai−1AkAk−1 . . . A1,
+(3.2)
+for some integers i and k with 1 ≤i ≤n + 1 and k ≥0, and variables
+A1, A2, . . . , Ak. (In particular, at the start of the derivation, we have i = 1
+and k = 1, and the current string is Ak = $. At the end of the derivation,
+we have i = n + 1 and k = 0, and the current string is a1a2 . . . an.)
+We will deﬁne the pushdown automaton M in such a way that the current
+string (3.2) corresponds to the conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+A1
+...
+Ak
+-
+Based on this discussion, we obtain the nondeterministic pushdown au-
+tomaton M = (Σ, V, {q}, δ, q), where
+• the tape alphabet is the set Σ of terminals of G,
+• the stack alphabet is the set V of variables of G,
+• the set of states consists of one state q, which is the start state, and
+• the transition function δ is obtained from the rules in R, in the following
+way:

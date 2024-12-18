@@ -1,0 +1,34 @@
+3.4.
+Chomsky normal form
+105
+Step 2: An ϵ-rule is a rule that is of the form A →ϵ, where A is a variable
+that is not equal to the start variable. In the second step, we eliminate all
+ϵ-rules from G1.
+We consider all ϵ-rules, one after another. Let A →ϵ be one such rule,
+where A ∈V1 and A ̸= S1. We modify G1 as follows:
+1. Remove the rule A →ϵ from the current set R1.
+2. For each rule in the current set R1 that is of the form
+(a) B →A, add the rule B →ϵ to R1, unless this rule has already
+been deleted from R1; observe that in this way, we replace the two-
+step derivation B ⇒A ⇒ϵ by the one-step derivation B ⇒ϵ;
+(b) B →uAv (where u and v are strings that are not both empty),
+add the rule B →uv to R1; observe that in this way, we replace
+the two-step derivation B ⇒uAv ⇒uv by the one-step derivation
+B ⇒uv;
+(c) B →uAvAw (where u, v, and w are strings), add the rules B →
+uvw, B →uAvw, and B →uvAw to R1; if u = v = w = ϵ and
+the rule B →ϵ has already been deleted from R1, then we do not
+add the rule B →ϵ;
+(d) treat rules in which A occurs more than twice on the right-hand
+side in a similar fashion.
+We repeat this process until all ϵ-rules have been eliminated.
+Let R2
+be the set of rules, after all ϵ-rules have been eliminated. We deﬁne G2 =
+(V2, Σ, R2, S2), where V2 = V1 and S2 = S1. This grammar has the property
+that
+• the start variable S2 does not occur on the right-hand side of any rule
+in R2,
+• R2 does not contain any ϵ-rule (it may contain the rule S2 →ϵ), and
+• L(G2) = L(G1) = L(G).
+Step 3: A unit-rule is a rule that is of the form A →B, where A and B are
+variables. In the third step, we eliminate all unit-rules from G2.

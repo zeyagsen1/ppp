@@ -1,0 +1,63 @@
+110
+Chapter 3.
+Context-Free Languages
+• A →BB; we add the rule A →B, but not the rule A →ϵ (because it
+has already been removed).
+At this moment, we have the following grammar:
+S
+→
+A|ϵ
+A
+→
+BAB|B|BB|AB|BA|A
+B
+→
+00
+Since all ϵ-rules have been eliminated, this completes Step 2. (Observe that
+the rule S →ϵ is allowed, because S is the start variable.)
+Step 3: Eliminate all unit-rules.
+We take the unit-rule A →A. We can remove this rule, without adding
+any new rule. At this moment, we have the following grammar:
+S
+→
+A|ϵ
+A
+→
+BAB|B|BB|AB|BA
+B
+→
+00
+We take the unit-rule S →A, remove it, and add the rules
+S →BAB|B|BB|AB|BA.
+This gives the following grammar:
+S
+→
+ϵ|BAB|B|BB|AB|BA
+A
+→
+BAB|B|BB|AB|BA
+B
+→
+00
+We take the unit-rule S →B, remove it, and add the rule S →00. This
+gives the following grammar:
+S
+→
+ϵ|BAB|BB|AB|BA|00
+A
+→
+BAB|B|BB|AB|BA
+B
+→
+00
+We take the unit-rule A →B, remove it, and add the rule A →00. This
+gives the following grammar:
+S
+→
+ϵ|BAB|BB|AB|BA|00
+A
+→
+BAB|BB|AB|BA|00
+B
+→
+00

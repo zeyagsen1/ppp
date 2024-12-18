@@ -1,0 +1,34 @@
+6.5.
+NP-complete languages
+217
+Theorem 6.5.6 Clique ∈NP.
+Next we consider Boolean formulas ϕ, with variables x1, x2, . . . , xm, hav-
+ing the form
+ϕ = C1 ∧C2 ∧. . . ∧Ck,
+(6.6)
+where each Ci, 1 ≤i ≤k, is of the form
+Ci = ℓi
+1 ∨ℓi
+2 ∨ℓi
+3.
+Each ℓi
+a is either a variable or the negation of a variable. An example of such
+a formula is
+ϕ = (x1 ∨¬x1 ∨¬x2) ∧(x3 ∨x2 ∨x4) ∧(¬x1 ∨¬x3 ∨¬x4).
+A formula ϕ of the form (6.6) is said to be satisﬁable, if there exists a truth-
+value in {0, 1} for each of the variables x1, x2, . . . , xm, such that the entire
+formula ϕ is true. Our example formula is satisﬁable: If we take x1 = 0 and
+x2 = 1, and give x3 and x4 an arbitrary value, then
+ϕ = (0 ∨1 ∨0) ∧(x3 ∨1 ∨x4) ∧(1 ∨¬x3 ∨¬x4) = 1.
+We deﬁne the following language:
+3SAT := {⟨ϕ⟩: ϕ is of the form (6.6) and is satisﬁable}.
+Again, we encourage you to prove the following claim:
+Theorem 6.5.7 3SAT ∈NP.
+Observe that the elements of Clique (which are pairs consisting of a graph
+and a positive integer) are completely diﬀerent from the elements of 3SAT
+(which are Boolean formulas). We will show that 3SAT ≤P Clique. Recall
+that this means the following: If the language Clique can be decided in
+polynomial time, then the language 3SAT can also be decided in polynomial
+time. In other words, any polynomial-time algorithm that decides Clique can
+be converted to a polynomial-time algorithm that decides 3SAT.
+Theorem 6.5.8 3SAT ≤P Clique.

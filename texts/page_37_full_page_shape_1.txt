@@ -1,0 +1,37 @@
+Deﬁne the language A as
+A = {w : w is a binary string containing 101 as a substring}.
+Again, we claim that A is a regular language. In other words, we claim that
+there exists a ﬁnite automaton M that accepts A, i.e., A = L(M).
+The ﬁnite automaton M will do the following, when reading an input
+string from left to right:
+• It skips over all 0s, and stays in the start state.
+• At the ﬁrst 1, it switches to the state “maybe the next two symbols are
+01”.
+– If the next symbol is 1, then it stays in the state “maybe the next
+two symbols are 01”.
+– On the other hand, if the next symbol is 0, then it switches to the
+state “maybe the next symbol is 1”.
+∗If the next symbol is indeed 1, then it switches to the accept
+state (but keeps on reading until the end of the string).
+∗On the other hand, if the next symbol is 0, then it switches
+to the start state, and skips 0s until it reads 1 again.
+By deﬁning the following four states, this process will become clear:
+• q1: M is in this state if the last symbol read was 1, but the substring
+101 has not been read.
+• q10: M is in this state if the last two symbols read were 10, but the
+substring 101 has not been read.
+• q101: M is in this state if the substring 101 has been read in the input
+string.
+• q: In all other cases, M is in this state.
+Here is the formal description of the ﬁnite automaton that accepts the
+language A:
+• Q = {q, q1, q10, q101},
+• Σ = {0, 1},
+• the start state is q,
+• the set F of accept states is equal to F = {q101}, and
+• the transition function δ is given by the following table:
+The ﬁgure below gives the state diagram of the ﬁnite automaton M =
+This nite automaton accepts the language A consisting of all binary
+ strings that contain the substring 101. As an exercise, how would you obtain
+ a nite automaton that accepts the complement of A, i.e., the language
+ consisting of all binary strings that do not contain the substring 101?

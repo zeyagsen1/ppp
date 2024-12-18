@@ -1,0 +1,43 @@
+2.8.
+Equivalence of regular expressions and regular languages 65
+Similarly, we can prove that
+Lr = ϵ ∪
+ [
+a∈Σ
+a · Lδ(r,a)
+!
+if r ∈F.
+(2.3)
+So we now have a set of equations in the “unknowns” Lr, for r ∈Q. The
+number of equations is equal to the size of Q. In other words, the number
+of equations is equal to the number of unknowns. The regular expression for
+L(M) = Lq is obtained by solving these equations using Lemma 2.8.2.
+Of course, we have to convince ourselves that these equations have a so-
+lution for any given DFA. Before we deal with this issue, we give an example.
+An example
+Consider the deterministic ﬁnite automaton M = (Q, Σ, δ, q0, F), where Q =
+{q0, q1, q2}, Σ = {a, b}, q0 is the start state, F = {q2}, and δ is given in the
+state diagram below. We show how to obtain the regular expression that
+describes the language accepted by M.
+q0
+q1
+q2
+a
+a
+a
+b
+b
+b
+For this case, (2.2) and (2.3) give the following equations:
+
+
+
+Lq0
+=
+a · Lq0 ∪b · Lq2
+Lq1
+=
+a · Lq0 ∪b · Lq1
+Lq2
+=
+ϵ ∪a · Lq1 ∪b · Lq0

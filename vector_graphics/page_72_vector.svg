@@ -1,0 +1,43 @@
+64
+Chapter 2.
+Finite Automata and Regular Languages
+Let M = (Q, Σ, δ, q, F) be an arbitrary deterministic ﬁnite automaton.
+We will show that there exists a regular expression that describes the lan-
+guage L(M).
+For each state r ∈Q, we deﬁne
+Lr = {w ∈Σ∗:
+the path in the state diagram of M that starts
+in state r and that corresponds to w ends in a
+state of F }.
+In words, Lr is the language accepted by M, if r were the start state.
+We will show that each such language Lr can be described by a regular
+expression. Since L(M) = Lq, this will prove that L(M) can be described by
+a regular expression.
+The basic idea is to set up equations for the languages Lr, which we then
+solve using Lemma 2.8.2. We claim that
+Lr =
+[
+a∈Σ
+a · Lδ(r,a)
+if r ̸∈F.
+(2.2)
+Why is this true? Let w be a string in Lr. Then the path P in the state
+diagram of M that starts in state r and that corresponds to w ends in a
+state of F. Since r ̸∈F, this path contains at least one edge. Let r′ be the
+state that follows the ﬁrst state (i.e., r) of P. Then r′ = δ(r, b) for some
+symbol b ∈Σ. Hence, b is the ﬁrst symbol of w. Write w = bv, where v is
+the remaining part of w. Then the path P ′ = P \ {r} in the state diagram
+of M that starts in state r′ and that corresponds to v ends in a state of F.
+Therefore, v ∈Lr′ = Lδ(r,b). Hence,
+w ∈b · Lδ(r,b) ⊆
+[
+a∈Σ
+a · Lδ(r,a).
+Conversely, let w be a string in S
+a∈Σ a · Lδ(r,a). Then there is a symbol b ∈Σ
+and a string v ∈Lδ(r,b) such that w = bv. Let P ′ be the path in the state
+diagram of M that starts in state δ(r, b) and that corresponds to v. Since
+v ∈Lδ(r,b), this path ends in a state of F. Let P be the path in the state
+diagram of M that starts in r, follows the edge to δ(r, b), and then follows P ′.
+This path P corresponds to w and ends in a state of F. Therefore, w ∈Lr.
+This proves the correctness of (2.2).

@@ -1,0 +1,35 @@
+216
+Chapter 6.
+Complexity Theory
+Theorem 6.5.5 SOS ≤P KS.
+Proof. Let us ﬁrst see what we have to show. According to Deﬁnition 6.5.1,
+we need a function f ∈FP, that maps input strings for SOS to input strings
+for KS, in such a way that
+⟨a1, . . . , am, b⟩∈SOS ⇐⇒f(⟨a1, . . . , am, b⟩) ∈KS.
+In order for f(⟨a1, . . . , am, b⟩) to be an input string for KS, this function
+value has to be of the form
+f(⟨a1, . . . , am, b⟩) = ⟨w1, . . . , wm, k1, . . . , km, W, K⟩.
+We deﬁne
+f(⟨a1, . . . , am, b⟩) := ⟨a1, . . . , am, a1, . . . , am, b, b⟩.
+It is clear that f ∈FP. We have
+⟨a1, . . . , am, b⟩∈SOS
+⇐⇒
+there exist c1, . . . , cm ∈{0, 1} such that Pm
+i=1 ciai = b
+⇐⇒
+there exist c1, . . . , cm ∈{0, 1} such that Pm
+i=1 ciai ≤b and Pm
+i=1 ciai ≥b
+⇐⇒
+⟨a1, . . . , am, a1, . . . , am, b, b⟩∈KS
+⇐⇒
+f(⟨a1, . . . , am, b⟩) ∈KS.
+Cliques and Boolean formulas
+We will deﬁne two languages A = 3SAT and B = Clique that have, at
+ﬁrst sight, nothing to do with each other. Then we show that, nevertheless,
+A ≤P B.
+Let G be a graph with vertex set V and edge set E. A subset V ′ of V is
+called a clique, if each pair of distinct vertices in V ′ is connected by an edge
+in E. We deﬁne the following language:
+Clique := {⟨G, k⟩: k ∈N and G has a clique with k vertices}.
+We encourage you to prove the following claim:

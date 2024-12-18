@@ -1,0 +1,73 @@
+4.2.
+Examples of Turing machines
+145
+q′
+aa →q′
+bdR
+q′
+ba →q′
+baR
+q′
+ab →qreject
+q′
+bb →q′
+cdR
+q′
+ac →qreject
+q′
+bc →qreject
+q′
+ad →q′
+adR
+q′
+bd →q′
+bdR
+q′
+a2 →qaccept
+q′
+b2 →qreject
+q′
+ca →qreject
+q′
+La →q′
+LaL
+q′
+cb →q′
+cbR
+q′
+Lb →q′
+LbL
+q′
+cc →q′
+LdL
+q′
+Lc →q′
+LcL
+q′
+cd →q′
+cdR
+q′
+Ld →q′
+LdL
+q′
+c2 →qreject
+q′
+L2 →q′
+a2R
+We remark that Stage 1 is really necessary for this Turing machine: If we
+omit this stage, and use only Stage 2, then the string aabcbc will be accepted.
+4.2.4
+Accepting anbncn using tape alphabet {a, b, c, 2}
+We consider again the language {anbncn : n ≥0}. In the previous section,
+we presented a Turing machine that uses an extra symbol d. The reader may
+wonder if we can construct a Turing machine for this language that does not
+use any extra symbols. We will show below that this is indeed possible.
+Start of the computation: The tape contains the input string w and the
+tape head is on the leftmost symbol of w. The Turing machine is in the start
+state q0.
+Idea: Repeat the following Stages 1 and 2, until the string is empty.
+Stage 1. Walk along the string from left to right, delete the leftmost a,
+delete the leftmost b, and delete the rightmost c.
+Stage 2. Shift the substring of bs and cs one position to the left; then walk
+back to the leftmost symbol.
+The input alphabet is Σ = {a, b, c} and the tape alphabet is Γ = {a, b, c, 2}.

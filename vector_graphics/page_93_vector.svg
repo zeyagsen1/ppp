@@ -1,0 +1,22 @@
+Exercises
+85
+2.12 For each of the following regular expressions, give two strings that are
+members and two strings that are not members of the language described by
+the expression. The alphabet is Σ = {a, b}.
+1. a(ba)∗b.
+2. (a ∪b)∗a(a ∪b)∗b(a ∪b)∗a(a ∪b)∗.
+3. (a ∪ba ∪bb)(a ∪b)∗.
+2.13 Give regular expressions describing the following languages.
+In all
+cases, the alphabet is {0, 1}.
+1. {w : w contains at least three 1s}.
+2. {w : w contains at least two 1s and at most one 0},
+3. {w : w contains an even number of 0s and exactly two 1s}.
+4. {w : w contains exactly two 0s and at least two 1s}.
+5. {w : w contains an even number of 0s and each 0 is followed by at least one 1}.
+6. {w : every odd position in w is 1}.
+2.14 Convert each of the following regular expressions to an NFA.
+1. (0 ∪1)∗000(0 ∪1)∗
+2. (((10)∗(00)) ∪10)∗
+3. ((0 ∪1)(11)∗∪0)∗
+2.15 Convert the following DFA to a regular expression.

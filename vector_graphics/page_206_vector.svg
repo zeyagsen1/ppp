@@ -1,0 +1,44 @@
+198
+Chapter 6.
+Complexity Theory
+• We say that the Turing machine M computes the function F in time
+T, if
+tM(w) ≤T(|w|)
+for all strings w ∈Σ∗.
+In other words, the “running time function” T is a function of the length
+of the input, which we usually denote by n. For any n, the value of T(n) is
+an upper bound on the running time of the Turing machine M, on any input
+string of length n.
+To give an example, consider the Turing machine of Section 4.2.1 that
+decides, using one tape, the language consisting of all palindromes. The tape
+head of this Turing machine moves from the left to the right, then back to
+the left, then to the right again, back to the left, etc. Each time it reaches
+the leftmost or rightmost symbol, it deletes this symbol. The running time
+of this Turing machine, on any input string of length n, is
+O(1 + 2 + 3 + . . . + n) = O(n2).
+On the other hand, the running time of the Turing machine of Section 4.2.2,
+which also decides the palindromes, but using two tapes instead of just one,
+is O(n).
+In Section 4.4, we mentioned that all computation models listed there are
+equivalent, in the sense that if a language can be decided in one model, it
+can be decided in any of the other models. We just saw, however, that the
+language consisting of all palindromes allows a faster algorithm on a two-
+tape Turing machine than on one-tape Turing machines. (Even though we
+did not prove this, it is true that Ω(n2) is a lower bound on the running
+time to decide palindromes on a one-tape Turing machine.) The following
+theorem can be proved.
+Theorem 6.1.2 Let A be a language (resp. let F be a function) that can be
+decided (resp. computed) in time T by an algorithm of type M. Then there is
+an algorithm of type N that decides A (resp. computes F) in time T ′, where
+M
+N
+T ′
+k-tape Turing machine
+one-tape Turing machine
+O(T 2)
+one-tape Turing machine
+Java program
+O(T 2)
+Java program
+k-tape Turing machine
+O(T 4)

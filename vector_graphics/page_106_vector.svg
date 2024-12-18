@@ -1,0 +1,46 @@
+98
+Chapter 3.
+Context-Free Languages
+we can derive, from X, all binary strings. Thus, by combining these with
+the rule
+S3 →X10X,
+we can derive, from S3, all strings of type 3.
+We arrive at the context-free grammar G = (V, Σ, R, S), where V =
+{S, S1, S2, S3, X}, Σ = {0, 1}, and R consists of the rules
+S
+→
+S1|S2|S3
+S1
+→
+1|S11|0S11
+S2
+→
+0|0S2|0S21
+S3
+→
+X10X
+X
+→
+ϵ|0X|1X
+To summarize, we have
+S1
+∗⇒0m1n, for all integers m and n with 0 ≤m < n,
+S2
+∗⇒0m1n, for all integers m and n with 0 ≤n < m,
+X
+∗⇒u, for each string u in {0, 1}∗,
+and
+S3
+∗⇒w, for every binary string w that contains 10 as a substring.
+From these observations, it follows that that L(G) = L.
+3.2.4
+A context-free grammar that veriﬁes addition
+Consider the language
+L = {anbmcn+m : n ≥0, m ≥0}.
+Using the pumping lemma for regular languages (Theorem 2.9.1), it can
+be shown that L is not a regular language. We will construct a context-
+free grammar G whose language is equal to L, thereby proving that L is a
+context-free language.
+First observe that ϵ ∈L. Therefore, we will take S →ϵ to be one of the
+rules in the grammar.
+Let us see how we can derive all strings in L from the start variable S:

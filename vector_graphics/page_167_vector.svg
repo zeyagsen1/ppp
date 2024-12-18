@@ -1,0 +1,34 @@
+5.1.
+Decidability
+159
+the algorithm terminates in its accept state.
+• In all other cases, the algorithm terminates in its reject state.
+An algorithm that exactly does this, is easy to obtain: On input u, the algo-
+rithm ﬁrst checks whether or not u encodes a deterministic ﬁnite automaton
+M and a string w. If this is not the case, then it terminates and rejects
+the input string u. Otherwise, the algorithm “constructs” M and w, and
+then simulates the computation of M on the input string w. If M accepts
+w, then the algorithm terminates and accepts the input string u. If M does
+not accept w, then the algorithm terminates and rejects the input string u.
+Thus, we have proved the following result:
+Theorem 5.1.2 The language ADFA is decidable.
+5.1.2
+The language ANFA
+We deﬁne the following language:
+ANFA = {⟨M, w⟩:
+M is a nondeterministic ﬁnite automaton that
+accepts the string w}.
+To prove that this language is decidable, consider the algorithm that
+does the following: On input u, the algorithm ﬁrst checks whether or not
+u encodes a nondeterministic ﬁnite automaton M and a string w. If this is
+not the case, then it terminates and rejects the input string u. Otherwise,
+the algorithm constructs M and w. Since a computation of M (on input w)
+is not unique, the algorithm ﬁrst converts M to an equivalent deterministic
+ﬁnite automaton N. Then, it proceeds as in Section 5.1.1.
+Observe that the construction for converting a nondeterministic ﬁnite au-
+tomaton to a deterministic ﬁnite automaton (see Section 2.5) is algorithmic,
+in the sense that it can be described by an algorithm. Because of this, the
+algorithm described above is a valid algorithm; it accepts all strings u that
+are in ANFA, and it rejects all strings u that are not in ANFA. Thus, we have
+proved the following result:
+Theorem 5.1.3 The language ANFA is decidable.

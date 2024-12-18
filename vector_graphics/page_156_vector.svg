@@ -1,0 +1,33 @@
+148
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+• Replace the leftmost a by the blank symbol 2.
+• Walk to the leftmost b.
+• Zigzag between the bs and cs; each time, replace the leftmost b by the
+symbol $, and replace the rightmost c by the blank symbol 2. If, for
+some b, there is no c left, the Turing machine rejects the input string.
+• Continue zigzagging until there are no bs left. Then go to Stage 4.
+Observe that in this third stage, the string ambnck is transformed to the
+string am−1$nck−n.
+Stage 4. In this stage, the Turing machine does the following:
+• Replace each $ by b.
+• Walk to the leftmost a.
+Hence, in this fourth stage, the string am−1$nck−n is transformed to the string
+am−1bnck−n.
+Observe that the input string ambnck is in the language if and only if the
+string am−1bnck−n is in the language. Therefore, the Turing machine repeats
+Stages 3 and 4, until there are no as left. At that moment, it checks whether
+there are any cs left; if so, it rejects the input string; otherwise, it accepts
+the input string.
+We hope that you believe that this description of the algorithm can be
+turned into a formal description of a Turing machine.
+4.3
+Multi-tape Turing machines
+In Section 4.2, we have seen two Turing machines that accept palindromes;
+the ﬁrst Turing machine has one tape, whereas the second one has two tapes.
+You will have noticed that the two-tape Turing machine was easier to obtain
+than the one-tape Turing machine. This leads to the question whether multi-
+tape Turing machines are more powerful than their one-tape counterparts.
+The answer is “no”:
+Theorem 4.3.1 Let k ≥1 be an integer. Any k-tape Turing machine can
+be converted to an equivalent one-tape Turing machine.

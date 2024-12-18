@@ -1,0 +1,46 @@
+52
+Chapter 2.
+Finite Automata and Regular Languages
+1. Q = {q0} ∪Q1, where q0 is a new state.
+2. q0 is the start state of M.
+3. F = {q0} ∪F1. (Since ϵ ∈A∗, q0 has to be an accept state.)
+4. δ : Q × Σϵ →P(Q) is deﬁned as follows: For any r ∈Q and for any
+a ∈Σϵ,
+δ(r, a) =
+
+
+
+
+
+
+
+
+
+
+
+δ1(r, a)
+if r ∈Q1 and r ̸∈F1,
+δ1(r, a)
+if r ∈F1 and a ̸= ϵ,
+δ1(r, a) ∪{q1}
+if r ∈F1 and a = ϵ,
+{q1}
+if r = q0 and a = ϵ,
+∅
+if r = q0 and a ̸= ϵ.
+In the ﬁnal theorem of this section, we mention (without proof) two more
+closure properties of the regular languages:
+Theorem 2.6.4 The set of regular languages is closed under the complement
+and intersection operations:
+1. If A is a regular language over the alphabet Σ, then the complement
+A = {w ∈Σ∗: w ̸∈A}
+is also a regular language.
+2. If A1 and A2 are regular languages over the same alphabet Σ, then the
+intersection
+A1 ∩A2 = {w ∈Σ∗: w ∈A1 and w ∈A2}
+is also a regular language.
+2.7
+Regular expressions
+In this section, we present regular expressions, which are a means to describe
+languages. As we will see, the class of languages that can be described by
+regular expressions coincides with the class of regular languages.

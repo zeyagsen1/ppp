@@ -1,0 +1,59 @@
+144
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+Stage 1: In this stage, we check if the string w is in the language described
+by the regular expression a∗b∗c∗. If this is the case, then we walk back to
+the leftmost symbol. For this stage, we use the following states, besides the
+states qaccept and qreject:
+qa :
+start state; we are reading the block of a’s
+qb :
+we are reading the block of b’s
+qc :
+we are reading the block of c’s
+qL :
+walk to the leftmost symbol
+Stage 2: In this stage, we repeat the following: Walk along the string from
+left to right, replace the leftmost a by d, replace the leftmost b by d, replace
+the leftmost c by d, and walk back to the leftmost symbol.
+For this stage, we use the following states:
+q′
+a :
+start state of Stage 2; search for the leftmost a
+q′
+b :
+leftmost a has been replaced by d;
+search for the leftmost b
+q′
+c :
+leftmost a has been replaced by d;
+leftmost b has been replaced by d;
+search for the leftmost c
+q′
+L :
+leftmost a has been replaced by d;
+leftmost b has been replaced by d;
+leftmost c has been replaced by d;
+walk to the leftmost symbol
+The transition function δ is speciﬁed by the following instructions:
+qaa →qaaR
+qba →qreject
+qab →qbbR
+qbb →qbbR
+qac →qccR
+qbc →qccR
+qad →cannot happen
+qbd →cannot happen
+qa2 →qL2L
+qb2 →qL2L
+qca →qreject
+qLa →qLaL
+qcb →qreject
+qLb →qLbL
+qcc →qccR
+qLc →qLcL
+qcd →cannot happen
+qLd →cannot happen
+qc2 →qL2L
+qL2 →q′
+a2R

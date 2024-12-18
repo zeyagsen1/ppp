@@ -1,0 +1,40 @@
+158
+Chapter 5.
+Decidable and Undecidable Languages
+In other words, the language A is decidable, if there exists an algorithm
+that (i) terminates on every input string w, and (ii) correctly tells us whether
+w ∈A or w ̸∈A.
+A language A that is not decidable is called undecidable.
+For such a
+language, there does not exist an algorithm that satisﬁes (i) and (ii) above.
+In Section 4.2, we have seen several examples of languages that are de-
+cidable.
+In the following subsections, we will give some examples of decidable and
+undecidable languages. These examples involve languages A whose elements
+are pairs of the form (C, w), where C is some computation model (for ex-
+ample, a deterministic ﬁnite automaton) and w is a string over the alphabet
+Σ. The pair (C, w) is in the language A if and only if the string w is in the
+language of the computation model C. For diﬀerent computation models C,
+we will ask the question whether A is decidable, i.e., whether an algorithm
+exists that decides, for any input (C, w), whether or not this input belongs
+to the language A. Since the input to any algorithm is a string over some
+alphabet, we must encode the pair (C, w) as a string. In all cases that we
+consider, such a pair can be described using a ﬁnite amount of text. There-
+fore, we assume, without loss of generality, that binary strings are used for
+these encodings. Throughout the rest of this chapter, we will denote the
+binary encoding of a pair (C, w) by
+⟨C, w⟩.
+5.1.1
+The language ADFA
+We deﬁne the following language:
+ADFA = {⟨M, w⟩:
+M is a deterministic ﬁnite automaton that
+accepts the string w}.
+Keep in mind that ⟨M, w⟩denotes the binary string that forms an en-
+coding of the ﬁnite automaton M and the string w that is given as input to
+M.
+We claim that the language ADFA is decidable. In order to prove this,
+we have to construct an algorithm with the following property, for any given
+input string u:
+• If u is the encoding of a deterministic ﬁnite automaton M and a string
+w (i.e., u is in the correct format ⟨M, w⟩), and if M accepts w, then

@@ -1,0 +1,31 @@
+8
+Chapter 1.
+Introduction
+some useful tips. (You may take a look at the book How to Solve It, by G.
+P´olya).
+1. Read and completely understand the statement of the theorem to be
+proved. Most often this is the hardest part.
+2. Sometimes, theorems contain theorems inside them.
+For example,
+“Property A if and only if property B”, requires showing two state-
+ments:
+(a) If property A is true, then property B is true (A ⇒B).
+(b) If property B is true, then property A is true (B ⇒A).
+Another example is the theorem “Set A equals set B.” To prove this,
+we need to prove that A ⊆B and B ⊆A. That is, we need to show
+that each element of set A is in set B, and that each element of set B
+is in set A.
+3. Try to work out a few simple cases of the theorem just to get a grip on
+it (i.e., crack a few simple cases ﬁrst).
+4. Try to write down the proof once you have it. This is to ensure the
+correctness of your proof. Often, mistakes are found at the time of
+writing.
+5. Finding proofs takes time, we do not come prewired to produce proofs.
+Be patient, think, express and write clearly and try to be precise as
+much as possible.
+In the next sections, we will go through some of the proof strategies.
+1.3.1
+Direct proofs
+As the name suggests, in a direct proof of a theorem, we just approach the
+theorem directly.
+Theorem 1.3.1 If n is an odd positive integer, then n2 is odd as well.

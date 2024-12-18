@@ -1,0 +1,33 @@
+Exercises
+235
+Time tables
+We are given a set of courses, class rooms, and professors.
+We want to
+decide whether or not there exists a time table such that all courses are
+being taught, no two courses are taught at the same time in the same class
+room, no professor teaches two courses at the same time, and conditions such
+as “Prof. L. Azy does not teach before 1pm” are satisﬁed. This problem is
+NP-complete.
+Motion planning
+We are given two positive integers k and ℓ, a set of k polyhedra, and two
+points s and t in Q3. We want to decide whether or not there exists a path
+between s and t, that does not intersect any of the polyhedra, and whose
+length is less than or equal to ℓ. This problem is NP-complete.
+Map labeling
+We are given a map with m cities, where each city is represented by a point.
+For each city, we are given a rectangle that is large enough to contain the
+name of the city. We want to decide whether or not these rectangles can be
+placed on the map, such that
+• no two rectangles overlap,
+• For each i with 1 ≤i ≤m, the point that represents city i is a corner
+of its rectangle.
+This problem is NP-complete.
+This list of NP-complete problems can be extended almost arbitrarily:
+For thousands of problems, it is known that they are NP-complete. For all
+of these, it is not known, whether or not they can be solved eﬃciently (i.e.,
+in polynomial time). Collections of NP-complete problems can be found in
+the book
+• M.R. Garey and D.S. Johnson. Computers and Intractability: A Guide
+to the Theory of NP-Completeness. W.H. Freeman, New York, 1979,
+and on the web page
+http://www.nada.kth.se/~viggo/wwwcompendium/

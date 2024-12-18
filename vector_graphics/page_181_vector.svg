@@ -1,0 +1,32 @@
+5.4.
+Enumerability
+173
+It follows from the pseudocode that H′ terminates on any input. We
+observe the following:
+• Assume that ⟨M, w⟩∈Halt. Then we have seen before that ⟨TMw⟩∈P.
+Since H decides the language P, it follows that H accepts the string
+⟨TMw⟩. Therefore, from the pseudocode, H′ accepts the string ⟨M, w⟩.
+• Assume that ⟨M, w⟩̸∈Halt. Then we have seen before that ⟨TMw⟩̸∈
+P. Since H decides the language P, it follows that H rejects (and
+terminates on) the string ⟨TMw⟩. Therefore, from the pseudocode, H′
+rejects (and terminates on) the string ⟨M, w⟩.
+We have shown that the Turing machine H′ decides the language Halt.
+This is a contradiction and, therefore, we conclude that the language P is
+undecidable.
+Until now, we assumed that ⟨M1⟩̸∈P. If ⟨M1⟩∈P, then we repeat the
+proof with P replaced by its complement P. This revised proof then shows
+that P is undecidable. Since for every language L,
+L is decidable if and only if L is decidable,
+we again conclude that P is undecidable.
+5.4
+Enumerability
+We now come to the last class of languages in this chapter:
+Deﬁnition 5.4.1 Let Σ be an alphabet and let A ⊆Σ∗be a language. We
+say that A is enumerable, if there exists a Turing machine M, such that for
+every string w ∈Σ∗, the following holds:
+1. If w ∈A, then the computation of the Turing machine M, on the input
+string w, terminates in the accept state.
+2. If w ̸∈A, then the computation of the Turing machine M, on the input
+string w, does not terminate in the accept state. That is, either the
+computation terminates in the reject state or the computation does not
+terminate.

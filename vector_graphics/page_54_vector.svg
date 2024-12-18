@@ -1,0 +1,27 @@
+46
+Chapter 2.
+Finite Automata and Regular Languages
+• δ′ : Q′ × Σ →Q′ is deﬁned as follows: For each R ∈Q′ and for each
+a ∈Σ,
+δ′(R, a) =
+[
+r∈R
+Cϵ(δ(r, a)).
+In this example δ′ is given by
+δ′(∅, a) = ∅
+δ′(∅, b) = ∅
+δ′({1}, a) = {3}
+δ′({1}, b) = ∅
+δ′({2}, a) = {1, 2}
+δ′({2}, b) = ∅
+δ′({3}, a) = {2}
+δ′({3}, b) = {2, 3}
+δ′({1, 2}, a) = {1, 2, 3}
+δ′({1, 2}, b) = ∅
+δ′({1, 3}, a) = {2, 3}
+δ′({1, 3}, b) = {2, 3}
+δ′({2, 3}, a) = {1, 2}
+δ′({2, 3}, b) = {2, 3}
+δ′({1, 2, 3}, a) = {1, 2, 3}
+δ′({1, 2, 3}, b) = {2, 3}
+The state diagram of the DFA M is as follows:

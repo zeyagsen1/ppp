@@ -1,0 +1,29 @@
+5.4.
+Enumerability
+175
+Recall that Z denotes the set of integers. Algorithm Hilbert does the
+following, on any input polynomial p with integer coeﬃcients.
+Let n de-
+note the number of variables in p. Algorithm Hilbert tries all elements
+(x1, x2, . . . , xn) ∈Zn, in a systematic way, and for each such element, it
+computes p(x1, x2, . . . , xn). If this value is zero, then algorithm Hilbert
+terminates and accepts the input.
+We observe the following:
+• If ⟨p⟩∈Hilbert, then algorithm Hilbert terminates and accepts p,
+provided we are able to visit all elements (x1, x2, . . . , xn) ∈Zn in a
+“systematic way”.
+• If ⟨p⟩̸∈Hilbert, then p(x1, x2, . . . , xn) ̸= 0 for all (x1, x2, . . . , xn) ∈Zn
+and, therefore, algorithm Hilbert does not terminate.
+These are exactly the requirements for the language Hilbert to be enumerable.
+It remains to explain how we visit all elements (x1, x2, . . . , xn) ∈Zn in a
+systematic way. For any integer d ≥0, let Hd denote the hypercube in Zn
+with sides of length 2d that is centered at the origin. That is, Hd consists
+of the set of all points (x1, x2, . . . , xn) in Zn, such that −d ≤xi ≤d for all
+1 ≤i ≤n and there exists at least one index j for which xj = d or xj = −d.
+We observe that Hd contains a ﬁnite number of elements. In fact, if d ≥1,
+then this number is equal to (2d + 1)n −(2d −1)n. The algorithm will visit
+all elements (x1, x2, . . . , xn) ∈Zn, in the following order: First, it visits the
+origin, which is the only element of H0. Then, it visits all elements of H1,
+followed by all elements of H2, etc., etc.
+To summarize, we obtain the following algorithm, proving that the lan-
+guage Hilbert is enumerable:

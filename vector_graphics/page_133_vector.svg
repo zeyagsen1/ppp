@@ -1,0 +1,36 @@
+3.8.
+The pumping lemma for context-free languages
+125
+3.8.1
+Proof of the pumping lemma
+The proof of the pumping lemma will use the following result about parse
+trees:
+Lemma 3.8.2 Let G be a context-free grammar in Chomsky normal form,
+let s be a non-empty string in L(G), and let T be a parse tree for s. Let ℓbe
+the height of T, i.e., ℓis the number of edges on a longest root-to-leaf path
+in T. Then
+|s| ≤2ℓ−1.
+Proof. The claim can be proved by induction on ℓ. By looking at some
+small values of ℓand using the fact that G is in Chomsky normal form, you
+should be able to verify the claim.
+Now we can start with the proof of the pumping lemma. Let L be a
+context-free language and let Σ be the alphabet of L. By Theorem 3.4.2, there
+exists a context-free grammar in Chomsky normal form, G = (V, Σ, R, S),
+such that L = L(G).
+Deﬁne r to be the number of variables of G and deﬁne p = 2r. We will
+prove that the value of p can be used as the pumping length. Consider an
+arbitrary string s in L such that |s| ≥p, and let T be a parse tree for s. Let
+ℓbe the height of T. Then, by Lemma 3.8.2, we have
+|s| ≤2ℓ−1.
+On the other hand, we have
+|s| ≥p = 2r.
+By combining these inequalities, we see that 2r ≤2ℓ−1, which can be rewrit-
+ten as
+ℓ≥r + 1.
+Consider the nodes on a longest root-to-leaf path in T.
+Since this path
+consists of ℓedges, it consists of ℓ+ 1 nodes. The ﬁrst ℓof these nodes store
+variables, which we denote by A0, A1, . . . , Aℓ−1 (where A0 = S), and the last
+node (which is a leaf) stores a terminal, which we denote by a.
+Since ℓ−1 −r ≥0, the sequence
+Aℓ−1−r, Aℓ−r, . . . , Aℓ−1

@@ -1,0 +1,36 @@
+174
+Chapter 5.
+Decidable and Undecidable Languages
+In other words, the language A is enumerable, if there exists an algorithm
+having the following property. If w ∈A, then the algorithm terminates on
+the input string w and tells us that w ∈A. On the other hand, if w ̸∈A,
+then either (i) the algorithm terminates on the input string w and tells us
+that w ̸∈A or (ii) the algorithm does not terminate on the input string w,
+in which case it does not tell us that w ̸∈A.
+In Section 5.5, we will show where the term “enumerable” comes from.
+The following theorem follows immediately from Deﬁnitions 5.1.1 and 5.4.1.
+Theorem 5.4.2 Every decidable language is enumerable.
+In the following subsections, we will give some examples of enumerable
+languages.
+5.4.1
+Hilbert’s problem
+We have seen Hilbert’s problem in Section 4.4: Is there an algorithm that
+decides, for any given polynomial p with integer coeﬃcients, whether or not
+p has integral roots? If we formulate this problem in terms of languages,
+then Hilbert asked whether or not the language
+Hilbert = {⟨p⟩:
+p is a polynomial with integer coeﬃcients
+that has an integral root}
+is decidable. As usual, ⟨p⟩denotes the binary string that forms an encoding
+of the polynomial p.
+As we mentioned in Section 4.4, it was proven by Matiyasevich in 1970
+that the language Hilbert is not decidable. We claim, that this language
+is enumerable.
+In order to prove this claim, we have to construct an al-
+gorithm Hilbert with the following property: For any input polynomial p
+with integer coeﬃcients,
+• if p has an integral root, then algorithm Hilbert will ﬁnd one in a
+ﬁnite amount of time,
+• if p does not have an integral root, then either algorithm Hilbert ter-
+minates and tells us that p does not have an integral root, or algorithm
+Hilbert does not terminate.

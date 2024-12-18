@@ -1,0 +1,35 @@
+232
+Chapter 6.
+Complexity Theory
+We map this domino game D to a Boolean formula ϕ, such that (6.10)
+holds. The formula ϕ will have variables
+xijℓ, 1 ≤i ≤t, 1 ≤j ≤t, 1 ≤ℓ≤k.
+These variables can be interpretated as follows:
+xijℓ= 1 ⇐⇒there is a tile of type Tℓat position (i, j) of the frame.
+We deﬁne:
+• For all i and j with 1 ≤i ≤t and 1 ≤j ≤t:
+C1
+ij := xij1 ∨xij2 ∨. . . ∨xijk.
+This formula expresses the condition that there is at least one tile at
+position (i, j).
+• For all i, j, ℓand ℓ′ with 1 ≤i ≤t, 1 ≤j ≤t, and 1 ≤ℓ< ℓ′ ≤k:
+C2
+ijℓℓ′ := ¬xijℓ∨¬xijℓ′.
+This formula expresses the condition that there is at most one tile at
+position (i, j).
+• For all i, j, ℓand ℓ′ with 1 ≤i ≤t, 1 ≤j < t, 1 ≤ℓ≤k and 1 ≤ℓ′ ≤k,
+such that i < t and the right symbol on a tile of type Tℓis not equal
+to the left symbol on a tile of type Tℓ′:
+C3
+ijℓℓ′ := ¬xijℓ∨¬xi,j+1,ℓ′.
+This formula expresses the condition that neighboring tiles in the same
+row “ﬁt” together. There are symmetric formulas for neighboring tiles
+in the same column.
+• For all j and ℓwith 1 ≤j ≤t and 1 ≤ℓ≤k, such that the top symbol
+on a tile of type Tℓis not equal to the symbol at position j of the upper
+boundary of the frame:
+C4
+jℓ:= ¬x1jℓ.
+This formula expresses the condition that tiles that touch the upper
+boundary of the frame “ﬁt” there. There are symmetric formulas for
+the lower, left, and right boundaries of the frame.

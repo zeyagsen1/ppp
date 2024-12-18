@@ -1,0 +1,32 @@
+Exercises
+193
+Answer the following two questions:
+• Assume that M accepts the string w. What is the language L(TMw) of
+the new Turing machine TMw?
+• Assume that M does not accept the string w. What is the language
+L(TMw) of the new Turing machine TMw?
+The goal is to prove that the language REGTM is undecidable. We will
+prove this by contradiction. Thus, we assume that R is a Turing machine
+that decides REGTM. Recall what this means:
+• If M is a Turing machine whose language is regular, then R, when
+given ⟨M⟩as input, will terminate in the accept state.
+• If M is a Turing machine whose language is not regular, then R, when
+given ⟨M⟩as input, will terminate in the reject state.
+We construct a new Turing machine R′ which takes as input an arbitrary
+Turing machine M and an arbitrary binary string w:
+Turing machine R′(⟨M, w⟩):
+construct the Turing machine TMw described above;
+run R on the input ⟨TMw⟩;
+if R terminates in the accept state
+then terminate in the accept state
+else if R terminates in the reject state
+then terminate in the reject state
+endif
+endif
+Prove that M accepts w if and only if R′ (when given ⟨M, w⟩as input),
+terminates in the accept state.
+Now ﬁnish the proof by arguing that the language REGTM is undecidable.
+5.11 A Java program P is called a Hello-World-program, if the following is
+true: When given the empty string ϵ as input, P outputs the string Hello
+World and then terminates. (We do not care what P does when the input
+string is non-empty.)

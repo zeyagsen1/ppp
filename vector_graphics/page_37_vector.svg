@@ -1,0 +1,43 @@
+2.2.
+Deterministic ﬁnite automata
+29
+• Σ = {0, 1},
+• the start state is q,
+• the set F of accept states is equal to F = {q101}, and
+• the transition function δ is given by the following table:
+0
+1
+q
+q
+q1
+q1
+q10
+q1
+q10
+q
+q101
+q101
+q101
+q101
+The ﬁgure below gives the state diagram of the ﬁnite automaton M =
+(Q, Σ, δ, q, F).
+q
+q1
+q10
+q101
+0
+1
+1
+0
+0
+1
+0,1
+This ﬁnite automaton accepts the language A consisting of all binary
+strings that contain the substring 101. As an exercise, how would you obtain
+a ﬁnite automaton that accepts the complement of A, i.e., the language
+consisting of all binary strings that do not contain the substring 101?
+2.2.3
+A third example of a ﬁnite automaton
+The ﬁnite automata we have seen so far have exactly one accept state. In
+this section, we will see an example of a ﬁnite automaton having more accept
+states.

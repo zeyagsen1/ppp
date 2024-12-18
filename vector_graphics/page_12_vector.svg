@@ -1,0 +1,33 @@
+4
+Chapter 1.
+Introduction
+5. This theory simpliﬁes the complex computers to an abstract and simple
+mathematical model, and helps you to understand them better.
+6. This course is about rigorously analyzing capabilities and limitations
+of systems.
+Where does this course ﬁt in the Computer Science Curriculum at Car-
+leton University? It is a theory course that is the third part in the series
+COMP 1805, COMP 2804, COMP 3803, COMP 3804, and COMP 4804.
+This course also widens your understanding of computers and will inﬂuence
+other courses including Compilers, Programming Languages, and Artiﬁcial
+Intelligence.
+1.2
+Mathematical preliminaries
+Throughout this course, we will assume that you know the following mathe-
+matical concepts:
+1. A set is a collection of well-deﬁned objects. Examples are (i) the set of
+all Dutch Olympic Gold Medallists, (ii) the set of all pubs in Ottawa,
+and (iii) the set of all even natural numbers.
+2. The set of natural numbers is N = {1, 2, 3, . . .}.
+3. The set of integers is Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . .}.
+4. The set of rational numbers is Q = {m/n : m ∈Z, n ∈Z, n ̸= 0}.
+5. The set of real numbers is denoted by R.
+6. If A and B are sets, then A is a subset of B, written as A ⊆B, if every
+element of A is also an element of B. For example, the set of even
+natural numbers is a subset of the set of all natural numbers. Every
+set A is a subset of itself, i.e., A ⊆A. The empty set is a subset of
+every set A, i.e., ∅⊆A.
+7. If B is a set, then the power set P(B) of B is deﬁned to be the set of
+all subsets of B:
+P(B) = {A : A ⊆B}.
+Observe that ∅∈P(B) and B ∈P(B).

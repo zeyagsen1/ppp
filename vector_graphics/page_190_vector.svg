@@ -1,0 +1,41 @@
+182
+Chapter 5.
+Decidable and Undecidable Languages
+where every element of B occurs exactly once in the set on the right-hand
+side.
+We deﬁne the inﬁnite binary sequence w = w1w2w3 . . ., where, for each
+integer n ≥1,
+wn =
+ 1
+if the n-th bit of f(n) is 0,
+0
+if the n-th bit of f(n) is 1.
+Since w ∈B, it follows from (5.3) that there is an element n ∈N, such that
+f(n) = w. Hence, the n-th bits of f(n) and w are equal. But, by deﬁnition,
+these n-th bits are not equal. This is a contradiction and, therefore, the set
+B is not countable.
+In the rest of the proof, we will show that the sets L and B have the same
+size. Since B is not countable, this will imply that L is not countable.
+In order to prove that L and B have the same size, we have to show that
+there exists a bijection
+g : L →B.
+We ﬁrst observe that the set {0, 1}∗is countable, because for each integer
+n ≥0, there are only ﬁnitely many (to be precise, exactly 2n) binary strings
+of length n. In fact, we can write
+{0, 1}∗= {ϵ, 0, 1, 00, 01, 10, 11, 000, 001, 010, 100, 011, 101, 110, 111, . . .}.
+For each integer n ≥1, we denote by sn the n-th string in this list. Hence,
+{0, 1}∗= {s1, s2, s3, . . .}.
+(5.4)
+Now we are ready to deﬁne the bijection g : L →B: Let A ∈L, i.e.,
+A ⊆{0, 1}∗is a language. We deﬁne the inﬁnite binary sequence g(A) as
+follows: For each integer n ≥1, the n-th bit of g(A) is equal to
+ 1
+if sn ∈A,
+0
+if sn ̸∈A.
+In words, the inﬁnite binary sequence g(A) contains a 1 exactly in those
+positions n for which the string sn in (5.4) is in the language A.
+To give an example, assume that A is the language consisting of all binary
+strings that start with 0. The following table gives the corresponding inﬁnite
+binary sequence g(A) (this sequence is obtained by reading the rightmost
+column from top to bottom):

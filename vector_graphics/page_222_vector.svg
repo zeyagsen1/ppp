@@ -1,0 +1,35 @@
+214
+Chapter 6.
+Complexity Theory
+2. for all strings w in {0, 1}∗,
+w ∈A ⇐⇒f(w) ∈B.
+If A ≤P B, then we also say that “B is at least as hard as A”, or “A is
+polynomial-time reducible to B”.
+We ﬁrst show that this formal deﬁnition is in accordance with the intuitive
+deﬁnition given above.
+Theorem 6.5.2 Let A and B be languages such that B ∈P and A ≤P B.
+Then A ∈P.
+Proof. Let f : {0, 1}∗→{0, 1}∗be the function in FP for which
+w ∈A ⇐⇒f(w) ∈B.
+(6.5)
+The following algorithm decides whether or not any given binary string w is
+in A:
+u := f(w);
+if u ∈B
+then return YES
+else return NO
+endif
+The correctness of this algorithm follows immediately from (6.5). So it
+remains to show that the running time is polynomial in the length of the
+input string w.
+Since f ∈FP, there exists a polynomial p such that the function f can
+be computed in time p. Similarly, since B ∈P, there exists a polynomial q,
+such that the language B can be decided in time q.
+Let n be the length of the input string w, i.e., n = |w|. Then the length
+of the string u is less than or equal to p(|w|) = p(n). (Why?) Therefore, the
+running time of our algorithm is bounded from above by
+p(|w|) + q(|u|) ≤p(n) + q(p(n)).
+Since the function p′, deﬁned by p′(n) := p(n)+q(p(n)), is a polynomial, this
+proves that A ∈P.
+The following theorem states that the relation ≤P is reﬂexive and tran-
+sitive. We leave the proof as an exercise.

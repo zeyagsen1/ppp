@@ -1,0 +1,67 @@
+2.8.
+Equivalence of regular expressions and regular languages 67
+Lemma 2.8.3 Let n ≥1 be an integer and, for 1 ≤i ≤n and 1 ≤j ≤n,
+let Bij and Ci be regular expressions such that ϵ ̸∈Bij. Let L1, L2, . . . , Ln be
+languages that satisfy
+Li =
+ n[
+j=1
+BijLj
+!
+∪Ci for 1 ≤i ≤n.
+Then L1 can be expressed as a regular expression only involving the regular
+expressions Bij and Ci.
+Proof. The proof is by induction on n. The base case is when n = 1. In
+this case, we have
+L1 = B11L1 ∪C1.
+Since ϵ ̸∈B11, it follows from Lemma 2.8.2 that L1 = B∗
+11C1. This proves
+the base case.
+Let n ≥2 and assume the lemma is true for n −1. We have
+Ln
+=
+ n[
+j=1
+BnjLj
+!
+∪Cn
+=
+BnnLn ∪
+ n−1
+[
+j=1
+BnjLj
+!
+∪Cn.
+Since ϵ ̸∈Bnn, it follows from Lemma 2.8.2 that
+Ln
+=
+B∗
+nn
+  n−1
+[
+j=1
+BnjLj
+!
+∪Cn
+!
+=
+B∗
+nn
+ n−1
+[
+j=1
+BnjLj
+!
+∪B∗
+nnCn
+=
+ n−1
+[
+j=1
+B∗
+nnBnjLj
+!
+∪B∗
+nnCn
+By substituting this equation for Ln into the equations for Li, 1 ≤i ≤n −1,

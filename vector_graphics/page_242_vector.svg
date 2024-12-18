@@ -1,0 +1,51 @@
+234
+Chapter 6.
+Complexity Theory
+• If ki = 3, then we deﬁne
+C′
+i := Ci.
+• If ki ≥4, then we deﬁne
+C′
+i
+:=
+(ℓi
+1 ∨ℓi
+2 ∨zi
+1) ∧(¬zi
+1 ∨ℓi
+3 ∨zi
+2) ∧(¬zi
+2 ∨ℓi
+4 ∨zi
+3) ∧. . .
+∧(¬zi
+ki−3 ∨ℓi
+ki−1 ∨ℓi
+ki),
+where zi
+1, . . . , zi
+ki−3 are new variables.
+Let
+ϕ′ := C′
+1 ∧C′
+2 ∧. . . ∧C′
+k.
+Then ϕ′ is an input for 3SAT, and (6.11) holds.
+Theorems 6.5.6, 6.5.8, 6.5.11, and 6.5.14 imply:
+Theorem 6.5.15 The language Clique is NP-complete.
+The traveling salesperson problem
+We are given two positive integers k and m, a set of m cities, and an integer
+m × m matrix M, where
+M(i, j) = the cost of driving from city i to city j,
+for all i, j ∈{1, 2, . . . , m}. We want to decide whether or not there is a tour
+through all cities whose total cost is less than or equal to k. This problem is
+NP-complete.
+Bin packing
+We are given three positive integers m, k, and ℓ, a set of m objects having
+volumes a1, a2, . . . , am, and k bins. Each bin has volume ℓ. We want to
+decide whether or not all objects ﬁt within these bins. This problem is NP-
+complete.
+Here is another interpretation of this problem: We are given m jobs that
+need time a1, a2, . . . , am to complete. We are also given k processors, and an
+integer ℓ. We want to decide whether or not it is possible to divide the jobs
+over the k processors, such that no processor needs more than ℓtime.

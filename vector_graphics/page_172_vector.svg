@@ -1,0 +1,33 @@
+164
+Chapter 5.
+Decidable and Undecidable Languages
+This means that for every Java program P,
+Q(⟨P⟩) terminates if and only if P(⟨P⟩) does not terminate.
+(5.1)
+What happens if we run the Java program Q on the input string ⟨Q⟩?
+In other words, what happens if we run Q(⟨Q⟩)? Then, in (5.1), we have to
+replace all occurrences of P by Q. Hence,
+Q(⟨Q⟩) terminates if and only if Q(⟨Q⟩) does not terminate.
+This is obviously a contradiction, and we can conclude that the Java program
+H does not exist. Therefore, the language Halt is undecidable.
+Remark 5.1.8 In this proof, we run the Java program Q on the input ⟨Q⟩.
+This means that the input to Q is a description of itself. In other words, we
+give Q itself as input. This is an example of what is called self-reference. An-
+other example of self-reference can be found in Remark 5.1.8 of the textbook
+Introduction to Theory of Computation by A. Maheshwari and M. Smid.
+5.2
+Countable sets
+The proofs that we gave in Sections 5.1.4 and 5.1.5 seem to be bizarre. In
+this section, we will convince you that these proofs in fact use a technique
+that you have seen in the course COMP 1805: Cantor’s Diagonalization.
+Let A and B be two sets and let f : A →B be a function. Recall that f
+is called a bijection, if
+• f is one-to-one (or injective), i.e., for any two distinct elements a and
+a′ in A, we have f(a) ̸= f(a′), and
+• f is onto (or surjective), i.e., for each element b ∈B, there exists an
+element a ∈A, such that f(a) = b.
+The set of natural numbers is denoted by N. That is, N = {1, 2, 3, . . .}.
+Deﬁnition 5.2.1 Let A and B be two sets. We say that A and B have the
+same size, if there exists a bijection f : A →B.
+Deﬁnition 5.2.2 Let A be a set. We say that A is countable, if A is ﬁnite,
+or A and N have the same size.

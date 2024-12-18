@@ -1,0 +1,35 @@
+120
+Chapter 3.
+Context-Free Languages
+3.7
+Equivalence of pushdown automata and
+context-free grammars
+The main result of this section is that nondeterministic pushdown automata
+and context-free grammars are equivalent in power:
+Theorem 3.7.1 Let Σ be an alphabet and let A ⊆Σ∗be a language. Then
+A is context-free if and only if there exists a nondeterministic pushdown
+automaton that accepts A.
+We will only prove one direction of this theorem. That is, we will show
+how to convert an arbitrary context-free grammar to a nondeterministic push-
+down automaton.
+Let G = (V, Σ, R, $) be a context-free grammar, where V is the set of
+variables, Σ is the set of terminals, R is the set of rules, and $ is the start
+variable. By Theorem 3.4.2, we may assume that G is in Chomsky normal
+form. Hence, every rule in R has one of the following three forms:
+1. A →BC, where A, B, and C are variables, B ̸= $, and C ̸= $.
+2. A →a, where A is a variable and a is a terminal.
+3. $ →ϵ.
+We will construct a nondeterministic pushdown automaton M that ac-
+cepts the language L(G) of this grammar G. Observe that M must have the
+following property: For every string w = a1a2 . . . an ∈Σ∗,
+w ∈L(G) if and only if M accepts w.
+This can be reformulated as follows:
+$
+∗⇒a1a2 . . . an
+if and only if there exists a computation of M that starts in the initial
+conﬁguration
+a1 · · ·
+ai · · · an 2
+6
+$
+-

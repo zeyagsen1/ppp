@@ -1,0 +1,31 @@
+Exercises
+89
+2. Determine all equivalence classes of the relation RL.
+2.28 Let Σ be a non-empty alphabet, and let L be a language over Σ, i.e.,
+L ⊆Σ∗. Recall the equivalence relation RL that was deﬁned in Exercise 2.26.
+1. Assume that L is a regular language, and let M = (Q, Σ, δ, q0, F) be
+a DFA that accepts L. Let u and u′ be strings in Σ∗. Let q be the
+state reached, when following the path in the state diagram of M, that
+starts in q0 and that is obtained by reading the string u. Similarly, let
+q′ be the state reached, when following the path in the state diagram
+of M, that starts in q0 and that is obtained by reading the string u′.
+Prove the following: If q = q′, then uRLu′.
+2. Prove the following claim: If L is a regular language, then the equiva-
+lence relation RL has a ﬁnite number of equivalence classes.
+2.29 Let L be the language deﬁned by
+L = {uuR : u ∈{0, 1}∗}.
+In words, a string is in L if and only if its length is even, and the second half
+is the reverse of the ﬁrst half. Consider the equivalence relation RL that was
+deﬁned in Exercise 2.26.
+1. Let m and n be two distinct positive integers and consider the two
+strings u = 0m1 and u′ = 0n1. Prove that ¬(uRLu′).
+2. Prove that L is not a regular language, without using the pumping
+lemma.
+3. Use the pumping lemma to prove that L is not a regular language.
+2.30 In this exercise, we will show that the converse of the pumping lemma
+does, in general, not hold. Consider the language
+A = {ambncn : m ≥1, n ≥0} ∪{bnck : n ≥0, k ≥0}.
+1. Show that A satisﬁes the conclusion of the pumping lemma for p = 1.
+Thus, show that every string s in A whose length is at least p can be
+written as s = xyz, such that y ̸= ϵ, |xy| ≤p, and xyiz ∈A for all
+i ≥0.

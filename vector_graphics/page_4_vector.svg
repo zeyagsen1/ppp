@@ -1,0 +1,104 @@
+iv
+Contents
+2.4.2
+A second example . . . . . . . . . . . . . . . . . . . . .
+37
+2.4.3
+A third example . . . . . . . . . . . . . . . . . . . . . .
+38
+2.4.4
+Deﬁnition of nondeterministic ﬁnite automaton
+. . . .
+39
+2.5
+Equivalence of DFAs and NFAs . . . . . . . . . . . . . . . . .
+41
+2.5.1
+An example . . . . . . . . . . . . . . . . . . . . . . . .
+44
+2.6
+Closure under the regular operations
+. . . . . . . . . . . . . .
+48
+2.7
+Regular expressions . . . . . . . . . . . . . . . . . . . . . . . .
+52
+2.8
+Equivalence of regular expressions and regular languages . . .
+57
+2.8.1
+Every regular expression describes a regular language .
+58
+2.8.2
+Converting a DFA to a regular expression
+. . . . . . .
+61
+2.9
+The pumping lemma and nonregular languages . . . . . . . . .
+68
+2.9.1
+Applications of the pumping lemma . . . . . . . . . . .
+70
+2.10 Higman’s Theorem . . . . . . . . . . . . . . . . . . . . . . . .
+77
+2.10.1 Dickson’s Theorem . . . . . . . . . . . . . . . . . . . .
+77
+2.10.2 Proof of Higman’s Theorem . . . . . . . . . . . . . . .
+78
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+81
+3
+Context-Free Languages
+91
+3.1
+Context-free grammars . . . . . . . . . . . . . . . . . . . . . .
+91
+3.2
+Examples of context-free grammars . . . . . . . . . . . . . . .
+94
+3.2.1
+Properly nested parentheses . . . . . . . . . . . . . . .
+94
+3.2.2
+A context-free grammar for a nonregular language . . .
+95
+3.2.3
+A context-free grammar for the complement of a non-
+regular language
+. . . . . . . . . . . . . . . . . . . . .
+97
+3.2.4
+A context-free grammar that veriﬁes addition
+. . . . .
+98
+3.3
+Regular languages are context-free . . . . . . . . . . . . . . . . 100
+3.3.1
+An example . . . . . . . . . . . . . . . . . . . . . . . . 102
+3.4
+Chomsky normal form
+. . . . . . . . . . . . . . . . . . . . . . 104
+3.4.1
+An example . . . . . . . . . . . . . . . . . . . . . . . . 109
+3.5
+Pushdown automata
+. . . . . . . . . . . . . . . . . . . . . . . 112
+3.6
+Examples of pushdown automata
+. . . . . . . . . . . . . . . . 116
+3.6.1
+Properly nested parentheses . . . . . . . . . . . . . . . 116
+3.6.2
+Strings of the form 0n1n
+. . . . . . . . . . . . . . . . . 117
+3.6.3
+Strings with b in the middle . . . . . . . . . . . . . . . 118
+3.7
+Equivalence of pushdown automata and context-free grammars 120
+3.8
+The pumping lemma for context-free languages
+. . . . . . . . 124
+3.8.1
+Proof of the pumping lemma . . . . . . . . . . . . . . . 125
+3.8.2
+Applications of the pumping lemma . . . . . . . . . . . 128

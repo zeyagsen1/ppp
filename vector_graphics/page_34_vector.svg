@@ -1,0 +1,36 @@
+26
+Chapter 2.
+Finite Automata and Regular Languages
+We ﬁnish this section by presenting an equivalent way of deﬁning the
+language accepted by a ﬁnite automaton. Let M = (Q, Σ, δ, q, F) be a ﬁnite
+automaton. The transition function δ : Q × Σ →Q tells us that, when M
+is in state r ∈Q and reads symbol a ∈Σ, it switches from state r to state
+δ(r, a). Let Σ∗denote the set of all strings over the alphabet Σ. (Σ∗includes
+the empty string ϵ.) We extend the function δ to a function
+δ : Q × Σ∗→Q,
+that is deﬁned as follows. For any state r ∈Q and for any string w over the
+alphabet Σ,
+δ(r, w) =
+ r
+if w = ϵ,
+δ(δ(r, v), a)
+if w = va, where v is a string and a ∈Σ.
+What is the meaning of this function δ? Let r be a state of Q and let w be
+a string over the alphabet Σ. Then
+• δ(r, w) is the state that M reaches, when it starts in state r, reads the
+string w from left to right, and uses δ to switch from state to state.
+Using this notation, we have
+L(M) = {w : w is a string over Σ and δ(q, w) ∈F}.
+2.2.1
+A ﬁrst example of a ﬁnite automaton
+Let
+A = {w : w is a binary string containing an odd number of 1s}.
+We claim that this language A is regular. In order to prove this, we have to
+construct a ﬁnite automaton M such that A = L(M).
+How to construct M? Here is a ﬁrst idea: The ﬁnite automaton reads the
+input string w from left to right and keeps track of the number of 1s it has
+seen. After having read the entire string w, it checks whether this number
+is odd (in which case w is accepted) or even (in which case w is rejected).
+Using this approach, the ﬁnite automaton needs a state for every integer
+i ≥0, indicating that the number of 1s read so far is equal to i. Hence,
+to design a ﬁnite automaton that follows this approach, we need an inﬁnite

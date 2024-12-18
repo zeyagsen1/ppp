@@ -1,0 +1,41 @@
+3.6.
+Examples of pushdown automata
+117
+qa$ →qR$S
+because of the a, S is pushed onto the stack
+qaS →qRSS
+because of the a, S is pushed onto the stack
+qbS →qRϵ
+because of the b, the top element is popped
+from the stack
+qb$ →qNϵ
+the number of bs read is larger than the number
+of as read; the stack is made empty (hence,
+the computation terminates before the entire
+string has been read), and the input string is rejected
+q2$ →qNϵ
+the entire input string has been read; the stack is
+made empty, and the input string is accepted
+q2S →qNS
+the entire input string has been read, it contains
+more as than bs; no changes are made (thus, the
+automaton does not terminate), and the input string
+is rejected
+3.6.2
+Strings of the form 0n1n
+We construct a deterministic pushdown automata that accepts the language
+{0n1n : n ≥0}.
+The automaton uses two states q0 and q1, where q0 is the start state.
+Initially, the automaton is in state q0.
+• For each 0 that it reads, the automaton pushes one symbol S onto the
+stack and stays in state q0.
+• When the ﬁrst 1 is read, the automaton switches to state q1. From that
+moment,
+– for each 1 that is read, the automaton pops the top symbol from
+the stack and stays in state q1;
+– if a 0 is read, the automaton does not make any change and,
+therefore, does not terminate.
+Based on this discussion, we obtain the deterministic pushdown automa-
+ton M = (Σ, Γ, Q, δ, q0), where Σ = {0, 1}, Γ = {$, S}, Q = {q0, q1}, q0 is
+the start state, and the transition function δ is speciﬁed by the following
+instructions:

@@ -1,0 +1,39 @@
+2.5.
+Equivalence of DFAs and NFAs
+45
+a
+b
+ϵ
+1
+{3}
+∅
+{2}
+2
+{1}
+∅
+∅
+3
+{2}
+{2, 3}
+∅
+The state diagram of N is as follows:
+1
+2
+3
+a
+a
+ǫ
+b
+a, b
+We will show how to convert this NFA N to a DFA M that accepts the
+same language. Following the proof of Theorem 2.5.1, the DFA M is speciﬁed
+by M = (Q′, Σ, δ′, q′, F ′), where each of the components is deﬁned below.
+• Q′ = P(Q). Hence,
+Q′ = {∅, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}.
+• q′ = Cϵ({q}). Hence, the start state q′ of M is the set of all states of
+N that can be reached from N’s start state q = 1, by making zero or
+more ϵ-transitions. We obtain
+q′ = Cϵ({q}) = Cϵ({1}) = {1, 2}.
+• F ′ = {R ∈Q′ : R ∩F ̸= ∅}. Hence, the accept states of M are those
+states that contain the accept state 2 of N. We obtain
+F ′ = {{2}, {1, 2}, {2, 3}, {1, 2, 3}}.

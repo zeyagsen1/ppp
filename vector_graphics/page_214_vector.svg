@@ -1,0 +1,33 @@
+206
+Chapter 6.
+Complexity Theory
+1. 2 ≤a < x,
+2. 2 ≤b < x, and
+3. x = ab.
+Clearly, these three conditions can be veriﬁed in polynomial time. Moreover,
+the length of this solution, i.e., the total number of bits in the binary rep-
+resentations of a and b, is polynomial in the number of bits in the binary
+representation of x.
+Languages having the property that the correctness of a proposed “solu-
+tion” can be veriﬁed in polynomial time, form the class NP:
+Deﬁnition 6.3.6 A language A belongs to the class NP, if there exist a
+polynomial p and a language B ∈P, such that for every string w,
+w ∈A ⇐⇒∃s : |s| ≤p(|w|) and ⟨w, s⟩∈B.
+In words, a language A is in the class NP, if for every string w, w ∈A if
+and only if the following two conditions are satisﬁed:
+1. There is a “solution” s, whose length |s| is polynomial in the length of
+w (i.e., |s| ≤p(|w|), where p is a polynomial).
+2. In polynomial time, we can verify whether or not s is a correct “solu-
+tion” for w (i.e., ⟨w, s⟩∈B and B ∈P).
+Hence, the language B can be regarded to be the “veriﬁcation language”:
+B = {⟨w, s⟩: s is a correct “solution” for w}.
+We have given already informal proofs of the fact that the languages
+kColor, HC, SOS, and NPrim are all contained in the class NP. Below, we
+formally prove that NPrim ∈NP. To prove this claim, we have to specify
+the polynomial p and the language B ∈P. First, we observe that
+NPrim = {⟨x⟩:
+there exist a and b in N such that
+2 ≤a < x, 2 ≤b < x and x = ab }.
+(6.1)
+We deﬁne the polynomial p by p(n) := n + 2, and the language B as
+B := {⟨x, a, b⟩: x ≥2, 2 ≤a < x, 2 ≤b < x and x = ab}.

@@ -1,0 +1,55 @@
+3.3.
+Regular languages are context-free
+99
+1. Every time we add an a, we also add a c. In this way, we obtain all
+strings of the form ancn, where n ≥0.
+2. Given a string of the form ancn, we start adding bs. Every time we add
+a b, we also add a c. Observe that every b has to be added between
+the as and the cs. Therefore, we use a variable B as a “pointer” to
+the position in the current string where a b can be added: Instead of
+deriving ancn from S, we derive the string anBcn. Then, from B, we
+derive all strings of the form bmcm, where m ≥0.
+We obtain the context-free grammar G = (V, Σ, R, S), where V = {S, A, B},
+Σ = {a, b, c}, and R consists of the rules
+S
+→
+ϵ|A
+A
+→
+ϵ|aAc|B
+B
+→
+ϵ|bBc
+The facts that
+• A
+∗⇒anBcn, for every n ≥0,
+• B
+∗⇒bmcm, for every m ≥0,
+imply that the following strings can be derived from the start variable S:
+• S
+∗⇒anBcn
+∗⇒anbmcmcn = anbmcn+m, for all n ≥0 and m ≥0.
+In fact, no other strings in {a, b, c}∗can be derived from S. Therefore, we
+have L(G) = L. Since
+S ⇒A ⇒B ⇒ϵ,
+we can simplify this grammar G, by eliminating the rules S →ϵ and A →ϵ.
+This gives the context-free grammar G′ = (V, Σ, R′, S), where V = {S, A, B},
+Σ = {a, b, c}, and R′ consists of the rules
+S
+→
+A
+A
+→
+aAc|B
+B
+→
+ϵ|bBc
+Finally, observe that we do not need S; instead, we can use A as start
+variable. This gives our ﬁnal context-free grammar G′′ = (V, Σ, R′′, A), where
+V = {A, B}, Σ = {a, b, c}, and R′′ consists of the rules
+A
+→
+aAc|B
+B
+→
+ϵ|bBc

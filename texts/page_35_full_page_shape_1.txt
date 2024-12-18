@@ -1,0 +1,30 @@
+ Let
+ A= w: wisabinary string containing an odd number of 1s
+ We claim that this language A is regular. In order to prove this, we have to
+ construct a nite automaton M such that A = L(M).
+ How to construct M? Here is a rst idea: The nite automaton reads the
+ input string w from left to right and keeps track of the number of 1s it has
+ seen. After having read the entire string w, it checks whether this number
+ is odd (in which case w is accepted) or even (in which case w is rejected).
+ Using this approach, the nite automaton needs a state for every integer
+ i 
+0, indicating that the number of 1s read so far is equal to i. Hence,
+ to design a nite automaton that follows this approach, we need an innite
+ number of states. But, the de nition of nite automaton requires the number
+ of states to be nite.
+ A better, and correct approach, is to keep track of whether the number
+ of 1s read so far is even or odd. This leads to the following nite automaton:
+ The set of states is Q = qe qo . If the nite automaton is in state qe,
+ then it has read an even number of 1s; if it is in state qo, then it has
+ read an odd number of 1s.
+ The alphabet is = 01 .
+ The start state is qe, because at the start, the number of 1s read by the
+ automaton is equal to 0, and 0 is even.
+ The set F of accept states is F = qo .
+ The transition function is given by the following table:
+
+ This ﬁnite automaton M = (Q, Σ, δ, qe, F) can also be described by its state
+diagram, which is given in the ﬁgure below. The arrow that comes “out of
+the blue” and enters the state qe, indicates that qe is the start state. The
+state depicted with double circles indicates the accept state.We have constructed a ﬁnite automaton M that accepts the language A.
+Therefore, A is a regular language.

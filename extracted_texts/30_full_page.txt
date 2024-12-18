@@ -1,0 +1,46 @@
+22
+Chapter 2.
+Finite Automata and Regular Languages
+• The machine is in state q3, if it has collected exactly 15 cents.
+• The machine is in state q4, if it has collected exactly 20 cents.
+• The machine is in state q5, if it has collected 25 cents or more.
+Initially (when a car arrives at the toll gate), the machine is in state q0.
+Assume, for example, that the driver presents the sequence (10,5,5,10) of
+coins.
+• After receiving the ﬁrst 10 cents coin, the machine switches from state
+q0 to state q2.
+• After receiving the ﬁrst 5 cents coin, the machine switches from state
+q2 to state q3.
+• After receiving the second 5 cents coin, the machine switches from state
+q3 to state q4.
+• After receiving the second 10 cents coin, the machine switches from
+state q4 to state q5. At this moment, the gate opens. (Remember that
+no change is given.)
+The ﬁgure below represents the behavior of the machine for all possible
+sequences of coins. State q5 is represented by two circles, because it is a
+special state: As soon as the machine reaches this state, the gate opens.
+q0
+q1
+q2
+q3
+q4
+q5
+5
+5
+5
+5
+10
+10
+10
+25
+25
+25
+10, 25
+5, 10, 25
+5, 10
+25
+start
+Observe that the machine (or computer) only has to remember which
+state it is in at any given time. Thus, it needs only a very small amount
+of memory: It has to be able to distinguish between any one of six possible
+cases and, therefore, it only needs a memory of ⌈log 6⌉= 3 bits.

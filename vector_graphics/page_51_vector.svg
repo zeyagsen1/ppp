@@ -1,0 +1,33 @@
+2.5.
+Equivalence of DFAs and NFAs
+43
+In this way, we obtain the correspondence that was given in the beginning
+of this proof.
+After this warming-up, we can consider the general case. In other words,
+from now on, we allow ϵ-transitions in the NFA N. The DFA M is deﬁned as
+above, except that the start state q′ and the transition function δ′ have to be
+modiﬁed. Recall that a computation of the NFA N consists of the following:
+1. Start in the start state q and make zero or more ϵ-transitions.
+2. Read one “real” symbol of Σ and move to a new state (or stay in the
+current state).
+3. Make zero or more ϵ-transitions.
+4. Read one “real” symbol of Σ and move to a new state (or stay in the
+current state).
+5. Make zero or more ϵ-transitions.
+6. Etc.
+The DFA M will simulate this computation in the following way:
+• Simulate 1. in one single step. As we will see below, this simulation is
+implicitly encoded in the deﬁnition of the start state q′ of M.
+• Simulate 2. and 3. in one single step.
+• Simulate 4. and 5. in one single step.
+• Etc.
+Thus, in one step, the DFA M simulates the reading of one “real” symbol of
+Σ, followed by making zero or more ϵ-transitions.
+To formalize this, we need the notion of ϵ-closure. For any state r of the
+NFA N, the ϵ-closure of r, denoted by Cϵ(r), is deﬁned to be the set of all
+states of N that can be reached from r, by making zero or more ϵ-transitions.
+For any state R of the DFA M (hence, R ⊆Q), we deﬁne
+Cϵ(R) =
+[
+r∈R
+Cϵ(r).

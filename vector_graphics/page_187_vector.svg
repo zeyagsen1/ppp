@@ -1,0 +1,36 @@
+5.5.
+Where does the term “enumerable” come from?
+179
+computation of E. It follows from the pseudocode that, on input w,
+M terminates in the accept state.
+• If w ̸∈A, then E will never sent w to the printer. It follows from the
+pseudocode that, on input w, M does not terminate.
+Thus, M satisﬁes the conditions in Deﬁnition 5.4.1. We conclude that the
+language A is enumerable.
+To prove the converse, we now assume that A is enumerable. Let M be
+a Turing machine that satisﬁes the conditions in Deﬁnition 5.4.1.
+We ﬁx an inﬁnite list
+s1, s2, s3, . . .
+of all strings in Σ∗. For example, if Σ = {0, 1}, then we can take this list to
+be
+ϵ, 0, 1, 00, 01, 10, 11, 000, 001, 010, 100, 011, 101, 110, 111, . . .
+We construct the following Turing machine E, which takes the empty
+string as input:
+Turing machine E:
+n := 1;
+while 1 + 1 = 2
+do for i := 1 to n
+do run M for n steps on the input string si;
+if M accepts si within n steps
+then write si on the print tape;
+enter the print state
+endif
+endfor;
+n := n + 1
+endwhile
+We claim that E is an enumerator for the language A. To prove this, it
+is obvious that any string that is sent to the printer by E belongs to A.
+It remains to prove that every string in A will be sent to the printer by E.
+Let w be a string in A. Then, on input w, the Turing machine M terminates
+in the accept state. Let m be the number of steps made by M on input w.
+Let i be the index such that w = si. Deﬁne n = max(m, i). Consider the

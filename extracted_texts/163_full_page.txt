@@ -1,0 +1,27 @@
+Exercises
+155
+End of the computation: The ﬁrst and second tapes are empty. The third
+tape contains the binary representation of the product xy and its head is on
+the rightmost bit of xy. The Turing machine is in the ﬁnal state q1.
+Hint: Use the Turing machines of Exercises 4.5 and 4.7.
+4.9 Construct a Turing machine with one tape that receives as input a string
+of the form 1n for some integer n ≥0; thus, the input is a string of n many
+1s. The output of the Turing machine is the string 1n21n. Thus, this Turing
+machine makes a copy of its input.
+The input alphabet is Σ = {1} and the tape alphabet is Γ = {1, 2}.
+Start of the computation: The tape contains a string of the form 1n, for
+some integer n ≥0, the tape head is on the leftmost symbol, and the Turing
+machine is in the start state. For example, if n = 4, the tape looks as follows:
+. . . 2 2 2 1 1 1 1 2 2 2
+. . .
+6
+End of the computation: The tape contains the string 1n21n, the tape
+head is on the 2 in the middle of this string, and the Turing machine is in
+the ﬁnal state. For our example, the tape looks as follows:
+. . . 2 2 2 1 1 1 1 2 1 1 1 1 2 2 2
+. . .
+6
+The Turing machine in this exercise does not have an accept state or a
+reject state; instead, it has a ﬁnal state. As soon as this state is entered, the
+Turing machine terminates. At termination, the contents of the tape is the
+output of the Turing machine.

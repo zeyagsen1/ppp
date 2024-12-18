@@ -1,0 +1,48 @@
+118
+Chapter 3.
+Context-Free Languages
+q00$ →q0R$S
+push S onto the stack
+q00S →q0RSS
+push S onto the stack
+q01$ →q0N$
+ﬁrst symbol in the input is 1; loop forever
+q01S →q1Rϵ
+ﬁrst 1 is encountered
+q02$ →q0Nϵ
+input string is empty; accept
+q02S →q0NS
+input only consists of 0s; loop forever
+q10$ →q1N$
+0 to the right of 1; loop forever
+q10S →q1NS
+0 to the right of 1; loop forever
+q11$ →q1N$
+too many 1s; loop forever
+q11S →q1Rϵ
+pop top symbol from the stack
+q12$ →q1Nϵ
+accept
+q12S →q1NS
+too many 0s; loop forever
+3.6.3
+Strings with b in the middle
+We will construct a nondeterministic pushdown automaton that accepts the
+set L of all strings in {a, b}∗having an odd length and whose middle symbol
+is b, i.e.,
+L = {vbw : v ∈{a, b}∗, w ∈{a, b}∗, |v| = |w|}.
+The idea is as follows. The automaton uses two states q and q′, where q
+is the start state. These states have the following meaning:
+• If the automaton is in state q, then it has not reached the middle symbol
+b of the input string.
+• If the automaton is in state q′, then it has read the middle symbol b.
+Observe that since the automaton can only make one single pass over the
+input string, it has to “guess” (i.e., use nondeterminism) when it reaches the
+middle of the string.
+• If the automaton is in state q, then, when reading the current tape
+symbol,
+– it either pushes one symbol S onto the stack and stays in state q
+– or, in case the current tape symbol is b, it “guesses” that it has
+reached the middle of the input string, by switching to state q′.
+• If the automaton is in state q′, then, when reading the current tape
+symbol, it pops the top symbol S from the stack and stays in state q′.

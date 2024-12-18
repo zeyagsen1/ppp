@@ -1,0 +1,18 @@
+Let A be the language
+A = {w ∈{0, 1}∗: w has a 1 in the third position from the right}.
+The following state diagram deﬁnes an NFA that accepts all strings that are
+in A, and rejects all strings that are not in A.
+This NFA does the following. If it is in the start state q1 and reads the
+ symbol 1, then it either stays in state q1 or it guesses that this symbol
+ is the third symbol from the right in the input string. In the latter case,
+ the NFA switches to state q2, and then it veri es that there are indeed
+ exactly two remaining symbols in the input string. If there are more than
+ two remaining symbols, then the NFA hangs (in state q4) after having read
+ the next two symbols.
+ Observe how this guessing mechanism is used: The automaton can only
+ read the input string once, from left to right. Hence, it does not know when
+ it reaches the third symbol from the right. When the NFA reads a 1, it can
+ guess that this is the third symbol from the right; after having made this
+ guess, it veri es whether or not the guess was correct.
+ In Section 2.2.3, we have seen a DFA for the same language A. Observe
+ that the NFA has a much simpler structure than the DFA.

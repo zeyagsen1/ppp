@@ -1,0 +1,38 @@
+140
+Chapter 4.
+Turing Machines and the Church-Turing Thesis
+• the Turing machine switches to state r′,
+• the head of the i-th tape replaces the scanned symbol ai by the symbol
+a′
+i, 1 ≤i ≤k, and
+• the head of the i-th tape moves according to σi, 1 ≤i ≤k: if σi = L,
+then the tape head moves one cell to the left; if σi = R, then it moves
+one cell to the right; if σi = N, then the tape head does not move.
+We will write the computation step (4.1) in the form of the instruction
+ra1a2 . . . ak →r′a′
+1a′
+2 . . . a′
+kσ1σ2 . . . σk.
+We now specify the computation of the Turing machine
+M = (Σ, Γ, Q, δ, q, qaccept, qreject).
+Start conﬁguration: The input is a string over the input alphabet Σ.
+Initially, this input string is stored on the ﬁrst tape, and the head of this
+tape is on the leftmost symbol of the input string. Initially, all other k −1
+tapes are empty, i.e., only contain blank symbols, and the Turing machine is
+in the start state q.
+Computation and termination: Starting in the start conﬁguration, the
+Turing machine performs a sequence of computation steps as described above.
+The computation terminates at the moment when the Turing machine en-
+ters the accept state qaccept or the reject state qreject. (Hence, if the Turing
+machine never enters the states qaccept and qreject, the computation does not
+terminate.)
+Acceptance: The Turing machine M accepts the input string w ∈Σ∗, if the
+computation on this input terminates in the state qaccept. If the computation
+on this input terminates in the state qreject, then M rejects the input string
+w.
+We denote by L(M) the language accepted by the Turing machine M.
+Thus, L(M) is the set of all strings in Σ∗that are accepted by M.
+Observe that a string w ∈Σ∗does not belong to L(M) if and only if on
+input w,
+• the computation of M terminates in the state qreject or
+• the computation of M does not terminate.

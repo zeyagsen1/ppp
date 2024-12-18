@@ -1,0 +1,78 @@
+Contents
+v
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+4
+Turing Machines and the Church-Turing Thesis
+137
+4.1
+Deﬁnition of a Turing machine . . . . . . . . . . . . . . . . . . 137
+4.2
+Examples of Turing machines
+. . . . . . . . . . . . . . . . . . 141
+4.2.1
+Accepting palindromes using one tape
+. . . . . . . . . 141
+4.2.2
+Accepting palindromes using two tapes . . . . . . . . . 142
+4.2.3
+Accepting anbncn using one tape . . . . . . . . . . . . . 143
+4.2.4
+Accepting anbncn using tape alphabet {a, b, c, 2} . . . . 145
+4.2.5
+Accepting ambncmn using one tape . . . . . . . . . . . . 147
+4.3
+Multi-tape Turing machines . . . . . . . . . . . . . . . . . . . 148
+4.4
+The Church-Turing Thesis . . . . . . . . . . . . . . . . . . . . 151
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+5
+Decidable and Undecidable Languages
+157
+5.1
+Decidability . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+5.1.1
+The language ADFA . . . . . . . . . . . . . . . . . . . . 158
+5.1.2
+The language ANFA . . . . . . . . . . . . . . . . . . . . 159
+5.1.3
+The language ACFG . . . . . . . . . . . . . . . . . . . . 160
+5.1.4
+The language ATM
+. . . . . . . . . . . . . . . . . . . . 161
+5.1.5
+The Halting Problem . . . . . . . . . . . . . . . . . . . 163
+5.2
+Countable sets . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+5.2.1
+The Halting Problem revisited . . . . . . . . . . . . . . 168
+5.3
+Rice’s Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+5.3.1
+Proof of Rice’s Theorem . . . . . . . . . . . . . . . . . 171
+5.4
+Enumerability . . . . . . . . . . . . . . . . . . . . . . . . . . . 173
+5.4.1
+Hilbert’s problem . . . . . . . . . . . . . . . . . . . . . 174
+5.4.2
+The language ATM
+. . . . . . . . . . . . . . . . . . . . 176
+5.5
+Where does the term “enumerable” come from? . . . . . . . . 177
+5.6
+Most languages are not enumerable . . . . . . . . . . . . . . . 180
+5.6.1
+The set of enumerable languages is countable
+. . . . . 180
+5.6.2
+The set of all languages is not countable . . . . . . . . 181
+5.6.3
+There are languages that are not enumerable . . . . . . 183
+5.7
+The relationship between decidable and enumerable languages 184
+5.8
+A language A such that both A and A are not enumerable . . 186
+5.8.1
+EQTM is not enumerable . . . . . . . . . . . . . . . . . 186
+5.8.2
+EQTM is not enumerable . . . . . . . . . . . . . . . . . 188
+Exercises . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189

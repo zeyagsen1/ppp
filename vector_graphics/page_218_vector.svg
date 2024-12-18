@@ -1,0 +1,38 @@
+210
+Chapter 6.
+Complexity Theory
+for all s with |s| ≤p(|w|)
+do if ⟨w, s⟩∈B
+then return YES and terminate
+endif
+endfor;
+return NO
+The correctness of the algorithm follows from (6.4). What is the running
+time? We assume that w and s are represented as binary strings. Let n be
+the length of the input, i.e., n = |w|.
+How many binary strings s are there whose length is at most p(|w|)? Any
+such s can be described by a sequence of length p(|w|) = p(n), consisting of
+the symbols “0”, “1”, and the blank symbol. Hence, there are at most 3p(n)
+many binary strings s with |s| ≤p(n). Therefore, the for-loop makes at most
+3p(n) iterations.
+Since B ∈P, there is an algorithm and a polynomial q, such that this
+algorithm, when given any input string z, decides in q(|z|) time, whether or
+not z ∈B. This input z has the form ⟨w, s⟩, and we have
+|z| = |w| + |s| ≤|w| + p(|w|) = n + p(n).
+It follows that the total running time of our algorithm that decides whether
+or not w ∈A, is bounded from above by
+3p(n) · q(n + p(n))
+≤
+22p(n) · q(n + p(n))
+≤
+22p(n) · 2q(n+p(n))
+=
+2p′(n),
+where p′ is the polynomial that is deﬁned by p′(n) := 2p(n) + q(n + p(n)).
+If we deﬁne the class EXP as
+EXP :=
+{A :
+there exists a polynomial p, such that A can be
+decided in time 2p(n) } ,
+then we have proved the following theorem.
+Theorem 6.3.8 NP ⊆EXP.

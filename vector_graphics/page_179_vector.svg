@@ -1,0 +1,38 @@
+5.3.
+Rice’s Theorem
+171
+5.3.1
+Proof of Rice’s Theorem
+The strategy of the proof is as follows: Assuming that the language P is
+decidable, we show that the language
+Halt = {⟨M, w⟩:
+M is a Turing machine that terminates on
+the input string w}
+is decidable. This will contradict Theorem 5.1.7.
+The assumption that P is decidable implies the existence of a Turing
+machine H that decides P. Observe that H takes as input a binary string
+⟨M⟩encoding a Turing machine M. In order to show that Halt is decidable,
+we need a Turing machine that takes as input a binary string ⟨M, w⟩encoding
+a Turing machine M and a binary string w. In the rest of this section, we
+will explain how this Turing machine can be obtained.
+Let M1 be a Turing machine that, for any input string, switches in its
+ﬁrst computation step from its start state to its reject state. In other words,
+M1 is a Turing machine with L(M1) = ∅. We assume that
+⟨M1⟩̸∈P.
+(At the end of the proof, we will consider the case when ⟨M1⟩∈P.) We also
+choose a Turing machine M2 such that
+⟨M2⟩∈P.
+Consider a ﬁxed Turing machine M and a ﬁxed binary string w. We
+construct a new Turing machine TMw that takes as input an arbitrary binary
+string x:
+Turing machine TMw(x):
+run Turing machine M on input w;
+if M terminates
+then run M2 on input x;
+if M2 terminates in the accept state
+then terminate in the accept state
+else if M2 terminates in the reject state
+then terminate in the reject state
+endif
+endif
+endif

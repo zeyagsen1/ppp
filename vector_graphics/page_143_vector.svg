@@ -1,0 +1,28 @@
+Exercises
+135
+In this exercise, you will prove that L is context-free.
+Let A be the language consisting of all non-empty strings w over the
+alphabet {a, b} such that the number of as in w is equal to the number of bs
+in w. In Exercise 3.3, you have shown that A is context-free.
+Let B be the language consisting of all strings w over the alphabet {a, b}
+such that
+• w does not contain the substring abba, and
+• w does not contain the substring bbaa.
+1. Give a regular expression that describes the complement of B.
+2. Argue that B is a regular language.
+3. Use Exercise 3.6 to argue that L is a context-free language.
+3.8 Construct (deterministic or nondeterministic) pushdown automata that
+accept the following languages.
+1. {02n1n : n ≥0}.
+2. {0n1m0n : n ≥1, m ≥1}.
+3. {w ∈{0, 1}∗: w contains more 1s than 0s}.
+4. {wwR : w ∈{0, 1}∗}.
+(If w = w1 . . . wn, then wR = wn . . . w1.)
+5. {w ∈{0, 1}∗: w is a palindrome}.
+3.9 Let L be the language
+L = {ambn : 0 ≤m ≤n ≤2m}.
+1. Prove that L is context-free, by constructing a context-free grammar
+whose language is equal to L.
+2. Prove that L is context-free, by constructing a nondeterministic push-
+down automaton that accepts L.
+3.10 Prove that the following languages are not context-free.

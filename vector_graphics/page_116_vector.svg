@@ -1,0 +1,27 @@
+108
+Chapter 3.
+Context-Free Languages
+3. If u1 ∈Σ, u2 ∈Σ, and u1 ̸= u2, then replace the rule A →u1u2 in the
+current set R4 by the three rules A →U1U2, U1 →u1, and U2 →u2,
+where U1 and U2 are new variables that are added to the current set
+V4.
+Observe that in this way, we replace the one-step derivation A ⇒u1u2
+by the three-step derivation A ⇒U1U2 ⇒u1U2 ⇒u1u2.
+4. If u1 ∈Σ, u2 ∈Σ, and u1 = u2, then replace the rule A →u1u2 = u1u1
+in the current set R4 by the two rules A →U1U1 and U1 →u1, where
+U1 is a new variable that is added to the current set V4.
+Observe that in this way, we replace the one-step derivation A ⇒
+u1u2 = u1u1 by the three-step derivation A ⇒U1U1 ⇒u1U1 ⇒u1u1.
+Let R5 be the set of rules, and let V5 be the set of variables, after Step 5
+has been completed. We deﬁne G5 = (V5, Σ, R5, S5), where S5 = S4. This
+grammar has the property that
+• the start variable S5 does not occur on the right-hand side of any rule
+in R5,
+• R5 does not contain any ϵ-rule (it may contain the rule S5 →ϵ),
+• R5 does not contain any unit-rule,
+• R5 does not contain any rule with more than two symbols on the right-
+hand side,
+• R5 does not contain any rule of the form A →u1u2, where u1 and u2
+are not both variables of V5, and
+• L(G5) = L(G4) = L(G3) = L(G2) = L(G1) = L(G).
+Since the grammar G5 is in Chomsky normal form, the proof is complete.

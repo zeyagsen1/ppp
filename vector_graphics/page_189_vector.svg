@@ -1,0 +1,31 @@
+5.6.
+Most languages are not enumerable
+181
+Why is the set S countable? For each integer n ≥0, there are exactly 2n
+binary strings of length n. Since there are binary strings that are not encod-
+ings of Turing machines, the set S contains at most 2n strings of length n.
+In particular, the number of strings in S having length n is ﬁnite. Therefore,
+we obtain an inﬁnite list of the elements of S in the following way:
+• List all strings in S having length 0. (Well, the empty string is not in
+S, so in this step, nothing happens.)
+• List all strings in S having length 1.
+• List all strings in S having length 2.
+• List all strings in S having length 3.
+• Etcetera, etcetera.
+In this inﬁnite list, every element of S occurs exactly once. Therefore, S is
+countable.
+5.6.2
+The set of all languages is not countable
+We deﬁne the set L as
+L = {A : A ⊆{0, 1}∗is a language}.
+In words, L is the set consisting of all languages. Every element of the set L
+is a set consisting of strings.
+Lemma 5.6.2 The set L is not countable.
+Proof. We deﬁne the set B as
+B = {w : w is an inﬁnite binary sequence}.
+We claim that this set is not countable. The proof of this claim is almost
+identical to the proof of Theorem 5.2.4. We assume that the set B is count-
+able. Then there exists a bijection f : N →B. Thus, for each n ∈N, f(n) is
+an inﬁnite binary sequence. We can write
+B = {f(1), f(2), f(3), . . .},
+(5.3)

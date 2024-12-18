@@ -1,0 +1,38 @@
+100
+Chapter 3.
+Context-Free Languages
+3.3
+Regular languages are context-free
+We mentioned already that the class of context-free languages includes the
+class of regular languages. In this section, we will prove this claim.
+Theorem 3.3.1 Let Σ be an alphabet and let L ⊆Σ∗be a regular language.
+Then L is a context-free language.
+Proof.
+Since L is a regular language, there exists a deterministic ﬁnite
+automaton M = (Q, Σ, δ, q, F) that accepts L.
+To prove that L is context-free, we have to deﬁne a context-free grammar
+G = (V, Σ, R, S), such that L = L(M) = L(G). Thus, G must have the
+following property: For every string w ∈Σ∗,
+w ∈L(M) if and only if w ∈L(G),
+which can be reformulated as
+M accepts w if and only if S
+∗⇒w.
+We will deﬁne the context-free grammar G in such a way that the following
+correspondence holds for any string w = w1w2 . . . wn:
+• Assume that M is in state A just after it has read the substring
+w1w2 . . . wi.
+• Then in the context-free grammar G, we have S
+∗⇒w1w2 . . . wiA.
+In the next step, M reads the symbol wi+1 and switches from state A to,
+say, state B; thus, δ(A, wi+1) = B. In order to guarantee that the above
+correspondence still holds, we have to add the rule A →wi+1B to G.
+Consider the moment when M has read the entire string w. Let A be the
+state M is in at that moment. By the above correspondence, we have
+S
+∗⇒w1w2 . . . wnA = wA.
+Recall that G must have the property that
+M accepts w if and only if S
+∗⇒w,
+which is equivalent to
+A ∈F if and only if S
+∗⇒w.

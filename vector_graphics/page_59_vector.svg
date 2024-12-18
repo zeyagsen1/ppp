@@ -1,0 +1,28 @@
+2.6.
+Closure under the regular operations
+51
+q1
+M1
+M2
+q2
+q2
+ε
+ε
+ε
+q0
+M
+Figure 2.2: The NFA M accepts L(M1)L(M2).
+q1
+N
+q1
+q0
+ε
+ε
+ε
+ε
+M
+Figure 2.3: The NFA M accepts (L(N))∗.
+Proof. Let Σ be the alphabet of A and let N = (Q1, Σ, δ1, q1, F1) be an
+NFA, such that A = L(N). We will construct an NFA M = (Q, Σ, δ, q0, F),
+such that L(M) = A∗. The construction is illustrated in Figure 2.3. The
+NFA M is deﬁned as follows:

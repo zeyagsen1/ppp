@@ -1,0 +1,43 @@
+84
+Chapter 2.
+Finite Automata and Regular Languages
+1. F = {q1} ∪F1.
+2. δ : Q1 × Σϵ →P(Q1) is deﬁned as follows: For any r ∈Q1 and for any
+a ∈Σϵ,
+δ(r, a) =
+
+
+
+δ1(r, a)
+if r ∈Q1 and r ̸∈F1,
+δ1(r, a)
+if r ∈F1 and a ̸= ϵ,
+δ1(r, a) ∪{q1}
+if r ∈F1 and a = ϵ.
+Then L(M) = A∗.
+2.8 Prove Theorem 2.6.4.
+2.9 Let A be a language over the alphabet Σ = {0, 1} and let A be the
+complement of A. Thus, A is the language consisting of all binary strings
+that are not in A.
+Assume that A is a regular language. Let M = (Q, Σ, δ, q, F) be a non-
+deterministic ﬁnite automaton (NFA) that accepts A.
+Consider the NFA N = (Q, Σ, δ, q, F), where F = Q\F is the complement
+of F. Thus, N is obtained from M by turning all accept states into nonaccept
+states, and turning all nonaccept states into accept states.
+1. Is it true that the language accepted by N is equal to A?
+2. Assume now that M is a deterministic ﬁnite automaton (DFA) that
+accepts A. Deﬁne N as above; thus, turn all accept states into nonac-
+cept states, and turn all nonaccept states into accept states. Is it true
+that the language accepted by N is equal to A?
+2.10 Recall the alternative deﬁnition for the star of a language A that we
+gave just before Theorem 2.3.1.
+In Theorems 2.3.1 and 2.6.2, we have shown that the class of regular
+languages is closed under the union and concatenation operations.
+Since
+A∗= S∞
+k=0 Ak, why doesn’t this imply that the class of regular languages is
+closed under the star operation?
+2.11 Let A and B be two regular languages over the same alphabet Σ. Prove
+that the diﬀerence of A and B, i.e., the language
+A \ B = {w : w ∈A and w ̸∈B}
+is a regular language.
